@@ -6,5 +6,11 @@
   "license": "MIT",
   "peerDependencies": {
     "gatsby": "^2.6.0"
+  },
+  "dependencies": {
+    "axios-jsonp": "^1.0.4",
+    "crypto": "^1.0.1",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "theme-ui": "^0.3.1"
   }
 }
