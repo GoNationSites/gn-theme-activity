@@ -7,7 +7,10 @@ import Shout from "../components/Shout"
 export default function Home({ data }) {
   return (
     <>
-      <Shout gonationID={data.testData.gonationID} />
+      <div sx={{ backgroundColor: 'primary', padding: [1, 4] }}>
+        <Shout gonationID={data.testData.gonationID} />
+      </div>
+
     </>
   )
 }

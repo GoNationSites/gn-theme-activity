@@ -48,8 +48,8 @@ const Shout = ({ gonationID }) => {
           </Box>
         </Flex>
       ) : (
-        <p>loading...</p>
-      )}
+          <p>loading...</p>
+        )}
     </Box>
   )
 }
