@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Box, Image, Flex, Heading, Text } from 'theme-ui'
+import { Box, Image, Flex, Heading, Text, Styled } from 'theme-ui'
 import GalleryAlbums from './GalleryAlbums'
 import Album from './Album'
 
@@ -7,7 +7,7 @@ export default function Gallery({ gonationID }) {
   const [galleryData, setGalleryData] = useState({
     albums: null,
     isLoading: true,
-    albumOpen: '',
+    albumOpenID: '',
   })
 
   // fetch data from gonation and sets it to component state.
@@ -24,6 +24,7 @@ export default function Gallery({ gonationID }) {
     )
       .then(res => res.json())
       .then(data => {
+        console.log(data)
         setGalleryData({ ...galleryData, albums: data, isLoading: false })
       })
       .catch(e => {
@@ -35,7 +36,7 @@ export default function Gallery({ gonationID }) {
   // back button to return to album view
   const backToAlbumView = () => {
     console.log(galleryData)
-    setGalleryData({ ...galleryData, albumOpen: '' })
+    setGalleryData({ ...galleryData, albumOpenID: '' })
     console.log(galleryData)
   }
 
@@ -47,29 +48,30 @@ export default function Gallery({ gonationID }) {
   // JSX for Rendering Albums
 
   return (
-    <div>
-      <h1>Our Gallery</h1>
-
+    <Box p={3} sx={{ boxShadow: '0 0 12px rgba(0,0,0,.3)' }}>
+      <Styled.h2 style={{ marginLeft: '16px', marginTop: '16px' }}>
+        Our Gallery
+      </Styled.h2>
       {/*  if data has arrived then load else show loading*/}
 
       {!galleryData.isLoading ? (
-        <Box p={3} bg='background'>
+        <Flex>
           {/*  if No album is open, load the grid of albums. if one is open load that album */}
-          {!galleryData.albumOpen ? (
+          {!galleryData.albumOpenID ? (
             <GalleryAlbums
               galleryData={galleryData}
               setGalleryData={setGalleryData}
             />
           ) : (
             <Album
-              images={galleryData.albumOpen}
+              albumOpenID={galleryData.albumOpenID}
               backToAlbumView={backToAlbumView}
             />
           )}
-        </Box>
+        </Flex>
       ) : (
         'Loading...'
       )}
-    </div>
+    </Box>
   )
 }

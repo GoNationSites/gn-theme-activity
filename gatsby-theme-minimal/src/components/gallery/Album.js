@@ -1,22 +1,69 @@
-import React from 'react'
-import { Box, Image, Flex, Heading, Text } from 'theme-ui'
+import React, { useState, useEffect } from 'react'
+import { Box, Image, Flex, Heading, Text, Styled, Button } from 'theme-ui'
 
-export default function Album({ images, backToAlbumView }) {
+export default function Album({ albumOpenID, backToAlbumView }) {
+  const [albumData, setAlbumData] = useState({
+    albums: null,
+    isLoading: true,
+  })
+
+  const fetchData = async () => {
+    await fetch(
+      `https://www.gonation.com/api/proxy/v2/albums/${albumOpenID}/images`,
+      {
+        mode: 'cors',
+        Accept: 'application/json',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    )
+      .then(res => res.json())
+      .then(data => {
+        console.log(data)
+        setAlbumData({ ...albumData, albums: data, isLoading: false })
+      })
+      .catch(e => {
+        console.log('error : ', console.e)
+        setAlbumData({ ...albumData, isLoading: false })
+      })
+  }
+
+  useEffect(() => {
+    fetchData()
+    return () => {}
+  }, [])
+
   return (
-    <div>
-      <button
+    <Box sx={{ width: '100%' }}>
+      <Button
+        variant='primary'
         onClick={() => {
           backToAlbumView()
         }}>
         Back to Albums
-      </button>
-      {console.log(images)}
-
-      {images.map(image => (
-        <Image
-          src={`https://res.cloudinary.com/gonation/w_1000,c_fit,fl_lossy,f_auto,q_auto/${image.cloudinaryId}`}
-        />
-      ))}
-    </div>
+      </Button>
+      <Flex
+        sx={{
+          flexWrap: 'wrap',
+          alignItems: 'stretch',
+          margin: '1rem auto',
+        }}>
+        {console.log(albumData)}
+        {!albumData.isLoading
+          ? albumData.albums.items.map(image => (
+              <Image
+                sx={{
+                  width: ['50%', '33%', '25%', '20%', '12.5%'],
+                  objectFit: 'cover',
+                  height: '200px',
+                }}
+                key={image.cloudinaryId}
+                src={`https://res.cloudinary.com/gonation/w_1000,c_fit,fl_lossy,f_auto,q_auto/${image.cloudinaryId}`}
+              />
+            ))
+          : 'Loading...'}
+      </Flex>
+    </Box>
   )
 }

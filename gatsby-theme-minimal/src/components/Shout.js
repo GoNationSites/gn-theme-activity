@@ -25,8 +25,8 @@ const Shout = ({ gonationID }) => {
       })
   }, [])
   return (
-    <Box p={3} bg='background'>
-      {!shout.isLoading ? (
+    <Box>
+      {!shout.isLoading && shout.shoutData ? (
         <Flex sx={{ boxShadow: '0 0 12px rgba(0,0,0,.3)', padding: 3 }}>
           <Box
             sx={{
@@ -47,7 +47,7 @@ const Shout = ({ gonationID }) => {
           </Box>
         </Flex>
       ) : (
-        <p>loading...</p>
+        ''
       )}
     </Box>
   )

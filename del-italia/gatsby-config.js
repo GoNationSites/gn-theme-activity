@@ -3,8 +3,8 @@ module.exports = {
     {
       resolve: `gatsby-theme-minimal`,
       options: {
-        gonationID: 'bzn-hqT-TAMZS62dB0DaCdx6Tw',
-        businessName: 'Example',
+        gonationID: 'bzn-FiHYl5AySdif83PtaotvGA',
+        businessName: 'Del Italia',
         hasAbout: true,
         hasMenu: true,
         hasShout: true,

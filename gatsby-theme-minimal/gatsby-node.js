@@ -1,10 +1,98 @@
 const crypto = require('crypto')
 const fetch = require('node-fetch')
 
+// to prevent failures on build for empty fields or non existant data.
+// we explicitly declare the scheme before hand and give it the option of null using the !!
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+
+  const typeDefsGonationData = `
+  type goNationData implements Node @dontInfer{
+
+  gonationID: String
+  businessName: String
+  hasAbout: Boolean
+  hasMenu: Boolean
+  hasShout: Boolean
+  hasEvents: Boolean
+  hasGallery: Boolean
+  hasHours: Boolean
+  hasContact: Boolean
+  }
+
+  `
+
+  const typeDefs = `
+  type goNationBusinessData implements Node @dontInfer{
+    publishableData: publishableData
+    avatar: avatar
+    location: location
+  }
+
+  type location {
+    address: address
+  }
+
+  type address {
+    street: String
+    indicator: String
+    city: String
+    state: String
+    postalCode: String
+    country: String
+  }
+
+  type publishableData {
+    description: String
+    contact: contact
+    hours: hours
+  }
+
+  type hours {
+    monday: [timeBlocks!]!
+    tuesday: [timeBlocks!]!
+    wednesday: [timeBlocks!]!
+    thursday: [timeBlocks!]!
+    friday: [timeBlocks!]!
+    saturday: [timeBlocks!]!
+    sunday: [timeBlocks!]!
+  }
+
+
+  type timeBlocks {
+    close: String
+    isClosed: Boolean
+    isOpen: Boolean
+    label: String
+    open: String
+  }
+
+  type contact {
+    facebook: String
+    instagram: String
+    twitter: String
+    phone: String
+    url: String
+  }
+
+  type avatar {
+    image: image
+  }
+
+  type image {
+    cloudinaryId: String
+  }
+`
+
+  // createTypes(typeDefsGonationData)
+  createTypes(typeDefs)
+}
+
 exports.sourceNodes = async (
   { actions, createNodeId, createContentDigest },
   {
     gonationID,
+    businessName,
     hasAbout,
     hasMenu,
     hasShout,
@@ -24,6 +112,7 @@ exports.sourceNodes = async (
       type: 'goNationData',
     },
     gonationID,
+    businessName,
     hasAbout,
     hasMenu,
     hasShout,
