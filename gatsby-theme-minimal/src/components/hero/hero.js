@@ -1,5 +1,5 @@
 import React from 'react'
-import { jsx, Box, Image, Flex, Heading, Text, Styled } from 'theme-ui'
+import { jsx, Box, Image, Flex, Heading, Text, Styled, Button } from 'theme-ui'
 export default function hero({ businessName, logo }) {
   return (
     <Flex
@@ -19,6 +19,10 @@ export default function hero({ businessName, logo }) {
         }}
       />
       <Styled.h1>{businessName}</Styled.h1>
+
+      {/* <Button variant='secondary' sx={{ marginBottom: '75px', bg: 'red' }}>
+        Order Online
+      </Button> */}
     </Flex>
   )
 }

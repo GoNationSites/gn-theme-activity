@@ -13,7 +13,9 @@ export default function GalleryAlbums({ galleryData, setGalleryData }) {
             sx={{
               width: ['100%', '48%', '24%'],
               textAlign: 'center',
-              margin: '1%',
+
+              margin: [0, '1%'],
+              marginBottom: ['1%'],
               height: '300px',
               display: 'flex',
               cursor: 'pointer',
@@ -32,7 +34,14 @@ export default function GalleryAlbums({ galleryData, setGalleryData }) {
                 width: '100%',
                 justifyContent: 'center',
               }}>
-              <Heading sx={{ color: 'white' }}>{name}</Heading>
+              <Heading
+                sx={{
+                  color: 'white',
+                  textShadow: '2px 2px black',
+                  fontSize: 5,
+                }}>
+                {name}
+              </Heading>
             </div>
           </Box>
         )

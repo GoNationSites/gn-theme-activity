@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Box, Image, Flex, Heading, Text, Styled, Button } from 'theme-ui'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default function Album({ albumOpenID, backToAlbumView }) {
   const [albumData, setAlbumData] = useState({
@@ -41,7 +43,7 @@ export default function Album({ albumOpenID, backToAlbumView }) {
         onClick={() => {
           backToAlbumView()
         }}>
-        Back to Albums
+        <FontAwesomeIcon icon={faLongArrowAltLeft} /> Back to Albums
       </Button>
       <Flex
         sx={{

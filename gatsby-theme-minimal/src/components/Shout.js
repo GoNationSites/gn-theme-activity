@@ -1,7 +1,9 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, Styled } from 'theme-ui'
 import React, { useEffect, useState } from 'react'
 import { Box, Image, Flex, Heading, Text } from 'theme-ui'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faComment } from '@fortawesome/free-solid-svg-icons'
 let axios = require('axios')
 let jsonpAdapter = require('axios-jsonp')
 
@@ -25,11 +27,21 @@ const Shout = ({ gonationID }) => {
       })
   }, [])
   return (
-    <Box>
+    <Box
+      sx={{
+        marginBottom: 4,
+        maxWidth: '600px',
+        margin: '0 auto',
+        transform: 'translateY(-50%)',
+        bg: 'secondary',
+        borderRadius: '10px',
+        padding: 2,
+      }}>
       {!shout.isLoading && shout.shoutData ? (
-        <Flex sx={{ boxShadow: '0 0 12px rgba(0,0,0,.3)', padding: 3 }}>
+        <Flex sx={{ alignItems: 'stretch' }}>
           <Box
             sx={{
+              display: 'flex',
               width: '25%',
             }}>
             <Image
@@ -41,9 +53,20 @@ const Shout = ({ gonationID }) => {
               }}
             />
           </Box>
-          <Box sx={{ flex: 1, paddingX: 2 }}>
-            <Heading as='h2'>Recent Shout</Heading>
-            <Text>{shout.shoutData.shout.text}</Text>
+          <Box
+            sx={{
+              flex: 1,
+              display: 'flex',
+              justifyContent: 'center',
+              flexDirection: 'column',
+              paddingX: 3,
+            }}>
+            <Text variant='headingLight'>
+              <FontAwesomeIcon icon={faComment} /> Recent Shout
+            </Text>
+            <Text variant='headingLight' sx={{ fontSize: 3, margin: 0 }}>
+              {shout.shoutData.shout.text}
+            </Text>
           </Box>
         </Flex>
       ) : (

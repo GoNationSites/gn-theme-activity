@@ -48,10 +48,8 @@ export default function Gallery({ gonationID }) {
   // JSX for Rendering Albums
 
   return (
-    <Box p={3} sx={{ boxShadow: '0 0 12px rgba(0,0,0,.3)' }}>
-      <Styled.h2 style={{ marginLeft: '16px', marginTop: '16px' }}>
-        Our Gallery
-      </Styled.h2>
+    <Box sx={{ marginBottom: 4 }}>
+      <Styled.h2>Our Gallery</Styled.h2>
       {/*  if data has arrived then load else show loading*/}
 
       {!galleryData.isLoading ? (

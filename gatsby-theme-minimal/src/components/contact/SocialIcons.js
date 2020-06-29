@@ -8,7 +8,7 @@ export default function SocialIcons({ instagram, facebook }) {
       <Text>
         <a href={facebook} target='_blank'>
           <Facebook
-            color={'black'}
+            color={'#ff6347'} // these colours are currently hard coded outside of theme ui. will need to bring them in as icons instead of svgs.
             height={'30px'}
             width={'30px'}
             style={{ margin: '10px' }}
@@ -16,7 +16,7 @@ export default function SocialIcons({ instagram, facebook }) {
         </a>
         <a href={instagram} target='_blank'>
           <Instagram
-            color={'black'}
+            color={'#ff6347'} // these colours are currently hard coded outside of theme ui. will need to bring them in as icons instead of svgs.
             height={'30px'}
             width={'30px'}
             style={{ margin: '10px' }}

@@ -7,10 +7,12 @@ export default function Footer({ businessName }) {
       sx={{
         backgroundColor: 'black',
         padding: 4,
-        color: 'white',
+        paddingBottom: 5,
         flexDirection: ['column', 'column', 'row'],
       }}>
-      <Text sx={{ flexGrow: '1', marginTop: 2, marginBottom: 2 }}>
+      <Text
+        variant='default'
+        sx={{ flexGrow: '1', marginTop: 2, marginBottom: 2, color: 'light' }}>
         © Copyright {new Date().getFullYear()}, {businessName}
       </Text>
       <Flex sx={{ alignItems: 'center', marginTop: 2, marginBottom: 2 }}>
@@ -20,7 +22,9 @@ export default function Footer({ businessName }) {
           width={'20px'}
           style={{ marginRight: '10px' }}
         />
-        Local Powered By GoNation
+        <Text sx={{ marginBottom: 0, color: 'light' }} variant='default'>
+          Local Powered By GoNation
+        </Text>
       </Flex>
     </Flex>
   )

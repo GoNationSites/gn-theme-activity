@@ -11,6 +11,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
   gonationID: String
   businessName: String
+  slug: String
   hasAbout: Boolean
   hasMenu: Boolean
   hasShout: Boolean
@@ -93,6 +94,7 @@ exports.sourceNodes = async (
   {
     gonationID,
     businessName,
+    slug,
     hasAbout,
     hasMenu,
     hasShout,
@@ -113,6 +115,7 @@ exports.sourceNodes = async (
     },
     gonationID,
     businessName,
+    slug,
     hasAbout,
     hasMenu,
     hasShout,

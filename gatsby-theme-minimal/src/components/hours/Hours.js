@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Image, Flex, Heading, Text } from 'theme-ui'
+import { Box, Image, Flex, Heading, Text, Styled } from 'theme-ui'
 import moment from 'moment'
 
 export default function hours({ hours }) {
@@ -13,7 +13,19 @@ export default function hours({ hours }) {
     sunday,
   } = hours
 
-  const dayOfTheWeek = [
+  // put all variables into an array for looping through
+  const daysOfWeek = [
+    monday,
+    tuesday,
+    wednesday,
+    thursday,
+    friday,
+    saturday,
+    sunday,
+  ]
+
+  // no day name in the object that coems through. needed to renfder text of the day.
+  const dayOfTheWeekText = [
     'monday',
     'tuesday',
     'wednesday',
@@ -33,11 +45,22 @@ export default function hours({ hours }) {
             <Flex
               sx={{
                 width: '100%',
-                flexDirection: ['row', 'row', 'row', 'column'],
-                marginBottom: 2,
+                flexDirection: ['row', 'row', 'row'],
+                marginBottom: 0,
               }}>
-              <Text sx={{ flexGrow: '1' }}>{timeBlock.label}</Text>
-              <Text sx={{ textAlign: 'right', width: '100%' }}>
+              <Text
+                variant='light'
+                sx={{ flexGrow: '1', marginBottom: 0, fontSize: 1 }}>
+                {timeBlock.label}
+              </Text>
+              <Text
+                variant='light'
+                sx={{
+                  textAlign: 'right',
+                  width: '100%',
+                  marginBottom: 0,
+                  fontSize: 1,
+                }}>
                 {moment(timeBlock.open, 'h:mm a').format('h:mm a')}-
                 {moment(timeBlock.close, 'h:mm a').format('h:mm a')}
               </Text>
@@ -50,114 +73,44 @@ export default function hours({ hours }) {
     })
 
   return (
-    <Box sx={{ boxShadow: '0 0 12px rgba(0,0,0,.3)', padding: 4 }}>
-      <Box sx={{ maxWidth: '1024px', margin: '0 auto' }}>
-        <Heading
-          as='h2'
-          sx={{
-            textAlign: ['left', 'left', 'left', 'center'],
-            marginBottom: 4,
-          }}>
-          Our Hours
-        </Heading>
-        <Flex
-          sx={{
-            flexDirection: ['column', 'column', 'column', 'row'],
-            justifyContent: 'space-between',
-          }}>
-          <Box
-            sx={{
-              paddingRight: 1,
-              textAlign: ['left', 'left', 'left', 'center'],
-              marginBottom: 3,
-            }}>
-            <Heading
-              as='h4'
-              sx={{ marginBottom: 2, textTransform: 'uppercase' }}>
-              Monday
-            </Heading>
-            {renderHours(monday)}
-          </Box>
-          <Box
-            sx={{
-              paddingRight: 1,
-              textAlign: ['left', 'left', 'left', 'center'],
-              marginBottom: 3,
-            }}>
-            <Heading
-              as='h4'
-              sx={{ marginBottom: 2, textTransform: 'uppercase' }}>
-              Tuesday
-            </Heading>
-            {renderHours(tuesday)}
-          </Box>
-          <Box
-            sx={{
-              paddingRight: 1,
-              textAlign: ['left', 'left', 'left', 'center'],
-              marginBottom: 3,
-            }}>
-            <Heading
-              as='h4'
-              sx={{ marginBottom: 2, textTransform: 'uppercase' }}>
-              Wednesday
-            </Heading>
-            {renderHours(wednesday)}
-          </Box>
-          <Box
-            sx={{
-              paddingRight: 1,
-              textAlign: ['left', 'left', 'left', 'center'],
-              marginBottom: 3,
-            }}>
-            <Heading
-              as='h4'
-              sx={{ marginBottom: 2, textTransform: 'uppercase' }}>
-              Thursday
-            </Heading>
-            {renderHours(thursday)}
-          </Box>
-          <Box
-            sx={{
-              paddingRight: 1,
-              textAlign: ['left', 'left', 'left', 'center'],
-              marginBottom: 3,
-            }}>
-            <Heading
-              as='h4'
-              sx={{ marginBottom: 2, textTransform: 'uppercase' }}>
-              Friday
-            </Heading>
-            {renderHours(friday)}
-          </Box>
-          <Box
-            sx={{
-              paddingRight: 1,
-              textAlign: ['left', 'left', 'left', 'center'],
-              marginBottom: 3,
-            }}>
-            <Heading
-              as='h4'
-              sx={{ marginBottom: 2, textTransform: 'uppercase' }}>
-              Saturday
-            </Heading>
-            {renderHours(saturday)}
-          </Box>
-          <Box
-            sx={{
-              paddingRight: 1,
-              textAlign: ['left', 'left', 'left', 'center'],
-              marginBottom: 3,
-            }}>
-            <Heading
-              as='h4'
-              sx={{ marginBottom: 2, textTransform: 'uppercase' }}>
-              Sunday
-            </Heading>
-            {renderHours(sunday)}
-          </Box>
-        </Flex>
-      </Box>
+    <Box sx={{ maxWidth: '300px', width: '100%' }}>
+      <Text
+        variant='h2'
+        sx={{
+          textAlign: ['center', 'center', 'left'],
+          marginBottom: 2,
+          color: 'light',
+        }}>
+        {' '}
+        Our Hours
+      </Text>
+      <Flex
+        sx={{
+          flexDirection: ['column'],
+          justifyContent: 'space-between',
+        }}>
+        {daysOfWeek.map((day, index) => {
+          return (
+            <Box
+              sx={{
+                padding: 1,
+                textAlign: ['left', 'left', 'left'],
+                marginBottom: 2,
+              }}>
+              <Text
+                variant='headingLight'
+                sx={{
+                  marginBottom: 1,
+                  textTransform: 'uppercase',
+                  fontSize: 2,
+                }}>
+                {dayOfTheWeekText[index]}
+              </Text>
+              {renderHours(day)}
+            </Box>
+          )
+        })}
+      </Flex>
     </Box>
   )
 }

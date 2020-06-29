@@ -21,7 +21,11 @@ export default function ContactForm() {
       <Input type='email' name='email' id='email' mb={3} />
       <Label htmlFor='message'>Message</Label>
       <Textarea name='message' id='message' rows='6' mb={3} />
-      <Button>Submit</Button>
+      <Button
+        sx={{ width: '100%', fontWeight: 'bolder', textTransform: 'uppercase' }}
+        variant='secondary'>
+        Submit
+      </Button>
     </form>
   )
 }
