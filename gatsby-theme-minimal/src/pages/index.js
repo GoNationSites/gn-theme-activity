@@ -16,10 +16,15 @@ import Menus from '../components/menu/Menus'
 
 export default function Home({ data }) {
   // desctructing all variables for use.
+  console.log(data)
+
+  const {
+    name: businessName,
+    slug,
+  } = data.allGoNationBusinessData.edges[0].node
+
   const {
     gonationID,
-    businessName,
-    slug,
     hasAbout,
     hasMenu,
     hasShout,
@@ -111,8 +116,6 @@ export const query = graphql`
       edges {
         node {
           gonationID
-          businessName
-          slug
           hasAbout
           hasMenu
           hasShout
@@ -126,6 +129,8 @@ export const query = graphql`
     allGoNationBusinessData {
       edges {
         node {
+          name
+          slug
           location {
             address {
               street

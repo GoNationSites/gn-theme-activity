@@ -10,8 +10,6 @@ exports.createSchemaCustomization = ({ actions }) => {
   type goNationData implements Node @dontInfer{
 
   gonationID: String
-  businessName: String
-  slug: String
   hasAbout: Boolean
   hasMenu: Boolean
   hasShout: Boolean
@@ -25,11 +23,17 @@ exports.createSchemaCustomization = ({ actions }) => {
 
   const typeDefs = `
   type goNationBusinessData implements Node @dontInfer{
+    name: String
+    slug: String
     publishableData: publishableData
     avatar: avatar
     location: location
   }
 
+  type business {
+    name: String
+    slug: String
+  }
   type location {
     address: address
   }
@@ -93,8 +97,6 @@ exports.sourceNodes = async (
   { actions, createNodeId, createContentDigest },
   {
     gonationID,
-    businessName,
-    slug,
     hasAbout,
     hasMenu,
     hasShout,
@@ -114,8 +116,6 @@ exports.sourceNodes = async (
       type: 'goNationData',
     },
     gonationID,
-    businessName,
-    slug,
     hasAbout,
     hasMenu,
     hasShout,
@@ -147,7 +147,7 @@ exports.sourceNodes = async (
     .then(res => res.json())
     .then(data => {
       const { business: businessData } = data
-
+      console.log(businessData)
       // creates the graphql schema
       const goNationBusinessDataNode = {
         id: createNodeId(`goNationBusinessData`),
