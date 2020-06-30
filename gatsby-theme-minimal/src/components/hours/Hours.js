@@ -39,8 +39,35 @@ export default function hours({ hours }) {
     day.map(timeBlock => {
       return (
         <Flex key={'id' + Math.random().toString(16).slice(2)}>
-          {timeBlock.isClosed ? <div>Closed</div> : null}
-          {timeBlock.isOpen ? <div>Open 24 Hours</div> : null}
+          {/* if the business is closed render this */}
+          {timeBlock.isClosed ? (
+            <Text
+              variant='light'
+              sx={{
+                flexGrow: '1',
+                marginBottom: 0,
+                fontSize: 1,
+                textAlign: 'right',
+              }}>
+              Closed
+            </Text>
+          ) : null}
+
+          {/* if open is true. render open 24 hours */}
+          {timeBlock.isOpen ? (
+            <Text
+              variant='light'
+              sx={{
+                flexGrow: '1',
+                marginBottom: 0,
+                fontSize: 1,
+                textAlign: 'right',
+              }}>
+              Open 24 Hours
+            </Text>
+          ) : null}
+
+          {/* anything else render all hours and labels */}
           {!timeBlock.isOpen && !timeBlock.isClosed ? (
             <Flex
               sx={{
@@ -57,7 +84,6 @@ export default function hours({ hours }) {
                 variant='light'
                 sx={{
                   textAlign: 'right',
-                  width: '100%',
                   marginBottom: 0,
                   fontSize: 1,
                 }}>
@@ -66,7 +92,7 @@ export default function hours({ hours }) {
               </Text>
             </Flex>
           ) : (
-            'Unknown'
+            ''
           )}
         </Flex>
       )

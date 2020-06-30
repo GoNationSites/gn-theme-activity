@@ -12,6 +12,7 @@ import Hours from '../components/hours/Hours'
 import Contact from '../components/contact/Contact'
 import Footer from '../components/Footer/Footer'
 import CtaWidget from '../components/ui/CtaWidget'
+import Menus from '../components/menu/Menus'
 
 export default function Home({ data }) {
   // desctructing all variables for use.
@@ -65,6 +66,8 @@ export default function Home({ data }) {
           {hasGallery ? <Gallery gonationID={gonationID} /> : null}
 
           {hasEvents ? <Events gonationID={gonationID} slug={slug} /> : null}
+
+          {hasMenu ? <Menus gonationID={gonationID} /> : ''}
 
           {/* {hasHours ? <Hours hours={hours} /> : null} */}
         </Box>

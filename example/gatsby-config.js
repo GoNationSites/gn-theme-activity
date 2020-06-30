@@ -4,7 +4,8 @@ module.exports = {
       resolve: `gatsby-theme-minimal`,
       options: {
         gonationID: 'bzn-hqT-TAMZS62dB0DaCdx6Tw',
-        businessName: 'Example',
+        businessName: 'Geronimo Tequila Bar & Southwest Grill',
+        slug: 'geronimo-tequila-bar-southwest-grill',
         hasAbout: true,
         hasMenu: true,
         hasShout: true,

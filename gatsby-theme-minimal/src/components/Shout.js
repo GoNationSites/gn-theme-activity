@@ -31,10 +31,9 @@ const Shout = ({ gonationID }) => {
       sx={{
         marginBottom: 4,
         maxWidth: '600px',
-        margin: '0 auto',
-        transform: 'translateY(-50%)',
+        margin: '-50px auto 20px',
         bg: 'secondary',
-        borderRadius: '10px',
+        borderRadius: ['0px', '0px', '10px'],
         padding: 2,
       }}>
       {!shout.isLoading && shout.shoutData ? (
@@ -64,7 +63,7 @@ const Shout = ({ gonationID }) => {
             <Text variant='headingLight'>
               <FontAwesomeIcon icon={faComment} /> Recent Shout
             </Text>
-            <Text variant='headingLight' sx={{ fontSize: 3, margin: 0 }}>
+            <Text variant='headingLight' sx={{ fontSize: 2, margin: 0 }}>
               {shout.shoutData.shout.text}
             </Text>
           </Box>

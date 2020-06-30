@@ -18,11 +18,7 @@ export default function hero({ businessName, logo }) {
           margin: '0 auto',
         }}
       />
-      <Styled.h1>{businessName}</Styled.h1>
-
-      {/* <Button variant='secondary' sx={{ marginBottom: '75px', bg: 'red' }}>
-        Order Online
-      </Button> */}
+      <Styled.h1 style={{ textAlign: 'center' }}>{businessName}</Styled.h1>
     </Flex>
   )
 }

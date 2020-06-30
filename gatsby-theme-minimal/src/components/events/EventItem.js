@@ -21,7 +21,7 @@ export default function EventItem({
       key={_id}
       sx={{
         margin: ['1%'],
-        width: ['48%', '32%', '23%', '20%'],
+        width: ['48%', '31%', '23%', '18%'],
         display: 'flex',
         flexDirection: 'column',
       }}>

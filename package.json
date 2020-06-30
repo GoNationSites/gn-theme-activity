@@ -10,6 +10,12 @@
   "workspaces": [
     "gatsby-theme-minimal",
     "example",
-    "del-italia"
+    "del-italia",
+    "elcafecito",
+    "prime1024",
+    "tacoco",
+    "milfordsportsbar",
+    "elistaverns",
+    "flipsideburger"
   ]
 }
