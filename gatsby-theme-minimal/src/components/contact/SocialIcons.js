@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Image, Flex, Heading, Text } from 'theme-ui'
+import { Text } from 'theme-ui'
 import Facebook from '../icons/Facebook'
 import Instagram from '../icons/Instagram'
 export default function SocialIcons({ instagram, facebook }) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { jsx, Box, Image, Flex, Heading, Text, Styled } from 'theme-ui'
+import { Flex, Text } from 'theme-ui'
 import GoNationMan from '../icons/GoNationMan'
 export default function Footer({ businessName }) {
   return (

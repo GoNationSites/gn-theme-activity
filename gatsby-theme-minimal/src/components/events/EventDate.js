@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Image, Flex, Heading, Text, Button } from 'theme-ui'
+import { Box, Text } from 'theme-ui'
 import moment from 'moment'
 export default function EventDate({ date, dateColor, monthColor, style }) {
   return (

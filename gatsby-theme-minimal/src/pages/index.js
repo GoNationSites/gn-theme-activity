@@ -16,8 +16,6 @@ import Menus from '../components/menu/Menus'
 
 export default function Home({ data }) {
   // desctructing all variables for use.
-  console.log(data)
-
   const {
     name: businessName,
     slug,
@@ -30,7 +28,6 @@ export default function Home({ data }) {
     hasShout,
     hasEvents,
     hasGallery,
-    hasHours,
     hasContact,
   } = data.allGoNationData.edges[0].node
   const {
@@ -121,7 +118,6 @@ export const query = graphql`
           hasShout
           hasEvents
           hasGallery
-          hasHours
           hasContact
         }
       }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Box, Image, Flex, Heading, Text, Styled, Button } from 'theme-ui'
+import { Box, Image, Flex, Button } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons'
 

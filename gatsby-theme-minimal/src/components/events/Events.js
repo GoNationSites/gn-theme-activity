@@ -1,10 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import React, { useEffect, useState } from 'react'
-import { Box, Image, Flex, Heading, Text, Button, Styled } from 'theme-ui'
-import moment from 'moment'
-import { faAlignCenter } from '@fortawesome/free-solid-svg-icons'
-import EventsModal from './EventsModal'
+import { Box, Flex, Styled } from 'theme-ui'
 import EventItem from './EventItem'
 
 let axios = require('axios')

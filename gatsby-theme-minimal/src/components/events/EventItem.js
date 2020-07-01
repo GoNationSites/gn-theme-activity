@@ -1,9 +1,6 @@
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
-import React, { useEffect, useState } from 'react'
-import { Box, Image, Flex, Heading, Text, Button } from 'theme-ui'
-import moment from 'moment'
-import { faAlignCenter } from '@fortawesome/free-solid-svg-icons'
+import React from 'react'
+import { jsx, Box, Image, Flex, Text, Button } from 'theme-ui'
 import EventsModal from './EventsModal'
 import EventDate from './EventDate'
 

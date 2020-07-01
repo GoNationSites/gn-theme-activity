@@ -1,16 +1,5 @@
 import React from 'react'
-import {
-  Label,
-  Input,
-  Select,
-  Textarea,
-  Radio,
-  Checkbox,
-  Slider,
-  Box,
-  Flex,
-  Button,
-} from 'theme-ui'
+import { Label, Input, Textarea, Button } from 'theme-ui'
 
 export default function ContactForm() {
   return (

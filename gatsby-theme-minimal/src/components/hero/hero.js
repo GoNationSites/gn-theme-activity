@@ -1,5 +1,5 @@
 import React from 'react'
-import { jsx, Box, Image, Flex, Heading, Text, Styled, Button } from 'theme-ui'
+import { Image, Flex, Styled } from 'theme-ui'
 export default function hero({ businessName, logo }) {
   return (
     <Flex

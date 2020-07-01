@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import { jsx, Styled } from 'theme-ui'
 import React, { useEffect, useState } from 'react'
-import { Box, Image, Flex, Heading, Text } from 'theme-ui'
+import { jsx, Box, Image, Flex, Text } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment } from '@fortawesome/free-solid-svg-icons'
 let axios = require('axios')

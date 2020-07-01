@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
-import React, { useEffect, useState } from 'react'
-import { Box, Image, Flex, Heading, Text, Styled } from 'theme-ui'
+import React from 'react'
+import { Box, Flex, Text, Styled } from 'theme-ui'
 
 const About = ({ gonationID, description, logo }) => {
   return (

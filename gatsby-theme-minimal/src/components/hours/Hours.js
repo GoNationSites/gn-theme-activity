@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Image, Flex, Heading, Text, Styled } from 'theme-ui'
+import { Box, Flex, Text } from 'theme-ui'
 import moment from 'moment'
 
 export default function hours({ hours }) {
@@ -118,6 +118,7 @@ export default function hours({ hours }) {
         {daysOfWeek.map((day, index) => {
           return (
             <Box
+              key={index}
               sx={{
                 padding: 1,
                 textAlign: ['left', 'left', 'left'],

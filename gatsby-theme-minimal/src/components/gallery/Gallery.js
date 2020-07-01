@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Box, Image, Flex, Heading, Text, Styled } from 'theme-ui'
+import { Box, Flex, Styled } from 'theme-ui'
 import GalleryAlbums from './GalleryAlbums'
 import Album from './Album'
 
@@ -23,10 +23,9 @@ export default function Gallery({ gonationID }) {
       }
     )
       .then(res => res.json())
-      .then(data => {
-        console.log(data)
+      .then(data =>
         setGalleryData({ ...galleryData, albums: data, isLoading: false })
-      })
+      )
       .catch(e => {
         console.log('error : ', console.e)
         setGalleryData({ ...galleryData, isLoading: false })
@@ -34,18 +33,13 @@ export default function Gallery({ gonationID }) {
   }
 
   // back button to return to album view
-  const backToAlbumView = () => {
-    console.log(galleryData)
+  const backToAlbumView = () =>
     setGalleryData({ ...galleryData, albumOpenID: '' })
-    console.log(galleryData)
-  }
 
   useEffect(() => {
     fetchData()
     return () => {}
   }, [])
-
-  // JSX for Rendering Albums
 
   return (
     <Box sx={{ marginBottom: 4 }}>

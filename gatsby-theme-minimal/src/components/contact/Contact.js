@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Image, Flex, Heading, Text, Styled, ColorMode } from 'theme-ui'
+import { Box, Flex, Text, Styled } from 'theme-ui'
 import SocialIcons from './SocialIcons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'

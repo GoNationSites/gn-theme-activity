@@ -104,8 +104,7 @@ export default {
       borderWidth: '1px',
       borderStyle: 'solid',
       '&:hover': {
-        bg: 'light',
-        color: 'text',
+        filter: 'brightness(75%)',
         borderColor: 'text',
       },
     },
@@ -117,8 +116,7 @@ export default {
       borderWidth: '1px',
       borderStyle: 'solid',
       '&:hover': {
-        bg: 'light',
-        color: 'text',
+        filter: 'brightness(75%)',
         borderColor: 'secondary',
       },
     },

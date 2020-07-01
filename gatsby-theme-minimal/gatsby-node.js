@@ -6,21 +6,6 @@ const fetch = require('node-fetch')
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
 
-  const typeDefsGonationData = `
-  type goNationData implements Node @dontInfer{
-
-  gonationID: String
-  hasAbout: Boolean
-  hasMenu: Boolean
-  hasShout: Boolean
-  hasEvents: Boolean
-  hasGallery: Boolean
-  hasHours: Boolean
-  hasContact: Boolean
-  }
-
-  `
-
   const typeDefs = `
   type goNationBusinessData implements Node @dontInfer{
     name: String
@@ -89,22 +74,12 @@ exports.createSchemaCustomization = ({ actions }) => {
   }
 `
 
-  // createTypes(typeDefsGonationData)
   createTypes(typeDefs)
 }
 
 exports.sourceNodes = async (
   { actions, createNodeId, createContentDigest },
-  {
-    gonationID,
-    hasAbout,
-    hasMenu,
-    hasShout,
-    hasEvents,
-    hasGallery,
-    hasHours,
-    hasContact,
-  }
+  { gonationID, hasAbout, hasMenu, hasShout, hasEvents, hasGallery, hasContact }
 ) => {
   const { createNode } = actions
 
@@ -121,7 +96,6 @@ exports.sourceNodes = async (
     hasShout,
     hasEvents,
     hasGallery,
-    hasHours,
     hasContact,
   }
   const contentDigest = crypto
@@ -147,7 +121,6 @@ exports.sourceNodes = async (
     .then(res => res.json())
     .then(data => {
       const { business: businessData } = data
-      console.log(businessData)
       // creates the graphql schema
       const goNationBusinessDataNode = {
         id: createNodeId(`goNationBusinessData`),
