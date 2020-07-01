@@ -70,6 +70,42 @@ export default {
       marginBottom: 3,
       fontSize: 5,
     },
+    headingMenuSection: {
+      textAlign: 'center',
+      fontSize: 5,
+      fontFamily: 'heading',
+      fontWeight: 'bolder',
+      marginBottom: 4,
+    },
+    menuItemName: {
+      fontSize: 3,
+      fontFamily: 'heading',
+      fontWeight: 'bolder',
+      marginBottom: 2,
+    },
+    menuItemDescription: {
+      fontSize: 2,
+      fontFamily: 'heading',
+    },
+
+    menuItemPriceLabel: {
+      fontSize: 2,
+      fontFamily: 'heading',
+    },
+    menuItemPrice: {
+      fontSize: 3,
+      fontFamily: 'heading',
+      fontWeight: 'bolder',
+      color: 'primary',
+      flexGrow: '1',
+      textAlign: 'right',
+    },
+    menuItemPriceVariants: {
+      fontSize: 2,
+      fontFamily: 'heading',
+      fontWeight: 'bolder',
+      color: 'primary',
+    },
   },
   styles: {
     h1: {

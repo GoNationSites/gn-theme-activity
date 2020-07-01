@@ -79,7 +79,16 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 exports.sourceNodes = async (
   { actions, createNodeId, createContentDigest },
-  { gonationID, hasAbout, hasMenu, hasShout, hasEvents, hasGallery, hasContact }
+  {
+    gonationID,
+    hasAbout,
+    hasMenu,
+    hasMenuImages,
+    hasShout,
+    hasEvents,
+    hasGallery,
+    hasContact,
+  }
 ) => {
   const { createNode } = actions
 
@@ -93,6 +102,7 @@ exports.sourceNodes = async (
     gonationID,
     hasAbout,
     hasMenu,
+    hasMenuImages,
     hasShout,
     hasEvents,
     hasGallery,

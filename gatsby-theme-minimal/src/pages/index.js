@@ -25,6 +25,7 @@ export default function Home({ data }) {
     gonationID,
     hasAbout,
     hasMenu,
+    hasMenuImages,
     hasShout,
     hasEvents,
     hasGallery,
@@ -69,7 +70,11 @@ export default function Home({ data }) {
 
           {hasEvents ? <Events gonationID={gonationID} slug={slug} /> : null}
 
-          {hasMenu ? <Menus gonationID={gonationID} /> : ''}
+          {hasMenu ? (
+            <Menus gonationID={gonationID} hasMenuImages={hasMenuImages} />
+          ) : (
+            ''
+          )}
 
           {/* {hasHours ? <Hours hours={hours} /> : null} */}
         </Box>
@@ -115,6 +120,7 @@ export const query = graphql`
           gonationID
           hasAbout
           hasMenu
+          hasMenuImages
           hasShout
           hasEvents
           hasGallery

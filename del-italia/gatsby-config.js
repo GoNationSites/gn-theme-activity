@@ -6,6 +6,7 @@ module.exports = {
         gonationID: 'bzn-FiHYl5AySdif83PtaotvGA',
         hasAbout: true,
         hasMenu: true,
+        hasMenuImages: true,
         hasShout: true,
         hasEvents: true,
         hasGallery: true,
