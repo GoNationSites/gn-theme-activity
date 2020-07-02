@@ -11,6 +11,7 @@ export default function CtaWidget({
   state,
   postalCode,
   country,
+  orderOnlineLink,
 }) {
   return (
     <Flex
@@ -44,11 +45,17 @@ export default function CtaWidget({
         </Box>
       </a>
 
-      <Box sx={{ flexGrow: '1' }}>
-        <Button variant='secondary' sx={{ width: '100%' }}>
-          Order Online
-        </Button>
-      </Box>
+      {orderOnlineLink ? (
+        <Box sx={{ flexGrow: '1' }}>
+          <a href={`${orderOnlineLink}`} target='_blank'>
+            <Button variant='secondary' sx={{ width: '100%' }}>
+              Order Online
+            </Button>
+          </a>
+        </Box>
+      ) : (
+        ''
+      )}
     </Flex>
   )
 }

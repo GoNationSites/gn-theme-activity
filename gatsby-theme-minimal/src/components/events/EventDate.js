@@ -3,31 +3,18 @@ import { Box, Text } from 'theme-ui'
 import moment from 'moment'
 export default function EventDate({ date, dateColor, monthColor, style }) {
   return (
-    <Box
-      style={style ? style : { margin: '0' }}
-      sx={{
-        textAlign: ['left', 'center'],
-        maxWidth: '50px',
-        maxHeight: '50px',
-        minWidth: 'unset',
-      }}>
+    <Box variant='event.eventItemDateContainer'>
       <Text
-        variant='default'
+        variant='event.eventDate'
         sx={{
-          fontSize: 3,
           color: dateColor ? dateColor : 'primary',
-          fontWeight: 'bolder',
-          width: '100%',
-          marginBottom: 0,
         }}>
         {`${moment(date).format('DD')}`}
       </Text>
       <Text
-        variant='default'
+        variant='event.eventMonth'
         sx={{
-          textTransform: 'uppercase',
           color: monthColor ? monthColor : '',
-          marginBottom: 0,
         }}>
         {`${moment(date).format('MMM')}`}
       </Text>

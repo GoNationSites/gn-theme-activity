@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { useEffect, useState } from 'react'
-import { jsx, Box, Image, Flex, Text } from 'theme-ui'
+import { jsx, Box, Image, Flex, Text, Spinner } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment } from '@fortawesome/free-solid-svg-icons'
 let axios = require('axios')
@@ -25,40 +25,19 @@ const Shout = ({ gonationID }) => {
         setShout({ ...shout, isLoading: false })
       })
   }, [])
+
   return (
-    <Box
-      sx={{
-        marginBottom: 4,
-        maxWidth: '600px',
-        margin: '-50px auto 20px',
-        bg: 'secondary',
-        borderRadius: ['0px', '0px', '10px'],
-        padding: 2,
-      }}>
+    <Box variant='shout.container'>
       {!shout.isLoading && shout.shoutData ? (
-        <Flex sx={{ alignItems: 'stretch' }}>
-          <Box
-            sx={{
-              display: 'flex',
-              width: '25%',
-            }}>
+        <Flex variant='shout.innerContainer'>
+          <Box variant='shout.imageContainer'>
             <Image
               src={`${shout.shoutData.imageBaseUrl}/${shout.shoutData.shout.image.image.cloudinaryId}`}
-              sx={{
-                objectFit: 'cover',
-                width: '100%',
-                height: '100%',
-              }}
+              variant='shout.shoutImage'
             />
           </Box>
-          <Box
-            sx={{
-              flex: 1,
-              display: 'flex',
-              justifyContent: 'center',
-              flexDirection: 'column',
-              paddingX: 3,
-            }}>
+
+          <Box variant='shout.content'>
             <Text variant='headingLight'>
               <FontAwesomeIcon icon={faComment} /> Recent Shout
             </Text>
@@ -68,7 +47,7 @@ const Shout = ({ gonationID }) => {
           </Box>
         </Flex>
       ) : (
-        ''
+        <Spinner />
       )}
     </Box>
   )

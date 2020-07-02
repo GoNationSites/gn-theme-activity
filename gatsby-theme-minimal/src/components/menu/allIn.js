@@ -27,19 +27,15 @@ const AllIn = ({ menuData, setModalActive, onBackClick, hasMenuImages }) => {
   const renderMenu = (menu, nested, idx) => {
     const { section } = menu
     const parsedSection = splitSectionChildren(menu)
-    console.log(parsedSection)
     return (
       <Box>
         {/* header with section name and description */}
-
         <Box sx={{ marginBottom: '5' }}>
-          <Text variant='headingMenuSection' sx={{ textAlign: 'center' }}>
+          <Text variant='menu.sectionTitle' sx={{ textAlign: 'center' }}>
             {section.name}
           </Text>
 
-          <Flex
-            sx={{ flexWrap: 'wrap' }}
-            className='columns is-multiline columns__menu-item is-marginless'>
+          <Flex variant='menu.sectionContainer'>
             {parsedSection.childItems.map(({ item }) => {
               return (
                 <MenuItem
@@ -60,17 +56,7 @@ const AllIn = ({ menuData, setModalActive, onBackClick, hasMenuImages }) => {
     )
   }
   return (
-    <Box sx={{ border: '2px solid black', padding: [2, 3] }}>
-      {onBackClick ? (
-        <a
-          className='back-to-menu-btn button is-dark'
-          onClick={() => onBackClick()}>
-          Back To Menu
-        </a>
-      ) : (
-        ''
-      )}
-
+    <Box variant='menu.container'>
       {menuData.map(item => {
         return renderMenu(item)
       })}

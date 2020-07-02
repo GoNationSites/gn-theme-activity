@@ -1,19 +1,17 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import React from 'react'
-import { Box, Flex, Text, Styled } from 'theme-ui'
+import { Box, Text, Styled } from 'theme-ui'
 
-const About = ({ gonationID, description, logo }) => {
-  return (
-    <Box sx={{ marginBottom: 4 }}>
-      <Flex>
-        <Box sx={{ flex: 1 }}>
-          <Styled.h2>About us</Styled.h2>
-          <Text variant='default'>{description}</Text>
-        </Box>
-      </Flex>
-    </Box>
-  )
-}
+const About = ({ description }) => (
+  <Box sx={{ marginBottom: 4 }}>
+    <Text variant='sectionHeading'>About us</Text>
+    <Text
+      variant='default'
+      sx={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+      {description}
+    </Text>
+  </Box>
+)
 
 export default About

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Box, Image, Flex, Button } from 'theme-ui'
+import { Box, Image, Flex, Button, Spinner } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons'
 
@@ -45,26 +45,18 @@ export default function Album({ albumOpenID, backToAlbumView }) {
         }}>
         <FontAwesomeIcon icon={faLongArrowAltLeft} /> Back to Albums
       </Button>
-      <Flex
-        sx={{
-          flexWrap: 'wrap',
-          alignItems: 'stretch',
-          margin: '1rem auto',
-        }}>
-        {console.log(albumData)}
-        {!albumData.isLoading
-          ? albumData.albums.items.map(image => (
-              <Image
-                sx={{
-                  width: ['50%', '33%', '25%', '20%', '12.5%'],
-                  objectFit: 'cover',
-                  height: '200px',
-                }}
-                key={image.cloudinaryId}
-                src={`https://res.cloudinary.com/gonation/w_1000,c_fit,fl_lossy,f_auto,q_auto/${image.cloudinaryId}`}
-              />
-            ))
-          : 'Loading...'}
+      <Flex variant='gallery.albumContainer'>
+        {!albumData.isLoading ? (
+          albumData.albums.items.map(({ cloudinaryId }) => (
+            <Image
+              variant='gallery.albumImage'
+              key={cloudinaryId}
+              src={`https://res.cloudinary.com/gonation/w_1000,c_fit,fl_lossy,f_auto,q_auto/${cloudinaryId}`}
+            />
+          ))
+        ) : (
+          <Spinner />
+        )}
       </Flex>
     </Box>
   )

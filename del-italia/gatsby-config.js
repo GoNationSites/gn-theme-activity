@@ -12,6 +12,7 @@ module.exports = {
         hasGallery: true,
         hasHours: true,
         hasContact: true,
+        orderOnlineLink: 'https://www.google.com',
       },
     },
   ],

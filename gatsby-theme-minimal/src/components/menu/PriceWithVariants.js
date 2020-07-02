@@ -10,20 +10,14 @@ const Price = ({ variants, withDollar, toSide }) => {
       .map(variant => (
         <Box
           key={(((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)}>
-          {variant.labelTitle ? (
-            <Flex className='menu-price__label-title'>
-              {variant.labelTitle}
-            </Flex>
-          ) : (
-            ''
-          )}
+          {variant.labelTitle ? <Flex>{variant.labelTitle}</Flex> : ''}
           <Flex sx={{ marginBottom: 2 }}>
             <Text
               sx={{ marginLeft: 3, marginRight: 3 }}
-              variant='menuItemPriceLabel'>
+              variant='menu.menuItemPriceLabel'>
               {'  '} <ListBullet /> {variant.label}
             </Text>{' '}
-            <Text variant='menuItemPriceVariants'>
+            <Text variant='menu.menuItemPriceVariants'>
               {withDollar ? '$' : ''}
               {variant.price}
             </Text>

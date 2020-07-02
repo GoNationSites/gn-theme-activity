@@ -15,37 +15,33 @@ const MenuItem = ({ item, type, withDollar, hasMenuImages }) => {
   }
 
   const defaultType = () => (
-    <Flex sx={{ marginBottom: 3 }}>
+    <Flex variant='menu.menuItemInnerContainer'>
       {hasMenuImages ? (
         item.photo_id ? (
           <Image
-            sx={{ maxWidth: '30%', objectFit: 'cover' }}
+            variant='menu.menuItemImage'
             src={item.imageUrl}
-            alt='Camera Icon'
+            alt='menu item'
           />
         ) : (
           <Image
-            sx={{
-              maxWidth: '30%',
-              objectFit: 'contain',
-              objectPosition: 'top',
-            }}
+            variant='menu.menuItemDefaultImage'
             src={camera}
-            alt='Camera Icon'
+            alt='default menu item'
           />
         )
       ) : (
         ''
       )}
-      <Box sx={{ padding: 2, flexGrow: '1' }}>
+      <Box variant='menu.menuItemContentContainer'>
         {item.variants.length && item.variants[0].label === '' ? (
           <Flex>
-            <Text variant='menuItemName'>{item.name}</Text>
+            <Text variant='menu.menuItemName'>{item.name}</Text>
             <Price withDollar={withDollar} variants={item.variants} toSide />
           </Flex>
         ) : (
           <Box>
-            <Text variant='menuItemName'>{item.name}</Text>
+            <Text variant='menu.menuItemName'>{item.name}</Text>
             <PriceWithVariants
               withDollar={withDollar}
               variants={item.variants}
@@ -53,14 +49,14 @@ const MenuItem = ({ item, type, withDollar, hasMenuImages }) => {
             />
           </Box>
         )}
-        <Text variant='menuItemDescription'>{item.desc}</Text>
+        <Text variant='menu.menuItemDescription'>{item.desc}</Text>
       </Box>
     </Flex>
   )
 
   return (
     <Box
-      sx={{ width: ['100%', '100%', '50%'] }}
+      variant='menu.menuItemContainer'
       className={`menu-item ${item.photo_id ? 'item-has-img' : ''}`}>
       {getMenuItemType()}
     </Box>

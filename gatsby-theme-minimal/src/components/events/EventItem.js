@@ -14,38 +14,16 @@ export default function EventItem({
   const { _id, name, starts, ends, description, imageurl } = event
 
   return (
-    <Box
-      key={_id}
-      sx={{
-        margin: ['1%'],
-        width: ['48%', '31%', '23%', '18%'],
-        display: 'flex',
-        flexDirection: 'column',
-      }}>
-      <Image
-        sx={{ minHeight: '250px', maxHeight: '300px', objectFit: 'cover' }}
-        src={imageurl}
-      />
-      <Flex
-        sx={{
-          flexGrow: '1',
-          paddingTop: 2,
-          paddingBottom: 2,
-          flexDirection: ['column', 'row'],
-        }}>
-        <EventDate date={starts} style={{ marginRight: '5px' }} />
+    <Flex key={_id} variant='event.eventItemContainer'>
+      <Image variant='event.eventItemImage' src={imageurl} />
+      <Flex variant='event.eventItemContent'>
+        <EventDate date={starts} />
         <Box>
-          <Text
-            variant='heading'
-            sx={{
-              fontSize: 3,
-              textTransform: 'capitalize',
-            }}>
-            {name}
-          </Text>
+          <Text variant='event.eventItemTitle'>{name}</Text>
         </Box>
       </Flex>
       <Button
+        variant='primary'
         onClick={() => {
           setEvents({ ...state, modalShowing: _id })
         }}
@@ -59,6 +37,6 @@ export default function EventItem({
         modalShowing={_id === state.modalShowing}
         closeModal={closeModal}
       />
-    </Box>
+    </Flex>
   )
 }

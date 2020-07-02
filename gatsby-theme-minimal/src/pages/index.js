@@ -20,7 +20,6 @@ export default function Home({ data }) {
     name: businessName,
     slug,
   } = data.allGoNationBusinessData.edges[0].node
-
   const {
     gonationID,
     hasAbout,
@@ -30,6 +29,7 @@ export default function Home({ data }) {
     hasEvents,
     hasGallery,
     hasContact,
+    orderOnlineLink,
   } = data.allGoNationData.edges[0].node
   const {
     description,
@@ -75,8 +75,6 @@ export default function Home({ data }) {
           ) : (
             ''
           )}
-
-          {/* {hasHours ? <Hours hours={hours} /> : null} */}
         </Box>
         {hasContact ? (
           <Contact
@@ -97,7 +95,6 @@ export default function Home({ data }) {
         ) : null}
 
         <Footer businessName={businessName} />
-
         <CtaWidget
           businessName={businessName}
           phone={contact.phone}
@@ -106,6 +103,7 @@ export default function Home({ data }) {
           state={state}
           postalCode={postalCode}
           country={country}
+          orderOnlineLink={orderOnlineLink}
         />
       </div>
     </>
@@ -125,6 +123,7 @@ export const query = graphql`
           hasEvents
           hasGallery
           hasContact
+          orderOnlineLink
         }
       }
     }

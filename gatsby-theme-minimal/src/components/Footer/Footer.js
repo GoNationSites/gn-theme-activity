@@ -3,13 +3,7 @@ import { Flex, Text } from 'theme-ui'
 import GoNationMan from '../icons/GoNationMan'
 export default function Footer({ businessName }) {
   return (
-    <Flex
-      sx={{
-        backgroundColor: 'black',
-        padding: 4,
-        paddingBottom: 5,
-        flexDirection: ['column', 'column', 'row'],
-      }}>
+    <Flex variant='footer'>
       <Text
         variant='default'
         sx={{ flexGrow: '1', marginTop: 2, marginBottom: 2, color: 'light' }}>

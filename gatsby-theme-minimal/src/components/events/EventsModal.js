@@ -14,57 +14,17 @@ export default function EventsModal({ event, modalShowing, closeModal, slug }) {
   const { _id, name, starts, ends, description, imageurl } = event
 
   return modalShowing ? (
-    <Box
-      sx={{
-        position: 'fixed',
-        top: '0',
-        bottom: '0',
-        left: '0',
-        right: '0',
-      }}>
-      <div
-        onClick={() => closeModal()}
-        style={{
-          position: 'absolute',
-          top: '0',
-          bottom: '0',
-          left: '0',
-          right: '0',
-          backgroundColor: 'rgba(0,0,0,0.5)',
-        }}
-      />
-      <Box
-        sx={{
-          padding: 0,
-          maxWidth: '767px',
-          zIndex: '1000',
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%,-50%)',
-          color: 'black',
-          backgroundColor: 'primary',
-          minWidth: '280px',
-          border: 'solid 6px white',
-        }}>
-        <Image
-          sx={{
-            maxHeight: ['175px', '250px', '500px'],
-            width: '100%',
-            objectFit: 'cover',
-          }}
-          src={imageurl}
-        />
-        <Box sx={{ padding: 3, color: 'white' }}>
-          <Text
-            variant='heading'
-            sx={{
-              color: 'white',
-            }}>
+    <Box variant='event.modalContainer'>
+      <Box variant='event.modalBackground' onClick={() => closeModal()} />
+      <Box variant='event.modal'>
+        <Image variant='event.modalImage' src={imageurl} />
+
+        <Box variant='event.modalContentContainer'>
+          <Text variant='event.modalEventName'>
             <FontAwesomeIcon icon={faGlassCheers} /> {name}
           </Text>
 
-          <Flex sx={{ alignItems: 'center', marginBottom: 3 }}>
+          <Flex variant='event.modalEventDate'>
             <FontAwesomeIcon
               style={{
                 marginRight: '10px',
@@ -120,5 +80,7 @@ export default function EventsModal({ event, modalShowing, closeModal, slug }) {
         </Box>
       </Box>
     </Box>
-  ) : null
+  ) : (
+    ''
+  )
 }
