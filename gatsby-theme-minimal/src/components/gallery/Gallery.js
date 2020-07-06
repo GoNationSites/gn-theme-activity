@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Box, Flex, Text } from 'theme-ui'
+import { Box, Flex, Text, Spinner } from 'theme-ui'
 import GalleryAlbums from './GalleryAlbums'
 import Album from './Album'
 
@@ -42,28 +42,37 @@ export default function Gallery({ gonationID }) {
   }, [])
 
   return (
-    <Box variant='page.section'>
-      <Text variant='sectionHeading'>Our Gallery</Text>
+    <>
       {/*  if data has arrived then load else show loading*/}
-
       {!galleryData.isLoading ? (
-        <Flex>
-          {/*  if No album is open, load the grid of albums. if one is open load that album */}
-          {!galleryData.albumOpenID ? (
-            <GalleryAlbums
-              galleryData={galleryData}
-              setGalleryData={setGalleryData}
-            />
+        <>
+          {galleryData.albums.items.length ? (
+            <Box variant='page.section'>
+              <Text variant='sectionHeading'>Our Gallery</Text>
+              <Flex>
+                {/*  if No album is open, load the grid of albums. if one is open load that album */}
+                {!galleryData.albumOpenID ? (
+                  <GalleryAlbums
+                    galleryData={galleryData}
+                    setGalleryData={setGalleryData}
+                  />
+                ) : (
+                  <Album
+                    albumOpenID={galleryData.albumOpenID}
+                    backToAlbumView={backToAlbumView}
+                  />
+                )}
+              </Flex>
+            </Box>
           ) : (
-            <Album
-              albumOpenID={galleryData.albumOpenID}
-              backToAlbumView={backToAlbumView}
-            />
+            ''
           )}
-        </Flex>
+        </>
       ) : (
-        'Loading...'
+        <Box variant='spinnerContainer'>
+          <Spinner />
+        </Box>
       )}
-    </Box>
+    </>
   )
 }

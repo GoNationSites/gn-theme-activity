@@ -47,7 +47,7 @@ export default function Contact({
 
           <Text variant='default'>
             <Styled.a
-              href={`https://www.google.com/maps/dir/?api=1&destination=${businessName}+${street}+${city}+${state}+${postalCode}+${country}`}
+              href={`https://www.google.com/maps/dir/?api=1&destination=${street}+${city}+${state}+${postalCode}+${country}`}
               target='_blank'>
               <FontAwesomeIcon icon={faMapMarkerAlt} />
               &nbsp;&nbsp;{street}, {city}, {state}, {postalCode}, {country}

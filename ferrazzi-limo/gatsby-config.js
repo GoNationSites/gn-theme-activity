@@ -3,7 +3,7 @@ module.exports = {
     {
       resolve: `gatsby-theme-minimal`,
       options: {
-        gonationID: 'bzn-cloWpLIdTAyIA4-jx-C1rw',
+        gonationID: 'bzn-9YOyJPqRQ9WN89jqd0as3g',
         hasAbout: true,
         hasMenu: true,
         hasMenuImages: true,

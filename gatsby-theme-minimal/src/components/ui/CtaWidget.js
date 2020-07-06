@@ -1,5 +1,15 @@
 import React from 'react'
-import { jsx, Box, Image, Flex, Heading, Text, Styled, Button } from 'theme-ui'
+import {
+  jsx,
+  Box,
+  Image,
+  Flex,
+  Heading,
+  Text,
+  Styled,
+  Button,
+  Link,
+} from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
@@ -18,7 +28,8 @@ export default function CtaWidget({
       sx={{
         position: 'fixed',
         bottom: '0',
-        right: '0',
+        left: '0',
+        width: '100%',
         maxWidth: '400px',
         bg: 'primary',
         alignItems: 'stretch',
@@ -30,29 +41,43 @@ export default function CtaWidget({
           alignItems: 'center',
           background: '#11434a',
           borderRight: 'solid 1px white',
+          width: '50%',
         }}>
-        <Box px={3} sx={{ color: 'light' }}>
+        <Box p={3} sx={{ color: 'light', width: '100%', textAlign: 'center' }}>
           <FontAwesomeIcon icon={faPhone} />
         </Box>
       </a>
 
       <a
-        href={`https://www.google.com/maps/dir/?api=1&destination=${businessName}+${street}+${city}+${state}+${postalCode}+${country}`}
-        style={{ display: 'flex', alignItems: 'center', background: '#11434a' }}
+        href={`https://www.google.com/maps/dir/?api=1&destination=${street}+${city}+${state}+${postalCode}+${country}`}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          background: '#11434a',
+          width: '50%',
+        }}
         target='_blank'>
-        <Box px={3} sx={{ color: 'light' }}>
+        <Box p={3} sx={{ color: 'light', width: '100%', textAlign: 'center' }}>
           <FontAwesomeIcon icon={faMapMarkerAlt} />
         </Box>
       </a>
 
       {orderOnlineLink ? (
-        <Box sx={{ flexGrow: '1' }}>
-          <a href={`${orderOnlineLink}`} target='_blank'>
-            <Button variant='secondary' sx={{ width: '100%' }}>
-              Order Online
-            </Button>
-          </a>
-        </Box>
+        <Link
+          href={`${orderOnlineLink}`}
+          target='_blank'
+          sx={{ flexGrow: '1', width: '100%', margin: 0 }}>
+          <Button
+            variant='secondary'
+            sx={{
+              width: '100%',
+              padding: '1rem',
+              textAlign: 'center',
+              borderRadius: 0,
+            }}>
+            Order Online
+          </Button>
+        </Link>
       ) : (
         ''
       )}

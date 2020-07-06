@@ -129,6 +129,11 @@ export default {
       color: 'light',
       marginBottom: 1,
     },
+    label: {
+      fontFamily: 'heading',
+      color: 'light',
+      marginBottom: 1,
+    },
     input: {
       borderColor: 'light',
       '&:focus': {
@@ -196,6 +201,11 @@ export default {
     section: {
       marginBottom: 4,
     },
+  },
+
+  spinnerContainer: {
+    display: 'flex',
+    justifyContent: 'center',
   },
 
   // HERO Styles
@@ -271,11 +281,13 @@ export default {
       flexWrap: 'wrap',
       alignItems: 'stretch',
       margin: '1rem auto',
+      justifyContent: 'center',
     },
     albumImage: {
-      width: ['50%', '33%', '25%', '20%', '12.5%'],
+      width: ['50%', '33%', '25%', '20%'],
       objectFit: 'cover',
       height: '200px',
+      padding: 1,
     },
   },
 

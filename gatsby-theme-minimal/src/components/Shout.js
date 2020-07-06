@@ -27,9 +27,11 @@ const Shout = ({ gonationID }) => {
   }, [])
 
   return (
-    <Box variant='shout.container'>
+  <>
       {!shout.isLoading && shout.shoutData ? (
+        <Box variant='shout.container'>
         <Flex variant='shout.innerContainer'>
+          {console.log(shout)}
           <Box variant='shout.imageContainer'>
             <Image
               src={`${shout.shoutData.imageBaseUrl}/${shout.shoutData.shout.image.image.cloudinaryId}`}
@@ -46,10 +48,11 @@ const Shout = ({ gonationID }) => {
             </Text>
           </Box>
         </Flex>
+        </Box>
       ) : (
-        <Spinner />
+        ''
       )}
-    </Box>
+ </>
   )
 }
 

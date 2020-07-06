@@ -100,6 +100,7 @@ export default function hours({ hours }) {
 
   return (
     <Box sx={{ maxWidth: '300px', width: '100%' }}>
+      {console.log(hours)}
       <Text
         variant='h2'
         sx={{

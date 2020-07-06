@@ -28,7 +28,8 @@ const AllIn = ({ menuData, setModalActive, onBackClick, hasMenuImages }) => {
     const { section } = menu
     const parsedSection = splitSectionChildren(menu)
     return (
-      <Box>
+      <Box
+        key={Math.random().toString(36).substring(2) + Date.now().toString(36)}>
         {/* header with section name and description */}
         <Box sx={{ marginBottom: '5' }}>
           <Text variant='menu.sectionTitle' sx={{ textAlign: 'center' }}>
@@ -36,9 +37,10 @@ const AllIn = ({ menuData, setModalActive, onBackClick, hasMenuImages }) => {
           </Text>
 
           <Flex variant='menu.sectionContainer'>
-            {parsedSection.childItems.map(({ item }) => {
+            {parsedSection.childItems.map(({ item }, index) => {
               return (
                 <MenuItem
+                  key={index}
                   type={'default'}
                   withDollar={withDollar}
                   item={item}

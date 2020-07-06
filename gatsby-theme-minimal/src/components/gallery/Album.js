@@ -40,6 +40,7 @@ export default function Album({ albumOpenID, backToAlbumView }) {
     <Box sx={{ width: '100%' }}>
       <Button
         variant='primary'
+        sx={{ margin: '0 auto', display: 'inherit' }}
         onClick={() => {
           backToAlbumView()
         }}>
@@ -55,7 +56,9 @@ export default function Album({ albumOpenID, backToAlbumView }) {
             />
           ))
         ) : (
-          <Spinner />
+          <Box variant='spinnerContainer'>
+            <Spinner />
+          </Box>
         )}
       </Flex>
     </Box>

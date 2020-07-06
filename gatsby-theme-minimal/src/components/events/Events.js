@@ -64,7 +64,9 @@ const Events = ({ gonationID, slug }) => {
 
   return (
     <Box>
-      {!recurringEvents.isLoading && recurringEvents.eventsData ? (
+      {!recurringEvents.isLoading &&
+      recurringEvents.eventsData &&
+      recurringEvents.eventsData.events.length ? (
         // ========== Start RECURRINGS EVENTS JSX ==============
         <Box variant='page.section'>
           <Text variant='sectionHeading'>Recurring Events</Text>
@@ -87,7 +89,9 @@ const Events = ({ gonationID, slug }) => {
         ''
       )}
 
-      {!singleEvents.isLoading && singleEvents.eventsData ? (
+      {!singleEvents.isLoading &&
+      singleEvents.eventsData &&
+      singleEvents.eventsData.events.length ? (
         // ========== END OF RECURRINGS EVENTS JSX ============
 
         // ======= Start of Single Events  =======

@@ -8,6 +8,7 @@ export default function Menus({ gonationID, hasMenuImages }) {
   const [menus, setMenus] = useState({
     menuData: null,
     isLoading: true,
+    error: false,
   })
 
   const fetchMenu = () => {
@@ -25,21 +26,22 @@ export default function Menus({ gonationID, hasMenuImages }) {
         return res.data
       })
       .catch(e => {
-        console.log('error : ', console.e)
-        setMenus({ ...menus, isLoading: false })
+        console.log('error : ', console.log(e))
+        setMenus({ ...menus, isLoading: false, error: true })
       })
   }
 
   const setMenuToLocalStorage = async () => {
     const menuData = await fetchMenu()
-    localStorage.setItem('powered-list', JSON.stringify(menuData)) // store object in local storage
+    localStorage.setItem('powered-list', JSON.stringify(menuData))
+    // store object in local storage
   }
 
   useEffect(() => {
     if (
       !localStorage.getItem('powered-list') ||
-      localStorage.getItem('powered-list') === null ||
-      localStorage.getItem('powered-list') === undefined
+      localStorage.getItem('powered-list') === 'null' ||
+      localStorage.getItem('powered-list') === 'undefined'
     ) {
       console.log('fetching menu')
       // fetching menu from external gonation resource
@@ -56,15 +58,31 @@ export default function Menus({ gonationID, hasMenuImages }) {
   }, [])
 
   return (
-    <Box variant='page.section'>
-      <Text variant='sectionHeading'>Our Menus</Text>
+    <>
       {/*  if data has arrived then load else show loading*/}
 
       {!menus.isLoading && menus.menuData ? (
-        <AllIn menuData={menus.menuData} hasMenuImages={hasMenuImages} />
+        <>
+          {menus.menuData.length ? (
+            <Box variant='page.section'>
+              <Text variant='sectionHeading'>Our Menus</Text>
+              <AllIn menuData={menus.menuData} hasMenuImages={hasMenuImages} />
+            </Box>
+          ) : (
+            ''
+          )}
+        </>
       ) : (
-        <Spinner />
+        <>
+          {menus.isLoading && !menus.error ? (
+            <Box variant='spinnerContainer'>
+              <Spinner />
+            </Box>
+          ) : (
+            ''
+          )}
+        </>
       )}
-    </Box>
+    </>
   )
 }

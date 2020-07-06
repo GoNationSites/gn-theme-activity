@@ -3,6 +3,7 @@ import React from 'react'
 import '../index.css'
 import { graphql } from 'gatsby'
 import { jsx, Box, Image, Flex, Heading, Text, Styled } from 'theme-ui'
+import SEO from '../components/seo'
 import Hero from '../components/hero/hero'
 import Shout from '../components/Shout'
 import About from '../components/About'
@@ -49,63 +50,60 @@ export default function Home({ data }) {
 
   return (
     <>
-      <div>
-        <Hero logo={avatar.image.cloudinaryId} businessName={businessName} />
+      <SEO title={businessName} description={description} />
+      <Hero logo={avatar.image.cloudinaryId} businessName={businessName} />
 
-        {hasShout ? <Shout gonationID={gonationID} /> : null}
+      {hasShout ? <Shout gonationID={gonationID} /> : null}
 
-        <Box
-          p={3}
-          sx={{
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            maxWidth: '991px',
-            margin: '0 auto',
-          }}>
-          {hasAbout ? (
-            <About gonationID={gonationID} description={description} />
-          ) : null}
-
-          {hasGallery ? <Gallery gonationID={gonationID} /> : null}
-
-          {hasEvents ? <Events gonationID={gonationID} slug={slug} /> : null}
-
-          {hasMenu ? (
-            <Menus gonationID={gonationID} hasMenuImages={hasMenuImages} />
-          ) : (
-            ''
-          )}
-        </Box>
-        {hasContact ? (
-          <Contact
-            gonationID={gonationID}
-            contact={contact}
-            street={street}
-            indicator={indicator}
-            city={city}
-            state={state}
-            postalCode={postalCode}
-            country={country}
-            address={
-              data.allGoNationBusinessData.edges[0].node.location.address
-            }
-            businessName={businessName}
-            hours={hours}
-          />
+      <Box
+        p={3}
+        sx={{
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          maxWidth: '991px',
+          margin: '0 auto',
+        }}>
+        {hasAbout ? (
+          <About gonationID={gonationID} description={description} />
         ) : null}
 
-        <Footer businessName={businessName} />
-        <CtaWidget
-          businessName={businessName}
-          phone={contact.phone}
+        {hasGallery ? <Gallery gonationID={gonationID} /> : null}
+
+        {hasEvents ? <Events gonationID={gonationID} slug={slug} /> : null}
+
+        {hasMenu ? (
+          <Menus gonationID={gonationID} hasMenuImages={hasMenuImages} />
+        ) : (
+          ''
+        )}
+      </Box>
+      {hasContact ? (
+        <Contact
+          gonationID={gonationID}
+          contact={contact}
           street={street}
+          indicator={indicator}
           city={city}
           state={state}
           postalCode={postalCode}
           country={country}
-          orderOnlineLink={orderOnlineLink}
+          address={data.allGoNationBusinessData.edges[0].node.location.address}
+          businessName={businessName}
+          hours={hours}
         />
-      </div>
+      ) : null}
+
+      <Footer businessName={businessName} />
+      <CtaWidget
+        businessName={businessName}
+        phone={contact.phone}
+        street={street}
+        city={city}
+        state={state}
+        postalCode={postalCode}
+        country={country}
+        orderOnlineLink={orderOnlineLink}
+      />
     </>
   )
 }
