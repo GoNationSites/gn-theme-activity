@@ -3,7 +3,12 @@ import { Label, Input, Textarea, Button } from 'theme-ui'
 
 export default function ContactForm() {
   return (
-    <form name='contact' method='POST' data-netlify='true'>
+    <form
+      name='contact'
+      method='POST'
+      data-netlify='true'
+      data-netlify-honeypot='bot-field'>
+      <input type='hidden' name='form-name' value='contact' />
       <Label htmlFor='name'>Name</Label>
       <Input name='name' id='name' mb={3} />
       <Label htmlFor='email'>Email</Label>
