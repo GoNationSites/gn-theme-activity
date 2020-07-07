@@ -5,13 +5,14 @@ module.exports = {
       options: {
         gonationID: 'bzn-hqT-TAMZS62dB0DaCdx6Tw',
         hasAbout: true,
-        hasMenu: true,
+        hasMenu: false,
         hasMenuImages: true,
         hasShout: true,
         hasEvents: true,
         hasGallery: true,
         hasHours: true,
         hasContact: true,
+        orderOnlineLink: 'google.com'
       },
     },
   ],
