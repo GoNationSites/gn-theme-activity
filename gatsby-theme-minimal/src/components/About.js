@@ -11,7 +11,12 @@ const About = ({ description }) => (
         <Text variant='sectionHeading'>About us</Text>
         <Text
           variant='default'
-          sx={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+          sx={{
+            textAlign: 'center',
+            maxWidth: '600px',
+            margin: '0 auto',
+            whiteSpace: 'pre-wrap',
+          }}>
           {description}
         </Text>
       </Box>

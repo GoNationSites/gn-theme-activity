@@ -24,11 +24,12 @@ const MenuItem = ({ item, type, withDollar, hasMenuImages }) => {
             alt='menu item'
           />
         ) : (
-          <Image
-            variant='menu.menuItemDefaultImage'
-            src={camera}
-            alt='default menu item'
-          />
+          ''
+          // <Image
+          //   variant='menu.menuItemDefaultImage'
+          //   src={camera}
+          //   alt='default menu item'
+          // />
         )
       ) : (
         ''
