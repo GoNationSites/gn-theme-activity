@@ -5,7 +5,7 @@ module.exports = {
       options: {
         gonationID: 'bzn-hqT-TAMZS62dB0DaCdx6Tw',
         hasAbout: true,
-        hasMenu: false,
+        hasMenu: true,
         hasMenuImages: true,
         hasShout: true,
         hasEvents: true,
