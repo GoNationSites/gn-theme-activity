@@ -4,7 +4,7 @@ import SocialIcons from './SocialIcons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import ContactForm from './ContactForm'
-import Hours from '../hours/HoursOld'
+import Hours from '../hours/hoursOld'
 
 export default function Contact({
   goNationID,
