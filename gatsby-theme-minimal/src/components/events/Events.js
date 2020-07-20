@@ -7,7 +7,7 @@ import EventItem from './EventItem'
 let axios = require('axios')
 let jsonpAdapter = require('axios-jsonp')
 
-const Events = ({ gonationID, slug }) => {
+const Events = ({ gonationID, slug, poweredID }) => {
   const [recurringEvents, setRecurringEvents] = useState({
     eventsData: null,
     isLoading: true,
@@ -23,7 +23,7 @@ const Events = ({ gonationID, slug }) => {
   useEffect(() => {
     // fetch recurring events
     axios({
-      url: `https://data.prod.gonation.com/profile/recurringevents?profile_id=${gonationID}`,
+      url: `https://data.prod.gonation.com/profile/recurringevents?profile_id=${poweredID}`,
       adapter: jsonpAdapter,
     })
       .then(res => {
@@ -40,7 +40,7 @@ const Events = ({ gonationID, slug }) => {
 
     // fetch special events
     axios({
-      url: `https://data.prod.gonation.com/profile/events?profile_id=${gonationID}`,
+      url: `https://data.prod.gonation.com/profile/events?profile_id=${poweredID}`,
       adapter: jsonpAdapter,
     })
       .then(res => {

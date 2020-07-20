@@ -4,7 +4,7 @@ import AllIn from './allIn'
 let axios = require('axios')
 let jsonpAdapter = require('axios-jsonp')
 
-export default function Menus({ gonationID, hasMenuImages }) {
+export default function Menus({ gonationID, hasMenuImages, poweredID }) {
   const [menus, setMenus] = useState({
     menuData: null,
     isLoading: true,
@@ -13,7 +13,7 @@ export default function Menus({ gonationID, hasMenuImages }) {
 
   const fetchMenu = () => {
     return axios({
-      url: `https://data.prod.gonation.com/pl/get?profile_id=${gonationID}`,
+      url: `https://data.prod.gonation.com/pl/get?profile_id=${poweredID}`,
       adapter: jsonpAdapter,
     })
       .then(res => {
@@ -63,6 +63,7 @@ export default function Menus({ gonationID, hasMenuImages }) {
 
       {!menus.isLoading && menus.menuData ? (
         <>
+          {console.log(menus)}
           {menus.menuData.length ? (
             <Box variant='page.section'>
               <Text variant='sectionHeading'>Our Menus</Text>

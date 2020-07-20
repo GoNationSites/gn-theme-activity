@@ -9,7 +9,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, keywords }) {
   return (
     <Helmet
       htmlAttributes={{
@@ -30,6 +30,11 @@ function SEO({ description, lang, meta, title }) {
           property: `og:description`,
           content: description ? description : '',
         },
+        {
+          property: `keywords`,
+          content: keywords ? keywords : '',
+        },
+
         {
           property: `og:type`,
           content: `website`,

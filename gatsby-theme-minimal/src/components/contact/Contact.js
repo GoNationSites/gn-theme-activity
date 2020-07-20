@@ -4,7 +4,7 @@ import SocialIcons from './SocialIcons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import ContactForm from './ContactForm'
-import Hours from '../hours/Hours'
+import Hours from '../hours/HoursOld'
 
 export default function Contact({
   goNationID,
@@ -18,7 +18,7 @@ export default function Contact({
   const { street, indicator, city, state, postalCode, country } = address
 
   return (
-    <Box sx={{ bg: 'primary', padding: 4 }}>
+    <Box sx={{ bg: 'primary', padding: 2 }}>
       <Flex
         sx={{
           justifyContent: ['center', 'center', 'center', 'space-between'],

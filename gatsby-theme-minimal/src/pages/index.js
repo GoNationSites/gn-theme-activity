@@ -23,6 +23,8 @@ export default function Home({ data }) {
   } = data.allGoNationBusinessData.edges[0].node
   const {
     gonationID,
+    poweredID,
+    seoKeywords,
     hasAbout,
     hasMenu,
     hasMenuImages,
@@ -50,10 +52,16 @@ export default function Home({ data }) {
 
   return (
     <>
-      <SEO title={businessName} description={description} />
+      <SEO
+        title={businessName}
+        description={description}
+        keywords={seoKeywords}
+      />
       <Hero logo={avatar.image.cloudinaryId} businessName={businessName} />
 
-      {hasShout ? <Shout gonationID={gonationID} /> : null}
+      {hasShout ? (
+        <Shout gonationID={gonationID} poweredID={poweredID} />
+      ) : null}
 
       <Box
         p={3}
@@ -69,10 +77,16 @@ export default function Home({ data }) {
 
         {hasGallery ? <Gallery gonationID={gonationID} /> : null}
 
-        {hasEvents ? <Events gonationID={gonationID} slug={slug} /> : null}
+        {hasEvents ? (
+          <Events gonationID={gonationID} slug={slug} poweredID={poweredID} />
+        ) : null}
 
         {hasMenu ? (
-          <Menus gonationID={gonationID} hasMenuImages={hasMenuImages} />
+          <Menus
+            gonationID={gonationID}
+            hasMenuImages={hasMenuImages}
+            poweredID={poweredID}
+          />
         ) : (
           ''
         )}
@@ -114,6 +128,8 @@ export const query = graphql`
       edges {
         node {
           gonationID
+          poweredID
+          seoKeywords
           hasAbout
           hasMenu
           hasMenuImages

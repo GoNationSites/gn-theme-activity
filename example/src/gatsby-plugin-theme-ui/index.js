@@ -478,6 +478,46 @@ export default {
     },
   },
 
+  // Hours
+
+  hours: {
+    container: {
+      flexDirection: 'column',
+      color: 'white',
+      fontFamily: 'heading',
+      flexGrow: '1',
+      width: '100%',
+      maxWidth: '400px',
+      padding: [2, 2, 2, 4],
+    },
+
+    labelHeading: {
+      fontFamily: 'heading',
+      fontWeight: 'heading',
+      fontSize: 3,
+      marginBottom: 3,
+      marginBottom: 1,
+      textTransform: 'uppercase',
+      fontSize: 2,
+    },
+    hoursEntry: {
+      width: '100%',
+      flexDirection: ['row', 'row', 'row'],
+      marginBottom: 0,
+    },
+    dayLabel: {
+      flexGrow: '1',
+      marginBottom: 0,
+      fontSize: 1,
+      textTransform: 'uppercase',
+    },
+    timeLabel: {
+      textAlign: 'right',
+      marginBottom: 0,
+      fontSize: 1,
+    },
+  },
+
   // Footer Styles
 
   footer: {
@@ -485,5 +525,16 @@ export default {
     padding: 4,
     paddingBottom: 5,
     flexDirection: ['column', 'column', 'row'],
+
+    heading: {
+      color: 'text',
+      marginTop: 0,
+      fontFamily: 'heading',
+      marginBottom: 3,
+      fontSize: 5,
+      textAlign: 'center',
+      color: 'light',
+      textAlign: ['center', 'center', 'left'],
+    },
   },
 }

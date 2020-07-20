@@ -6,7 +6,7 @@ import { faComment } from '@fortawesome/free-solid-svg-icons'
 let axios = require('axios')
 let jsonpAdapter = require('axios-jsonp')
 
-const Shout = ({ gonationID }) => {
+const Shout = ({ gonationID, poweredID }) => {
   const [shout, setShout] = useState({
     shoutData: null,
     isLoading: true,
@@ -14,7 +14,7 @@ const Shout = ({ gonationID }) => {
 
   useEffect(() => {
     axios({
-      url: `https://data.prod.gonation.com/profile/shoutsnew/${gonationID}`,
+      url: `https://data.prod.gonation.com/profile/shoutsnew/${poweredID}`,
       adapter: jsonpAdapter,
     })
       .then(res => {
@@ -27,32 +27,32 @@ const Shout = ({ gonationID }) => {
   }, [])
 
   return (
-  <>
+    <>
       {!shout.isLoading && shout.shoutData ? (
         <Box variant='shout.container'>
-        <Flex variant='shout.innerContainer'>
-          {console.log(shout)}
-          <Box variant='shout.imageContainer'>
-            <Image
-              src={`${shout.shoutData.imageBaseUrl}/${shout.shoutData.shout.image.image.cloudinaryId}`}
-              variant='shout.shoutImage'
-            />
-          </Box>
+          <Flex variant='shout.innerContainer'>
+            {console.log(shout)}
+            <Box variant='shout.imageContainer'>
+              <Image
+                src={`${shout.shoutData.imageBaseUrl}/${shout.shoutData.shout.image.image.cloudinaryId}`}
+                variant='shout.shoutImage'
+              />
+            </Box>
 
-          <Box variant='shout.content'>
-            <Text variant='headingLight'>
-              <FontAwesomeIcon icon={faComment} /> Recent Shout
-            </Text>
-            <Text variant='headingLight' sx={{ fontSize: 2, margin: 0 }}>
-              {shout.shoutData.shout.text}
-            </Text>
-          </Box>
-        </Flex>
+            <Box variant='shout.content'>
+              <Text variant='headingLight'>
+                <FontAwesomeIcon icon={faComment} /> Recent Shout
+              </Text>
+              <Text variant='headingLight' sx={{ fontSize: 2, margin: 0 }}>
+                {shout.shoutData.shout.text}
+              </Text>
+            </Box>
+          </Flex>
         </Box>
       ) : (
         ''
       )}
- </>
+    </>
   )
 }
 

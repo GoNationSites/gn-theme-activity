@@ -1,144 +1,154 @@
-import React from 'react'
-import { Box, Flex, Text } from 'theme-ui'
-import moment from 'moment'
+/** @jsx jsx */
+import React, { useState, useEffect } from 'react'
+import formatTime from '../helpers/formatTime'
+import dayLookup from '../helpers/dayLookup'
+import checkIfSequence from '../helpers/checkIfSequence'
+import { jsx, Styled } from 'theme-ui'
+import { Box, Text, Flex } from '@theme-ui/components'
+import { faCommentsDollar } from '@fortawesome/free-solid-svg-icons'
 
-export default function hours({ hours }) {
-  const {
-    monday,
-    tuesday,
-    wednesday,
-    thursday,
-    friday,
-    saturday,
-    sunday,
-  } = hours
+const Hours = ({ hours }) => {
+  console.log(hours)
+  const [formattedHours, setFormattedHours] = useState([])
+  const days = Object.keys(hours)
 
-  // put all variables into an array for looping through
-  const daysOfWeek = [
-    monday,
-    tuesday,
-    wednesday,
-    thursday,
-    friday,
-    saturday,
-    sunday,
-  ]
+  // gets all unique hour labels
+  const hourLabels = () => {
+    const labels = []
+    days.forEach(day => {
+      hours[day].forEach(hour => {
+        if (!labels.includes(hour.label)) {
+          labels.push(hour.label)
+        }
+      })
+    })
+    return labels
+  }
 
-  // no day name in the object that coems through. needed to renfder text of the day.
-  const dayOfTheWeekText = [
-    'monday',
-    'tuesday',
-    'wednesday',
-    'thursday',
-    'friday',
-    'saturday',
-    'sunday',
-  ]
+  // @param String of an hour label. Returns hours for only the given label
+  const renderHoursForLabel = label => {
+    console.log(label)
+    return days.map((day, idxDay) => {
+      return hours[day]
+        .filter((el, p) => el.label === label)
+        .map((hour, idxHour) => {
+          hour.day = day
+          return hour
+        })
+    })
+  }
 
-  const renderHours = day =>
-    day.map(timeBlock => {
-      return (
-        <Flex key={'id' + Math.random().toString(16).slice(2)}>
-          {/* if the business is closed render this */}
-          {timeBlock.isClosed ? (
-            <Text
-              variant='light'
-              sx={{
-                flexGrow: '1',
-                marginBottom: 0,
-                fontSize: 1,
-                textAlign: 'right',
-              }}>
-              Closed
-            </Text>
-          ) : null}
+  // takes the hour data and formats it in an array of object that combines similar hours
+  const buildSimilarData = () => {
+    const hourArr = []
 
-          {/* if open is true. render open 24 hours */}
-          {timeBlock.isOpen ? (
-            <Text
-              variant='light'
-              sx={{
-                flexGrow: '1',
-                marginBottom: 0,
-                fontSize: 1,
-                textAlign: 'right',
-              }}>
-              Open 24 Hours
-            </Text>
-          ) : null}
-
-          {/* anything else render all hours and labels */}
-          {!timeBlock.isOpen && !timeBlock.isClosed ? (
-            <Flex
-              sx={{
-                width: '100%',
-                flexDirection: ['row', 'row', 'row'],
-                marginBottom: 0,
-              }}>
-              <Text
-                variant='light'
-                sx={{ flexGrow: '1', marginBottom: 0, fontSize: 1 }}>
-                {timeBlock.label}
-              </Text>
-              <Text
-                variant='light'
-                sx={{
-                  textAlign: 'right',
-                  marginBottom: 0,
-                  fontSize: 1,
-                }}>
-                {moment(timeBlock.open, 'h:mm a').format('h:mm a')}-
-                {moment(timeBlock.close, 'h:mm a').format('h:mm a')}
-              </Text>
-            </Flex>
-          ) : (
-            ''
-          )}
-        </Flex>
-      )
+    // initialize the array of objects by setting each object the key of hour label
+    hourLabels().map(label => {
+      const obj = {}
+      obj[label] = {}
+      hourArr.push(obj)
     })
 
+    // @param given label, populate each label object with hour data
+    const fillHourBlockWithContent = label => {
+      const hourLabel = Object.keys(label) ? Object.keys(label)[0] : 'hours'
+      const hours = renderHoursForLabel(hourLabel)
+      console.log(label)
+      const pushNewHour = hour => {
+        label[hourLabel].push({
+          days: [hour.day],
+          open: hour.open,
+          close: hour.close,
+        })
+      }
+
+      // check if label hour has matching time. if so, just add the day, else make a new block
+      hours.forEach(hourObj => {
+        console.log(hourObj)
+        const hour = hourObj[0]
+        if (hour !== undefined && Object.keys(label[hourLabel]).length === 0) {
+          label[hourLabel] = []
+          pushNewHour(hour)
+        } else if (hour !== undefined) {
+          if (
+            label[hourLabel].length > 1 &&
+            label[hourLabel].some(e => {
+              return e.open === hour.open && e.close === hour.close
+            })
+          ) {
+            label[hourLabel].forEach(pushedHour => {
+              if (
+                pushedHour.open + pushedHour.close ===
+                hour.open + hour.close
+              ) {
+                pushedHour.days.push(hour.day)
+              }
+            })
+          } else {
+            pushNewHour(hour)
+          }
+        }
+      })
+    }
+
+    // Do the above function for EVERY label
+    hourArr.forEach(label => {
+      fillHourBlockWithContent(label)
+    })
+    // Finally, set formattedHours = the returned value
+    console.log(hourArr)
+    setFormattedHours(hourArr)
+  }
+
+  useEffect(() => {
+    buildSimilarData()
+  }, [])
+
+  // Decide how to print the days. (day & day), (day - day), (day, day, day) etc.
+  const formatDays = days => {
+    const lengthOfDays = days.length
+    if (lengthOfDays === 1) {
+      return dayLookup[days[0]].fullDay
+    } else if (lengthOfDays === 2) {
+      const dayString = days.map(day => dayLookup[day].fullDay)
+      return dayString.join(' & ')
+    } else {
+      const dayAsKeys = days.map(day => dayLookup[day].key)
+      if (checkIfSequence(dayAsKeys)) {
+        const dayString = `${dayLookup[days[0]].fullDay} - ${
+          dayLookup[days[days.length - 1]].fullDay
+        }`
+        return dayString
+      } else {
+        const dayString = days.map(day => dayLookup[day].fullDay)
+        return dayString.join(', ')
+      }
+    }
+  }
+
   return (
-    <Box sx={{ maxWidth: '300px', width: '100%' }}>
-      {console.log(hours)}
-      <Text
-        variant='h2'
-        sx={{
-          textAlign: ['center', 'center', 'left'],
-          marginBottom: 2,
-          color: 'light',
-        }}>
-        {' '}
-        Our Hours
-      </Text>
-      <Flex
-        sx={{
-          flexDirection: ['column'],
-          justifyContent: 'space-between',
-        }}>
-        {daysOfWeek.map((day, index) => {
-          return (
-            <Box
-              key={index}
-              sx={{
-                padding: 1,
-                textAlign: ['left', 'left', 'left'],
-                marginBottom: 2,
-              }}>
-              <Text
-                variant='headingLight'
-                sx={{
-                  marginBottom: 1,
-                  textTransform: 'uppercase',
-                  fontSize: 2,
-                }}>
-                {dayOfTheWeekText[index]}
-              </Text>
-              {renderHours(day)}
-            </Box>
-          )
-        })}
-      </Flex>
-    </Box>
+    <Flex variant='hours.container'>
+      <Text variant='footer.heading'>Hours</Text>
+
+      {formattedHours.map((hourBlock, idx) => (
+        <Box sx={{ marginBottom: 3 }} key={`${idx}-${Object.keys(hourBlock)}`}>
+          <Text variant='hours.labelHeading'>{Object.keys(hourBlock)}</Text>
+
+          {hourBlock[Object.keys(hourBlock)].map((el, idx) => (
+            <div key={`${el.open} - ${idx}`}>
+              <Flex variant='hours.hoursEntry'>
+                <Text variant='hours.dayLabel'>{formatDays(el.days)}</Text>
+
+                <Text variant='hours.timelabel'>
+                  {formatTime(el.open)} - {formatTime(el.close)}
+                </Text>
+              </Flex>
+            </div>
+          ))}
+        </Box>
+      ))}
+    </Flex>
   )
 }
+
+export default Hours

@@ -81,6 +81,8 @@ exports.sourceNodes = async (
   { actions, createNodeId, createContentDigest },
   {
     gonationID,
+    poweredID,
+    seoKeywords,
     hasAbout,
     hasMenu,
     hasMenuImages,
@@ -101,6 +103,8 @@ exports.sourceNodes = async (
       type: 'goNationData',
     },
     gonationID,
+    poweredID,
+    seoKeywords,
     hasAbout,
     hasMenu,
     hasMenuImages,
@@ -132,6 +136,7 @@ exports.sourceNodes = async (
   )
     .then(res => res.json())
     .then(data => {
+      console.log(data)
       const { business: businessData } = data
       // creates the graphql schema
       const goNationBusinessDataNode = {
