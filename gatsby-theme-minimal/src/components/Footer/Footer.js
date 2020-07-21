@@ -9,8 +9,8 @@ export default function Footer({ businessName }) {
         sx={{ flexGrow: '1', marginTop: 2, marginBottom: 2, color: 'light' }}>
         © Copyright {new Date().getFullYear()}, {businessName}
       </Text>
-      <Flex sx={{ alignItems: 'center', marginTop: 2, marginBottom: 2 }}>
-        <a href='https://www.gonation.com/' target='_blank'>
+      <a href='https://www.gonation.com/' target='_blank'>
+        <Flex sx={{ alignItems: 'center', marginTop: 2, marginBottom: 2 }}>
           <GoNationMan
             color={'#FFF'}
             height={'20px'}
@@ -20,8 +20,8 @@ export default function Footer({ businessName }) {
           <Text sx={{ marginBottom: 0, color: 'light' }} variant='default'>
             Local Powered By GoNation
           </Text>
-        </a>
-      </Flex>
+        </Flex>
+      </a>
     </Flex>
   )
 }
