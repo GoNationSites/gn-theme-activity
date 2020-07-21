@@ -13,15 +13,6 @@ const MenuItem = ({ item, type, withDollar, hasMenuImages }) => {
         return defaultType()
     }
   }
-  const CheckMenuItem = (name, item) => {
-    // console.log('functionhit')
-    // console.log(name)
-    if (name == 'Garlic Bread') {
-      console.log(item)
-      console.log(item.variants[0].price)
-    }
-  }
-
   const defaultType = () => (
     <Flex variant='menu.menuItemInnerContainer'>
       {hasMenuImages ? (
@@ -46,15 +37,22 @@ const MenuItem = ({ item, type, withDollar, hasMenuImages }) => {
         {/* if the variant length is one and no label then render without variants or if there are no variants */}
         {(item.variants.length === 1 && item.variants[0].label === '') ||
         item.variants.length === 0 ? (
-          <Flex>
-            <Text variant='menu.menuItemName'>{item.name}</Text>
-            {/* if there is no variants then no price exists */}
-            {item.variants.length !== 0 ? (
-              <Price withDollar={withDollar} variants={item.variants} toSide />
-            ) : (
-              ''
-            )}
-          </Flex>
+          <Box>
+            <Flex>
+              <Text variant='menu.menuItemName'>{item.name}</Text>
+              {/* if there is no variants then no price exists */}
+              {item.variants.length !== 0 ? (
+                <Price
+                  withDollar={withDollar}
+                  variants={item.variants}
+                  toSide
+                />
+              ) : (
+                ''
+              )}
+            </Flex>
+            <Text variant='menu.menuItemDescription'>{item.desc}</Text>
+          </Box>
         ) : (
           <Box>
             <Flex>
@@ -67,6 +65,7 @@ const MenuItem = ({ item, type, withDollar, hasMenuImages }) => {
                   : ''}
               </Text>
             </Flex>
+            <Text variant='menu.menuItemDescription'>{item.desc}</Text>
             <PriceWithVariants
               withDollar={withDollar}
               variants={item.variants}
@@ -74,7 +73,6 @@ const MenuItem = ({ item, type, withDollar, hasMenuImages }) => {
             />
           </Box>
         )}
-        <Text variant='menu.menuItemDescription'>{item.desc}</Text>
       </Box>
     </Flex>
   )

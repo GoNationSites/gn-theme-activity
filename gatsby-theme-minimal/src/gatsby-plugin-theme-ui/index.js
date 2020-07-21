@@ -462,6 +462,7 @@ export default {
     },
     menuItemDescription: {
       fontSize: 2,
+      marginBottom: 3,
       fontFamily: 'heading',
     },
 

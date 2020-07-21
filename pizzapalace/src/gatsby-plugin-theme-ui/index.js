@@ -463,6 +463,7 @@ export default {
     menuItemDescription: {
       fontSize: 2,
       fontFamily: 'heading',
+      marginBottom: 3,
     },
 
     menuItemPriceLabel: {
