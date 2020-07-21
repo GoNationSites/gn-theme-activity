@@ -25,6 +25,7 @@ export default function Home({ data }) {
     gonationID,
     poweredID,
     seoKeywords,
+    hasHeroTitle,
     hasAbout,
     hasMenu,
     hasMenuImages,
@@ -57,7 +58,11 @@ export default function Home({ data }) {
         description={description}
         keywords={seoKeywords}
       />
-      <Hero logo={avatar.image.cloudinaryId} businessName={businessName} />
+      <Hero
+        hasHeroTitle={hasHeroTitle}
+        logo={avatar.image.cloudinaryId}
+        businessName={businessName}
+      />
 
       {hasShout ? (
         <Shout gonationID={gonationID} poweredID={poweredID} />
@@ -75,8 +80,6 @@ export default function Home({ data }) {
           <About gonationID={gonationID} description={description} />
         ) : null}
 
-        {hasGallery ? <Gallery gonationID={gonationID} /> : null}
-
         {hasEvents ? (
           <Events gonationID={gonationID} slug={slug} poweredID={poweredID} />
         ) : null}
@@ -90,6 +93,8 @@ export default function Home({ data }) {
         ) : (
           ''
         )}
+
+        {hasGallery ? <Gallery gonationID={gonationID} /> : null}
       </Box>
       {hasContact ? (
         <Contact
@@ -130,6 +135,7 @@ export const query = graphql`
           gonationID
           poweredID
           seoKeywords
+          hasHeroTitle
           hasAbout
           hasMenu
           hasMenuImages

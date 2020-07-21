@@ -10,15 +10,17 @@ export default function Footer({ businessName }) {
         © Copyright {new Date().getFullYear()}, {businessName}
       </Text>
       <Flex sx={{ alignItems: 'center', marginTop: 2, marginBottom: 2 }}>
-        <GoNationMan
-          color={'#FFF'}
-          height={'20px'}
-          width={'20px'}
-          style={{ marginRight: '10px' }}
-        />
-        <Text sx={{ marginBottom: 0, color: 'light' }} variant='default'>
-          Local Powered By GoNation
-        </Text>
+        <a href='https://www.gonation.com/' target='_blank'>
+          <GoNationMan
+            color={'#FFF'}
+            height={'20px'}
+            width={'20px'}
+            style={{ marginRight: '10px' }}
+          />
+          <Text sx={{ marginBottom: 0, color: 'light' }} variant='default'>
+            Local Powered By GoNation
+          </Text>
+        </a>
       </Flex>
     </Flex>
   )

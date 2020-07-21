@@ -63,10 +63,9 @@ export default function Menus({ gonationID, hasMenuImages, poweredID }) {
 
       {!menus.isLoading && menus.menuData ? (
         <>
-          {console.log(menus)}
           {menus.menuData.length ? (
             <Box variant='page.section'>
-              <Text variant='sectionHeading'>Our Menus</Text>
+              <Text variant='sectionHeading'>Our Menu</Text>
               <AllIn menuData={menus.menuData} hasMenuImages={hasMenuImages} />
             </Box>
           ) : (

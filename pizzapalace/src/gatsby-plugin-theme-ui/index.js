@@ -409,6 +409,13 @@ export default {
       fontSize: [5, 5, 6],
       textAlign: 'center',
     },
+    sectionDescription: {
+      textAlign: 'center',
+      fontFamily: 'heading',
+      maxWidth: '500px',
+      margin: '1.75rem auto',
+      fontWeight: 'bold',
+    },
     sectionContainer: {
       alignItems: 'stretch',
       flexWrap: 'wrap',
@@ -524,6 +531,7 @@ export default {
     backgroundColor: 'black',
     padding: 4,
     paddingBottom: 5,
+    paddingTop: 5,
     flexDirection: ['column', 'column', 'row'],
 
     heading: {

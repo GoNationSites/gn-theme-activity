@@ -36,6 +36,10 @@ const AllIn = ({ menuData, setModalActive, onBackClick, hasMenuImages }) => {
             {section.name}
           </Text>
 
+          <Text variant='menu.sectionDescription' sx={{ textAlign: 'center' }}>
+            {section.desc}
+          </Text>
+
           <Flex variant='menu.sectionContainer'>
             {parsedSection.childItems.map(({ item }, index) => {
               return (

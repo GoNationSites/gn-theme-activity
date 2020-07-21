@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   jsx,
   Box,
@@ -23,6 +23,16 @@ export default function CtaWidget({
   country,
   orderOnlineLink,
 }) {
+  // const [scrolledBottom, setScrolledBottom] = useState(false)
+
+  // useEffect(() => {
+  //   document.scrollHeight - document.scrollTop === document.clientHeight
+  //     ? setScrolledBottom(true)
+  //     : setScrolledBottom(false)
+
+  //   return () => {}
+  // })
+
   return (
     <Flex
       sx={{

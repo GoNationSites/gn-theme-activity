@@ -7,6 +7,7 @@ module.exports = {
         poweredID: '4fb93c43b111aa3a6e000060',
         seoKeywords:
           'Seafood, Mediterranean, Salads, Pasta, pizza, veal, catering, kabobs',
+        hasHeroTitle: false,
         hasAbout: true,
         hasMenu: true,
         hasMenuImages: true,

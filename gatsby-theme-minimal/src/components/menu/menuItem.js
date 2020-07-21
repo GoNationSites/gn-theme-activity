@@ -13,6 +13,14 @@ const MenuItem = ({ item, type, withDollar, hasMenuImages }) => {
         return defaultType()
     }
   }
+  const CheckMenuItem = (name, item) => {
+    // console.log('functionhit')
+    // console.log(name)
+    if (name == 'Garlic Bread') {
+      console.log(item)
+      console.log(item.variants[0].price)
+    }
+  }
 
   const defaultType = () => (
     <Flex variant='menu.menuItemInnerContainer'>
@@ -35,14 +43,30 @@ const MenuItem = ({ item, type, withDollar, hasMenuImages }) => {
         ''
       )}
       <Box variant='menu.menuItemContentContainer'>
-        {item.variants.length && item.variants[0].label === '' ? (
+        {/* if the variant length is one and no label then render without variants or if there are no variants */}
+        {(item.variants.length === 1 && item.variants[0].label === '') ||
+        item.variants.length === 0 ? (
           <Flex>
             <Text variant='menu.menuItemName'>{item.name}</Text>
-            <Price withDollar={withDollar} variants={item.variants} toSide />
+            {/* if there is no variants then no price exists */}
+            {item.variants.length !== 0 ? (
+              <Price withDollar={withDollar} variants={item.variants} toSide />
+            ) : (
+              ''
+            )}
           </Flex>
         ) : (
           <Box>
-            <Text variant='menu.menuItemName'>{item.name}</Text>
+            <Flex>
+              <Text variant='menu.menuItemName'>{item.name}</Text>
+
+              <Text variant='menu.menuItemPrice'>
+                {/* if the first variant doesn't have a label then render it as a main overall price */}
+                {item.variants[0].label === '' && item.variants[0].price
+                  ? item.variants[0].price
+                  : ''}
+              </Text>
+            </Flex>
             <PriceWithVariants
               withDollar={withDollar}
               variants={item.variants}
