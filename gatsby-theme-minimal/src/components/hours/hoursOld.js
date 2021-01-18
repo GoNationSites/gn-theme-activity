@@ -107,14 +107,13 @@ export default function hours({ hours }) {
     })
 
   return (
-    <Box sx={{ maxWidth: '300px', width: '100%' }}>
+    <Box sx={{ width: '100%' }}>
       {console.log(hours)}
       <Text
         variant='h2'
         sx={{
           textAlign: ['center', 'center', 'left'],
           marginBottom: 2,
-          color: 'light',
         }}>
         {' '}
         Our Hours
@@ -136,7 +135,7 @@ export default function hours({ hours }) {
                 flexWrap: 'wrap',
               }}>
               <Text
-                variant='headingLight'
+                // variant='headingLight'
                 sx={{
                   marginBottom: 1,
                   textTransform: 'uppercase',
@@ -144,7 +143,21 @@ export default function hours({ hours }) {
                 }}>
                 {dayOfTheWeekText[index]}
               </Text>
-              {renderHours(day)}
+              {console.log(day)}
+
+              {day.length === 0 ? (
+                <Text
+                  sx={{
+                    flexGrow: '1',
+                    marginBottom: 0,
+                    fontSize: 1,
+                    textAlign: 'right',
+                  }}>
+                  Closed
+                </Text>
+              ) : (
+                renderHours(day)
+              )}
             </Box>
           )
         })}

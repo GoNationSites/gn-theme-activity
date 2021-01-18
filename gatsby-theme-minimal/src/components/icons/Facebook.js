@@ -19,7 +19,7 @@ const Facebook = ({ color, height, width, style }) => (
 )
 
 Facebook.defaultProps = {
-  color: 'white',
+  color: 'black',
   height: '16px',
   width: '16px',
 }

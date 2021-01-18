@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { jsx, Box, Image, Flex, Text, Spinner } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment } from '@fortawesome/free-solid-svg-icons'
@@ -11,6 +11,21 @@ const Shout = ({ gonationID, poweredID }) => {
     shoutData: null,
     isLoading: true,
   })
+  const [scrolled, SetScrolled] = useState(false)
+
+  const scrollRef = useRef()
+  scrollRef.current = scrolled
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 70
+      if (scrollRef.current !== show) {
+        SetScrolled(show)
+      }
+    }
+
+    document.addEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     axios({
@@ -29,7 +44,7 @@ const Shout = ({ gonationID, poweredID }) => {
   return (
     <>
       {!shout.isLoading && shout.shoutData ? (
-        <Box variant='shout.container'>
+        <Box variant={`shout.${!scrolled ? 'container' : 'containerScrolled'}`}>
           <Flex variant='shout.innerContainer'>
             {console.log(shout)}
             <Box variant='shout.imageContainer'>
@@ -40,10 +55,10 @@ const Shout = ({ gonationID, poweredID }) => {
             </Box>
 
             <Box variant='shout.content'>
-              <Text variant='headingLight'>
+              <Text variant='shout.title'>
                 <FontAwesomeIcon icon={faComment} /> Recent Shout
               </Text>
-              <Text variant='headingLight' sx={{ fontSize: 2, margin: 0 }}>
+              <Text variant='shout.text' sx={{ fontSize: 2, margin: 0 }}>
                 {shout.shoutData.shout.text}
               </Text>
             </Box>

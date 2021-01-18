@@ -20,7 +20,7 @@ const Instagram = ({ color, height, width, style }) => (
 )
 
 Instagram.defaultProps = {
-  color: 'white',
+  color: 'black',
   height: '16px',
   width: '16px',
 }

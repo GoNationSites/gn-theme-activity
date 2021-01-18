@@ -7,40 +7,59 @@ import SEO from '../components/seo'
 import Hero from '../components/hero/hero'
 import Shout from '../components/Shout'
 import About from '../components/About'
-import Gallery from '../components/gallery/Gallery'
-import Events from '../components/events/Events'
-import Hours from '../components/hours/Hours'
+import Hours from '../components/hours/hoursOld'
 import Contact from '../components/contact/Contact'
 import Footer from '../components/Footer/Footer'
 import CtaWidget from '../components/ui/CtaWidget'
-import Menus from '../components/menu/Menus'
+import Logo from '../components/logo/Logo'
+import Cover from '../components/cover/Cover'
+import ContactDetails from '../components/contact/ContactDetails'
+import SocialIcons from '../components/contact/SocialIcons'
+import ContactForm from '../components/contact/ContactForm'
 
 export default function Home({ data }) {
-  // desctructing all variables for use.
-  const {
-    name: businessName,
-    slug,
-  } = data.allGoNationBusinessData.edges[0].node
+  // ! destructing all variables for use.
+  // ? ==========================================
+  // ? =====  Data From Gatsby Config File  =====
+  // ? ==========================================
+
   const {
     gonationID,
     poweredID,
     seoKeywords,
     hasHeroTitle,
     hasAbout,
-    hasMenu,
-    hasMenuImages,
+    // hasMenu,
+    // hasMenuImages,
     hasShout,
-    hasEvents,
-    hasGallery,
+    // hasEvents,
+    // hasGallery,
     hasContact,
     orderOnlineLink,
   } = data.allGoNationData.edges[0].node
+
+  // ? ==========================================
+  // ? ======  Data From Gonation Business  =====
+  // ? ==========================================
+
+  const businessData = data.allGoNationBusinessData.edges[0].node
+
   const {
-    description,
-    contact,
-    hours,
-  } = data.allGoNationBusinessData.edges[0].node.publishableData
-  const { avatar } = data.allGoNationBusinessData.edges[0].node
+    name: businessName,
+    slug,
+    avatar: {
+      image: { cloudinaryId: avatarCloudinaryId },
+    },
+    cover: {
+      image: { cloudinaryId: coverCloudinaryId },
+    },
+    location,
+    publishableData,
+  } = businessData
+
+  const { description, contact, hours } = publishableData
+
+  const { facebook, instagram, twitter } = contact
 
   const {
     street,
@@ -49,7 +68,11 @@ export default function Home({ data }) {
     state,
     postalCode,
     country,
-  } = data.allGoNationBusinessData.edges[0].node.location.address
+  } = location.address
+
+  // ? ==========================================
+  // ? ===========  Rendering JSX  ==============
+  // ? ==========================================
 
   return (
     <>
@@ -58,15 +81,43 @@ export default function Home({ data }) {
         description={description}
         keywords={seoKeywords}
       />
-      <Hero
-        hasHeroTitle={hasHeroTitle}
-        logo={avatar.image.cloudinaryId}
-        businessName={businessName}
-      />
+
+      {console.log(data.allGoNationBusinessData.edges[0].node)}
+
+      <Logo logoImageId={avatarCloudinaryId} />
+
+      <Cover coverImageId={coverCloudinaryId} />
 
       {hasShout ? (
         <Shout gonationID={gonationID} poweredID={poweredID} />
       ) : null}
+
+      <Box variant='contactInfo'>
+        <Text variant='contactInfo.title' as='h3'>
+          Contact Us
+        </Text>
+
+        <ContactDetails
+          street={street}
+          indicator={indicator}
+          city={city}
+          state={state}
+          postalCode={postalCode}
+          country={country}
+          phone={contact.phone}
+        />
+
+        <SocialIcons
+          facebook={facebook}
+          instagram={instagram}
+          twitter={twitter}
+          gonationSlug={slug}
+        />
+      </Box>
+
+      <ContactForm />
+
+      <Hours hours={hours} />
 
       <Box
         p={3}
@@ -79,24 +130,9 @@ export default function Home({ data }) {
         {hasAbout ? (
           <About gonationID={gonationID} description={description} />
         ) : null}
-
-        {hasEvents ? (
-          <Events gonationID={gonationID} slug={slug} poweredID={poweredID} />
-        ) : null}
-
-        {hasMenu ? (
-          <Menus
-            gonationID={gonationID}
-            hasMenuImages={hasMenuImages}
-            poweredID={poweredID}
-          />
-        ) : (
-          ''
-        )}
-
-        {hasGallery ? <Gallery gonationID={gonationID} /> : null}
       </Box>
-      {hasContact ? (
+
+      {/* {hasContact ? (
         <Contact
           gonationID={gonationID}
           contact={contact}
@@ -110,7 +146,7 @@ export default function Home({ data }) {
           businessName={businessName}
           hours={hours}
         />
-      ) : null}
+      ) : null} */}
 
       <Footer businessName={businessName} />
       <CtaWidget
@@ -228,8 +264,33 @@ export const query = graphql`
               cloudinaryId
             }
           }
+          cover {
+            image {
+              cloudinaryId
+            }
+          }
         }
       }
     }
   }
 `
+
+{
+  /* {hasEvents ? (
+          <Events gonationID={gonationID} slug={slug} poweredID={poweredID} />
+        ) : null}
+
+        {hasMenu ? (
+          <Menus
+            gonationID={gonationID}
+            hasMenuImages={hasMenuImages}
+            poweredID={poweredID}
+          />
+        ) : (
+          ''
+        )} */
+}
+
+{
+  /* {hasGallery ? <Gallery gonationID={gonationID} /> : null} */
+}

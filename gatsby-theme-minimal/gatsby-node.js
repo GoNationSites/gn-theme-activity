@@ -12,6 +12,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     slug: String
     publishableData: publishableData
     avatar: avatar
+    cover:cover
     location: location
   }
 
@@ -69,6 +70,10 @@ exports.createSchemaCustomization = ({ actions }) => {
     image: image
   }
 
+  type cover {
+    image: image
+  }
+
   type image {
     cloudinaryId: String
   }
@@ -86,6 +91,7 @@ exports.sourceNodes = async (
     hasHeroTitle,
     hasAbout,
     hasMenu,
+    menuVersion,
     hasMenuImages,
     hasShout,
     hasEvents,
@@ -109,6 +115,7 @@ exports.sourceNodes = async (
     hasHeroTitle,
     hasAbout,
     hasMenu,
+    menuVersion,
     hasMenuImages,
     hasShout,
     hasEvents,

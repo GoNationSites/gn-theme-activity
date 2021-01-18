@@ -1,41 +1,54 @@
 import React from 'react'
-import { Text } from 'theme-ui'
+import { Text, Box, Link } from 'theme-ui'
 import Facebook from '../icons/Facebook'
 import Instagram from '../icons/Instagram'
 import Twitter from '../icons/Twitter'
-export default function SocialIcons({ instagram, facebook, twitter }) {
+import GoNationMan from '../icons/GoNationMan'
+
+export default function SocialIcons({
+  instagram,
+  facebook,
+  twitter,
+  gonationSlug,
+}) {
   return (
-    <div>
+    <Box variant='socialIcons'>
       {facebook ? (
-        <a href={facebook} target='_blank'>
-          <Facebook height={'30px'} width={'30px'} style={{ margin: '10px' }} />
-        </a>
+        <Link variant='socialIcons.link' href={facebook} target='_blank'>
+          <Facebook height={'30px'} width={'30px'} />
+          <Text variant='socialIcons.text'>Facebook</Text>
+        </Link>
       ) : (
         ''
       )}
       {instagram ? (
-        <a href={instagram} target='_blank'>
-          <Instagram
-            height={'30px'}
-            width={'30px'}
-            style={{ margin: '10px' }}
-          />
-        </a>
+        <Link variant='socialIcons.link' href={instagram} target='_blank'>
+          <Instagram height={'30px'} width={'30px'} />
+          <Text variant='socialIcons.text'>Instagram</Text>
+        </Link>
       ) : (
         ''
       )}
       {twitter ? (
-        <a href={twitter} target='_blank'>
-          <Twitter
-            color={'#ff6347'} // these colours are currently hard coded outside of theme ui. will need to bring them in as icons instead of svgs.
-            height={'30px'}
-            width={'30px'}
-            style={{ margin: '10px' }}
-          />
-        </a>
+        <Link variant='socialIcons.link' href={twitter} target='_blank'>
+          <Twitter height={'30px'} width={'30px'} />
+          <Text variant='socialIcons.text'>Twitter</Text>
+        </Link>
       ) : (
         ''
       )}
-    </div>
+
+      {gonationSlug ? (
+        <Link
+          variant='socialIcons.link'
+          href={`https://www.gonation.com/place/${gonationSlug}/pulse`}
+          target='_blank'>
+          <GoNationMan height={'30px'} width={'30px'} />
+          <Text variant='socialIcons.text'>Gonation</Text>
+        </Link>
+      ) : (
+        ''
+      )}
+    </Box>
   )
 }
