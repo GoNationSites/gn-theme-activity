@@ -2,7 +2,7 @@ export default {
   // ======== base styles ========
   colors: {
     text: '#333',
-    background: '#FFF',
+    background: '#fefefe',
     primary: '#231f20',
     secondary: '#fbad18',
     light: '#FFF',
@@ -82,38 +82,63 @@ export default {
       textAlign: 'center',
     },
     sectionHeading: {
-      color: 'text',
-      marginTop: 0,
-      fontFamily: 'heading',
-      marginBottom: 3,
-      fontSize: [5, 5, 6],
       textAlign: 'center',
-      fontWeight: 'bolder',
+      fontSize: '2rem',
+      textTransform: 'uppercase',
+      borderBottom: '2px solid',
+      borderColor: 'text',
+      margin: '0rem auto 1rem',
+      width: 'fit-content',
+    },
+  },
+
+  boxStyles: {
+    shadowBox: {
+      boxShadow: ['', '', '', '1px 0 7px rgba(0,0,0,.2)'],
+      borderRadius: ['', '', '', '10px'],
+    },
+    borderBox: {
+      border: 'solid 1px #EEEEEE',
     },
   },
 
   styles: {
-    h1: {
-      color: 'light',
-      fontFamily: 'heading',
-      fontSize: 6,
-      marginY: 3,
-      textAlign: 'center',
-    },
-    h2: {
-      color: 'text',
-      marginTop: 0,
-      fontFamily: 'heading',
-      marginBottom: 3,
-      fontSize: [5, 5, 6],
-      textAlign: 'center',
-    },
-    a: {
-      color: 'text',
-      marginTop: 1,
-      marginBottom: 1,
-      display: 'inline-block',
-      textDecoration: 'none',
+    root: {
+      fontFamily: 'body',
+      h1: {
+        color: 'light',
+        fontFamily: 'heading',
+        fontSize: 6,
+        marginY: 3,
+        textAlign: 'center',
+      },
+      h2: {
+        color: 'text',
+        marginTop: 0,
+        fontFamily: 'heading',
+        marginBottom: 3,
+        fontSize: [5, 5, 6],
+        textAlign: 'center',
+      },
+      h3: {
+        color: 'text',
+        marginTop: 0,
+        fontFamily: 'heading',
+        marginBottom: 3,
+        fontSize: [5, 5, 6],
+        textAlign: 'center',
+      },
+      h4: {
+        color: 'text',
+        marginTop: 0,
+        fontFamily: 'heading',
+        marginBottom: 3,
+        textAlign: 'center',
+      },
+      a: {
+        color: 'text',
+        textDecoration: 'none',
+      },
     },
     spinner: {
       color: 'primary',
@@ -153,16 +178,36 @@ export default {
   // ? =====  custom styling  =====
   // ? ============================
 
-  // high level styles
-  page: {
-    section: {
-      marginBottom: 4,
-    },
-  },
-
   spinnerContainer: {
     display: 'flex',
     justifyContent: 'center',
+  },
+
+  // ? ===================
+  // ? ===== Layout ======
+  // ? ===================
+
+  // high level styles
+  pageContainer: {
+    display: 'flex',
+    flexDirection: ['column', '', '', 'row'],
+  },
+
+  column1: {
+    width: ['', '', '', '20%'],
+    position: ['', '', '', 'fixed'],
+    // borderRight: ['', '', '', '1px solid black'],
+    boxShadow: ['', '', '', '1px 0 7px rgba(0,0,0,.2)'],
+    height: ['', '', '', '100vh'],
+    textAlign: ['', '', '', 'center'],
+  },
+
+  column2: {
+    display: ['', '', '', 'flex'],
+    flexWrap: 'wrap',
+    width: ['', '', '', '80%'],
+    padding: ['', '', '', '0.5rem', '1rem'],
+    marginLeft: ['', '', '', '20%'],
   },
 
   // ? =================
@@ -171,18 +216,20 @@ export default {
 
   logo: {
     logo: {
-      position: 'fixed',
+      position: ['fixed', '', '', 'static'],
       height: '100%',
       maxHeight: '150px',
       margin: '0 auto',
       left: '50%',
-      transform: 'translateX(-50%)',
+      transform: ['translateX(-50%)', '', '', 'unset'],
       zIndex: '10',
       transition: 'all ease-in-out 0.2s',
     },
     logoScrolled: {
       variant: 'logo.logo',
-      maxHeight: '75px',
+      position: ['fixed', '', '', 'static'],
+      transform: ['translateX(-50%)', '', '', 'unset'],
+      maxHeight: ['75px', '', '', '150px'],
     },
   },
 
@@ -194,8 +241,8 @@ export default {
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
     backgroundRepeat: ' no-repeat',
-    height: '100vh',
-    width: '100%',
+    height: ['100vh', '', '', '30vh'],
+    width: ['100%', '', '', ''],
   },
 
   // ? =================
@@ -204,10 +251,14 @@ export default {
 
   shout: {
     container: {
-      position: 'absolute',
-      transform: 'translateY(-100%)',
-      bg: 'secondary',
-      margin: '-50px auto 20px',
+      // boxShadow: ['', '', '', '1px 0 7px rgba(0,0,0,.2)'],
+      border: ['', '', '', 'solid 1px #EEEEEE'],
+      borderRadius: ['', '', '', '10px'],
+      width: ['100%', '', '', 'calc(50% - 1rem)'],
+      position: ['absolute', '', '', 'static'],
+      transform: ['translateY(-100%)', '', '', 'unset'],
+      bg: ['secondary', '', '', 'unset'],
+      margin: ['-50px auto 20px', '', '', '0.5rem'],
       padding: 2,
       transition: 'all ease-in-out 0.2s',
     },
@@ -217,6 +268,7 @@ export default {
     },
     innerContainer: {
       alignItems: 'stretch',
+      height: '100%',
     },
     imageContainer: {
       display: 'flex',
@@ -226,65 +278,24 @@ export default {
       objectFit: 'cover',
       width: '100%',
       height: '100%',
+      borderRadius: '5px',
     },
     content: {
       flex: 1,
       display: 'flex',
       justifyContent: 'center',
       flexDirection: 'column',
-      paddingX: 3,
+      padding: ['0rem 0.75rem', '', '', '2rem 1rem'],
     },
 
     title: {
       variant: 'text.headingLight',
+      color: ['light', '', '', 'text'],
     },
 
     text: {
       variant: 'text.headingLight',
-    },
-  },
-
-  // ? =================
-  // ? ===== Shout =====
-  // ? =================
-
-  // Hours
-
-  hours: {
-    container: {
-      flexDirection: 'column',
-      color: 'white',
-      fontFamily: 'heading',
-      flexGrow: '1',
-      width: '100%',
-      maxWidth: '400px',
-      padding: [2, 2, 2, 4],
-    },
-
-    labelHeading: {
-      fontFamily: 'heading',
-      fontWeight: 'heading',
-      fontSize: 3,
-      marginBottom: 3,
-      marginBottom: 1,
-      textTransform: 'uppercase',
-      fontSize: 2,
-    },
-    hoursEntry: {
-      width: '100%',
-      flexDirection: ['row', 'row', 'row'],
-      marginBottom: 0,
-    },
-    dayLabel: {
-      flexGrow: '1',
-      marginBottom: 0,
-      fontSize: 1,
-      textTransform: 'uppercase',
-    },
-    timeLabel: {
-      textAlign: 'right',
-      marginBottom: 0,
-      fontSize: 1,
+      color: ['light', '', '', 'text'],
     },
   },
 
@@ -295,13 +306,10 @@ export default {
   contactInfo: {
     padding: '2rem 1rem',
     title: {
-      textAlign: 'center',
-      fontSize: '2rem',
-      textTransform: 'uppercase',
-      borderBottom: '2px solid',
-      borderColor: 'text',
-      margin: '0rem auto 1rem',
-      width: 'fit-content',
+      variant: 'text.sectionHeading',
+      fontSize: ['', '', '', '1.5rem'],
+      textAlign: ['center', '', '', 'left'],
+      margin: ['0 auto', '', '', '1rem 0rem'],
     },
   },
 
@@ -326,10 +334,14 @@ export default {
   // ? ===========================
 
   contactDetails: {
-    padding: '1rem',
-    fontSize: '1.5rem',
-    textAlign: 'center',
-    phone: {},
+    padding: ['1rem', '', '', '1rem 0rem'],
+    fontSize: ['1.5rem', '', '', '1rem', '1.25rem'],
+    textAlign: ['center', '', '', 'left'],
+    borderBottom: ['', '', '', '2px solid #EEEEEE'],
+    marginBottom: ['', '', '', '1rem'],
+    phone: {
+      marginBottom: '1rem',
+    },
     directions: {},
   },
 
@@ -339,15 +351,23 @@ export default {
 
   socialIcons: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: ['row', '', '', 'column'],
     flexWrap: 'wrap',
     justifyContent: 'center',
     link: {
       textDecoration: 'none',
       textAlign: 'center',
       margin: '0.5rem',
+      display: ['', '', '', 'flex'],
+      alignItems: 'center',
+      svg: {
+        path: {
+          fill: 'secondary',
+        },
+      },
     },
     text: {
+      marginLeft: ['', '', '', '0.5rem'],
       color: 'text',
       textDecoration: 'none',
     },
@@ -359,9 +379,13 @@ export default {
 
   // form styles
   contactForm: {
-    padding: '2rem 1rem',
-    maxWidth: '500px',
-    margin: '0 auto',
+    border: ['', '', '', 'solid 1px #EEEEEE'],
+    borderRadius: ['', '', '', '10px'],
+    padding: '1rem 1rem',
+    width: ['calc(100% - 1rem)', 'calc(75% - 1rem)', 'calc(50% - 1rem)'],
+    border: ['', '', '', 'solid 1px #EEEEEE'],
+    margin: ['0 auto', '', '', '0.5rem'],
+    // maxWidth: '500px',
     label: {
       fontSize: 1,
       fontWeight: 'bold',
@@ -402,14 +426,213 @@ export default {
     },
   },
 
+  // ? ===========================
+  // ? ========= Hours ===========
+  // ? ===========================
+
+  hours: {
+    container: {
+      border: ['', '', '', 'solid 1px #EEEEEE'],
+      borderRadius: ['', '', '', '10px'],
+      flexDirection: 'column',
+      flexGrow: '1',
+      width: ['calc(100% - 1rem)', 'calc(75% - 1rem)', 'calc(50% - 1rem)'],
+      padding: [2, 2, 2, 4],
+      // border: ['', '', '', 'solid 1px black'],
+      margin: ['0 auto', '', '', '0.5rem'],
+    },
+    title: {
+      variant: 'text.sectionHeading',
+    },
+    hoursContainer: {
+      flexDirection: ['column'],
+      justifyContent: 'space-between',
+    },
+    dayContainer: {
+      textAlign: ['left', 'left', 'left'],
+      marginBottom: 2,
+      display: 'flex',
+      flexWrap: 'wrap',
+    },
+    dayOfTheWeek: {
+      marginBottom: 1,
+      textTransform: 'uppercase',
+      fontSize: 2,
+    },
+
+    timeBlocksContainer: {},
+    timeBlock: {
+      width: '100%',
+      flexDirection: ['row', 'row', 'row'],
+      marginBottom: 0,
+    },
+
+    timeBlockLabel: {
+      flexGrow: '1',
+      marginBottom: 0,
+      fontSize: 1,
+    },
+    time: {
+      textAlign: 'right',
+      marginBottom: 0,
+      fontSize: 1,
+    },
+    closed: {
+      width: 'unset',
+      flexGrow: '1',
+      marginBottom: 0,
+      fontSize: 1,
+      textAlign: 'right',
+    },
+    open24: {
+      flexGrow: '1',
+      marginBottom: 0,
+      fontSize: 1,
+      textAlign: 'right',
+    },
+  },
+
+  // ? ====================================
+  // ? ====== Menu and Online Order =======
+  // ? ====================================
+
+  contentBoxesLinks: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'stretch',
+    width: ['100%', '', '', '50%'],
+    padding: ['2rem 1rem', '', '', '0rem'],
+    svg: {
+      fontSize: '2rem',
+      marginBottom: '1rem',
+    },
+    a: {
+      padding: '1rem',
+      height: '100%',
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      textAlign: 'center',
+      fontSize: '1.5rem',
+      ':hover': {
+        bg: 'secondary',
+        color: 'light',
+        borderRadius: ['', '', '', '10px'],
+      },
+    },
+  },
+
+  onlineOrder: {
+    width: 'calc(50% - 1rem)',
+    border: ['', '', '', 'solid 1px #EEEEEE'],
+    borderRadius: ['', '', '', '10px'],
+    margin: '0.5rem',
+  },
+
+  menu: {
+    width: 'calc(50% - 1rem)',
+    // border: 'solid 1px black',
+    border: ['', '', '', 'solid 1px #EEEEEE'],
+    borderRadius: ['', '', '', '10px'],
+    margin: '0.5rem',
+  },
+
+  // ? ===========================
+  // ? ========== About ==========
+  // ? ===========================
+
+  about: {
+    order: ['', '', '', '8'],
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    maxWidth: ['991px', '', '', 'unset'],
+    margin: ['0 auto', '', '', '0.5rem'],
+    padding: '2rem 1rem 2rem',
+    border: ['', '', '', 'solid 1px #EEEEEE'],
+    borderRadius: ['', '', '', '10px'],
+    width: '100%',
+    title: {
+      variant: 'text.sectionHeading',
+    },
+    text: {
+      textAlign: 'center',
+      maxWidth: '600px',
+      margin: '0 auto',
+      whiteSpace: 'pre-wrap',
+      padding: '1rem',
+    },
+  },
+
+  // ? ===========================
+  // ? ======= CTA Widget ========
+  // ? ===========================
+
+  CTAContainer: {
+    display: ['', '', '', 'none'],
+    position: 'fixed',
+    flexWrap: 'wrap',
+    bottom: '0',
+    left: '0',
+    width: '100%',
+    bg: 'primary',
+    alignItems: 'stretch',
+    borderTop: '1px solid white',
+    svg: {
+      marginRight: '0.5rem',
+    },
+    phone: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      background: 'primary',
+      width: '50%',
+      color: 'light',
+      textAlign: 'center',
+      padding: 3,
+      borderRight: 'solid 1px white',
+    },
+    directions: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      background: 'primary',
+      width: '50%',
+      padding: 3,
+      color: 'light',
+      textAlign: 'center',
+    },
+    order: {
+      flexGrow: '1',
+      width: '100%',
+      margin: 0,
+      background: 'primary',
+      width: '100%',
+      padding: '1rem',
+      textAlign: 'center',
+      borderRadius: 0,
+      color: 'light',
+      borderTop: '1px solid white',
+    },
+    CTAText: {},
+  },
+
+  // ? ===========================
+  // ? ========= Footer ==========
+  // ? ===========================
+
   // Footer Styles
 
   footer: {
-    backgroundColor: 'black',
-    padding: 4,
-    paddingBottom: 5,
-    paddingTop: 5,
+    order: '9',
+    backgroundColor: 'secondary',
+    padding: ['20px 1rem 120px', '', '', '1rem'],
     flexDirection: ['column', 'column', 'row'],
+    alignItems: 'center',
+    marginTop: '1rem',
+    width: '100%',
 
     heading: {
       color: 'text',
@@ -666,5 +889,45 @@ export default {
 //     fontFamily: 'heading',
 //     fontWeight: 'bolder',
 //     color: 'primary',
+//   },
+// },
+
+// Hours
+
+// hours: {
+//   container: {
+//     flexDirection: 'column',
+//     color: 'white',
+//     fontFamily: 'heading',
+//     flexGrow: '1',
+//     width: '100%',
+//     maxWidth: '400px',
+//     padding: [2, 2, 2, 4],
+//   },
+
+//   labelHeading: {
+//     fontFamily: 'heading',
+//     fontWeight: 'heading',
+//     fontSize: 3,
+//     marginBottom: 3,
+//     marginBottom: 1,
+//     textTransform: 'uppercase',
+//     fontSize: 2,
+//   },
+//   hoursEntry: {
+//     width: '100%',
+//     flexDirection: ['row', 'row', 'row'],
+//     marginBottom: 0,
+//   },
+//   dayLabel: {
+//     flexGrow: '1',
+//     marginBottom: 0,
+//     fontSize: 1,
+//     textTransform: 'uppercase',
+//   },
+//   timeLabel: {
+//     textAlign: 'right',
+//     marginBottom: 0,
+//     fontSize: 1,
 //   },
 // },

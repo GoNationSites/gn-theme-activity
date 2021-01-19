@@ -23,70 +23,26 @@ export default function CtaWidget({
   country,
   orderOnlineLink,
 }) {
-  // const [scrolledBottom, setScrolledBottom] = useState(false)
-
-  // useEffect(() => {
-  //   document.scrollHeight - document.scrollTop === document.clientHeight
-  //     ? setScrolledBottom(true)
-  //     : setScrolledBottom(false)
-
-  //   return () => {}
-  // })
-
   return (
-    <Flex
-      sx={{
-        position: 'fixed',
-        bottom: '0',
-        left: '0',
-        width: '100%',
-        maxWidth: '400px',
-        bg: 'primary',
-        alignItems: 'stretch',
-      }}>
-      <a
-        href={`tel:${phone}`}
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          background: '#11434a',
-          borderRight: 'solid 1px white',
-          width: '50%',
-        }}>
-        <Box p={3} sx={{ color: 'light', width: '100%', textAlign: 'center' }}>
-          <FontAwesomeIcon icon={faPhone} />
-        </Box>
-      </a>
+    <Flex variant='CTAContainer'>
+      <Link href={`tel:${phone}`} variant='CTAContainer.phone'>
+        <FontAwesomeIcon icon={faPhone} /> <Text variant='CTAText'>Call</Text>
+      </Link>
 
-      <a
+      <Link
+        variant='CTAContainer.directions'
         href={`https://www.google.com/maps/dir/?api=1&destination=${street}+${city}+${state}+${postalCode}+${country}`}
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          background: '#11434a',
-          width: '50%',
-        }}
         target='_blank'>
-        <Box p={3} sx={{ color: 'light', width: '100%', textAlign: 'center' }}>
-          <FontAwesomeIcon icon={faMapMarkerAlt} />
-        </Box>
-      </a>
+        <FontAwesomeIcon icon={faMapMarkerAlt} />
+        <Text variant='CTAText'>Directions</Text>
+      </Link>
 
       {orderOnlineLink ? (
         <Link
+          variant='CTAContainer.order'
           href={`${orderOnlineLink}`}
-          target='_blank'
-          sx={{ flexGrow: '1', width: '100%', margin: 0 }}>
-          <Button
-            variant='secondary'
-            sx={{
-              width: '100%',
-              padding: '1rem',
-              textAlign: 'center',
-              borderRadius: 0,
-            }}>
-            Order Online
-          </Button>
+          target='_blank'>
+          <Text variant='CTAText'>Order Online</Text>
         </Link>
       ) : (
         ''

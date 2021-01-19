@@ -15,7 +15,7 @@ module.exports = {
         hasGallery: false,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: '',
+        orderOnlineLink: 'https://www.google.com',
       },
     },
   ],

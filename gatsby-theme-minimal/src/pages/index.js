@@ -2,7 +2,7 @@
 import React from 'react'
 import '../index.css'
 import { graphql } from 'gatsby'
-import { jsx, Box, Image, Flex, Heading, Text, Styled } from 'theme-ui'
+import { jsx, Box, Image, Flex, Heading, Text, Styled, Link } from 'theme-ui'
 import SEO from '../components/seo'
 import Hero from '../components/hero/hero'
 import Shout from '../components/Shout'
@@ -16,6 +16,8 @@ import Cover from '../components/cover/Cover'
 import ContactDetails from '../components/contact/ContactDetails'
 import SocialIcons from '../components/contact/SocialIcons'
 import ContactForm from '../components/contact/ContactForm'
+import MenuLink from '../components/menu/MenuLink'
+import OrderOnline from '../components/ui/OrderOnline'
 
 export default function Home({ data }) {
   // ! destructing all variables for use.
@@ -84,71 +86,90 @@ export default function Home({ data }) {
 
       {console.log(data.allGoNationBusinessData.edges[0].node)}
 
-      <Logo logoImageId={avatarCloudinaryId} />
+      <Box variant='pageContainer'>
+        <Box variant='column1'>
+          <Logo logoImageId={avatarCloudinaryId} />
 
-      <Cover coverImageId={coverCloudinaryId} />
+          {/* // ! Only Shows on Desktop */}
+          <Box
+            variant='contactInfo'
+            sx={{ display: ['none', '', '', 'block'] }}>
+            <Text variant='contactInfo.title' as='h3'>
+              Contact Us
+            </Text>
 
-      {hasShout ? (
-        <Shout gonationID={gonationID} poweredID={poweredID} />
-      ) : null}
+            <ContactDetails
+              street={street}
+              indicator={indicator}
+              city={city}
+              state={state}
+              postalCode={postalCode}
+              country={country}
+              phone={contact.phone}
+            />
 
-      <Box variant='contactInfo'>
-        <Text variant='contactInfo.title' as='h3'>
-          Contact Us
-        </Text>
+            <SocialIcons
+              facebook={facebook}
+              instagram={instagram}
+              twitter={twitter}
+              gonationSlug={slug}
+            />
+          </Box>
+          {/* // ! ================================ */}
+        </Box>
 
-        <ContactDetails
-          street={street}
-          indicator={indicator}
-          city={city}
-          state={state}
-          postalCode={postalCode}
-          country={country}
-          phone={contact.phone}
-        />
+        <Box variant='column2'>
+          <Cover coverImageId={coverCloudinaryId} />
 
-        <SocialIcons
-          facebook={facebook}
-          instagram={instagram}
-          twitter={twitter}
-          gonationSlug={slug}
-        />
+          {hasShout ? (
+            <Shout gonationID={gonationID} poweredID={poweredID} />
+          ) : null}
+
+          <Box variant='contentBoxesLinks'>
+            <MenuLink gonationSlug={slug} />
+
+            {orderOnlineLink && (
+              <OrderOnline orderOnlineLink={orderOnlineLink} />
+            )}
+          </Box>
+
+          {hasAbout ? (
+            <About gonationID={gonationID} description={description} />
+          ) : null}
+
+          {/* // ! Only Shows on Mobile and Tablet */}
+          <Box variant='contactInfo' sx={{ display: ['', '', '', 'none'] }}>
+            <Text variant='contactInfo.title' as='h3'>
+              Contact Us
+            </Text>
+
+            <ContactDetails
+              street={street}
+              indicator={indicator}
+              city={city}
+              state={state}
+              postalCode={postalCode}
+              country={country}
+              phone={contact.phone}
+            />
+
+            <SocialIcons
+              facebook={facebook}
+              instagram={instagram}
+              twitter={twitter}
+              gonationSlug={slug}
+            />
+          </Box>
+          {/* // ! ================================ */}
+
+          <ContactForm />
+
+          <Hours hours={hours} />
+
+          <Footer businessName={businessName} />
+        </Box>
       </Box>
 
-      <ContactForm />
-
-      <Hours hours={hours} />
-
-      <Box
-        p={3}
-        sx={{
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          maxWidth: '991px',
-          margin: '0 auto',
-        }}>
-        {hasAbout ? (
-          <About gonationID={gonationID} description={description} />
-        ) : null}
-      </Box>
-
-      {/* {hasContact ? (
-        <Contact
-          gonationID={gonationID}
-          contact={contact}
-          street={street}
-          indicator={indicator}
-          city={city}
-          state={state}
-          postalCode={postalCode}
-          country={country}
-          address={data.allGoNationBusinessData.edges[0].node.location.address}
-          businessName={businessName}
-          hours={hours}
-        />
-      ) : null} */}
-
-      <Footer businessName={businessName} />
       <CtaWidget
         businessName={businessName}
         phone={contact.phone}

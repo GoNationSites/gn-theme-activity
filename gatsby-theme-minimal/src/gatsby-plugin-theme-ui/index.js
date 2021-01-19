@@ -2,12 +2,11 @@ export default {
   // ======== base styles ========
   colors: {
     text: '#333',
-    background: '#FFF',
-    primary: '#218b66',
-    secondary: '#77002F',
+    background: '#fefefe',
+    primary: '#231f20',
+    secondary: '#fbad18',
     light: '#FFF',
   },
-
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   breakpoints: ['480px', '768px', '1024px', '1500px', '2000px'],
@@ -83,83 +82,66 @@ export default {
       textAlign: 'center',
     },
     sectionHeading: {
-      color: 'text',
-      marginTop: 0,
-      fontFamily: 'heading',
-      marginBottom: 3,
-      fontSize: [5, 5, 6],
       textAlign: 'center',
-      fontWeight: 'bolder',
+      fontSize: '2rem',
+      textTransform: 'uppercase',
+      borderBottom: '2px solid',
+      borderColor: 'text',
+      margin: '0rem auto 1rem',
+      width: 'fit-content',
+    },
+  },
+
+  boxStyles: {
+    shadowBox: {
+      boxShadow: ['', '', '', '1px 0 7px rgba(0,0,0,.2)'],
+      borderRadius: ['', '', '', '10px'],
+    },
+    borderBox: {
+      border: 'solid 1px #EEEEEE',
     },
   },
 
   styles: {
-    h1: {
-      color: 'light',
-      fontFamily: 'heading',
-      fontSize: 6,
-      marginY: 3,
-      textAlign: 'center',
-    },
-    h2: {
-      color: 'text',
-      marginTop: 0,
-      fontFamily: 'heading',
-      marginBottom: 3,
-      fontSize: [5, 5, 6],
-      textAlign: 'center',
-    },
-    a: {
-      color: 'light',
-      marginTop: 1,
-      marginBottom: 1,
-      display: 'inline-block',
-      textDecoration: 'none',
+    root: {
+      fontFamily: 'body',
+      h1: {
+        color: 'light',
+        fontFamily: 'heading',
+        fontSize: 6,
+        marginY: 3,
+        textAlign: 'center',
+      },
+      h2: {
+        color: 'text',
+        marginTop: 0,
+        fontFamily: 'heading',
+        marginBottom: 3,
+        fontSize: [5, 5, 6],
+        textAlign: 'center',
+      },
+      h3: {
+        color: 'text',
+        marginTop: 0,
+        fontFamily: 'heading',
+        marginBottom: 3,
+        fontSize: [5, 5, 6],
+        textAlign: 'center',
+      },
+      h4: {
+        color: 'text',
+        marginTop: 0,
+        fontFamily: 'heading',
+        marginBottom: 3,
+        textAlign: 'center',
+      },
+      a: {
+        color: 'text',
+        textDecoration: 'none',
+      },
     },
     spinner: {
       color: 'primary',
-    },
-  },
-
-  // form styles
-  forms: {
-    label: {
-      fontSize: 1,
-      fontWeight: 'bold',
-      color: 'light',
-      marginBottom: 1,
-    },
-    label: {
-      fontFamily: 'heading',
-      color: 'light',
-      marginBottom: 1,
-    },
-    input: {
-      borderColor: 'light',
-      '&:focus': {
-        borderColor: 'secondary',
-        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
-        outline: 'none',
-      },
-    },
-    select: {
-      borderColor: 'light',
-      '&:focus': {
-        borderColor: 'secondary',
-        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
-        outline: 'none',
-      },
-    },
-    textarea: {
-      borderColor: 'light',
-      '&:focus': {
-        borderColor: 'secondary',
-        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
-        outline: 'none',
-      },
-    },
-    slider: {
-      bg: 'muted',
     },
   },
 
@@ -192,50 +174,101 @@ export default {
     },
   },
 
-  // ============================
-  // =====  custom styling  =====
-  // ============================
-
-  // high level styles
-  page: {
-    section: {
-      marginBottom: 4,
-    },
-  },
+  // ? ============================
+  // ? =====  custom styling  =====
+  // ? ============================
 
   spinnerContainer: {
     display: 'flex',
     justifyContent: 'center',
   },
 
-  // HERO Styles
-  hero: {
-    container: {
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '60vh',
-      bg: 'primary',
-    },
+  // ? ===================
+  // ? ===== Layout ======
+  // ? ===================
+
+  // high level styles
+  pageContainer: {
+    display: 'flex',
+    flexDirection: ['column', '', '', 'row'],
+  },
+
+  column1: {
+    width: ['', '', '', '20%'],
+    position: ['', '', '', 'fixed'],
+    // borderRight: ['', '', '', '1px solid black'],
+    boxShadow: ['', '', '', '1px 0 7px rgba(0,0,0,.2)'],
+    height: ['', '', '', '100vh'],
+    textAlign: ['', '', '', 'center'],
+  },
+
+  column2: {
+    display: ['', '', '', 'flex'],
+    flexWrap: 'wrap',
+    width: ['', '', '', '80%'],
+    padding: ['', '', '', '0.5rem', '1rem'],
+    marginLeft: ['', '', '', '20%'],
+  },
+
+  // ? =================
+  // ? ===== Logo ======
+  // ? =================
+
+  logo: {
     logo: {
+      position: ['fixed', '', '', 'static'],
       height: '100%',
       maxHeight: '150px',
       margin: '0 auto',
+      left: '50%',
+      transform: ['translateX(-50%)', '', '', 'unset'],
+      zIndex: '10',
+      transition: 'all ease-in-out 0.2s',
+    },
+    logoScrolled: {
+      variant: 'logo.logo',
+      position: ['fixed', '', '', 'static'],
+      transform: ['translateX(-50%)', '', '', 'unset'],
+      maxHeight: ['75px', '', '', '150px'],
     },
   },
 
-  // Shout Styles
+  // ? =================
+  // ? ===== Cover =====
+  // ? =================
+
+  cover: {
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    backgroundRepeat: ' no-repeat',
+    height: ['100vh', '', '', '30vh'],
+    width: ['100%', '', '', ''],
+  },
+
+  // ? =================
+  // ? ===== Shout =====
+  // ? =================
+
   shout: {
     container: {
-      marginBottom: 4,
-      maxWidth: '600px',
-      margin: '-50px auto 20px',
-      bg: 'secondary',
-      borderRadius: ['0px', '0px', '10px'],
+      // boxShadow: ['', '', '', '1px 0 7px rgba(0,0,0,.2)'],
+      border: ['', '', '', 'solid 1px #EEEEEE'],
+      borderRadius: ['', '', '', '10px'],
+      width: ['100%', '', '', 'calc(50% - 1rem)'],
+      position: ['absolute', '', '', 'static'],
+      transform: ['translateY(-100%)', '', '', 'unset'],
+      bg: ['secondary', '', '', 'unset'],
+      margin: ['-50px auto 20px', '', '', '0.5rem'],
       padding: 2,
+      transition: 'all ease-in-out 0.2s',
+    },
+    containerScrolled: {
+      variant: 'shout.container',
+      margin: '0px',
     },
     innerContainer: {
       alignItems: 'stretch',
+      height: '100%',
     },
     imageContainer: {
       display: 'flex',
@@ -245,295 +278,361 @@ export default {
       objectFit: 'cover',
       width: '100%',
       height: '100%',
+      borderRadius: '5px',
     },
     content: {
       flex: 1,
       display: 'flex',
       justifyContent: 'center',
       flexDirection: 'column',
-      paddingX: 3,
+      padding: ['0rem 0.75rem', '', '', '2rem 1rem'],
+    },
+
+    title: {
+      variant: 'text.headingLight',
+      color: ['light', '', '', 'text'],
+    },
+
+    text: {
+      variant: 'text.headingLight',
+      color: ['light', '', '', 'text'],
     },
   },
 
-  // Gallery Styles
-  gallery: {
-    albumsContainer: {
-      width: '100%',
-      flexWrap: 'wrap',
-      justifyContent: 'center',
+  // ? ===============================
+  // ? ===== Contact Information =====
+  // ? ===============================
+
+  contactInfo: {
+    padding: '2rem 1rem',
+    title: {
+      variant: 'text.sectionHeading',
+      fontSize: ['', '', '', '1.5rem'],
+      textAlign: ['center', '', '', 'left'],
+      margin: ['0 auto', '', '', '1rem 0rem'],
     },
-    albumsCTA: {
-      width: ['100%', '48%', '24%'],
-      margin: [0, '1%'],
-      marginBottom: ['1%'],
-      height: '300px',
-      cursor: 'pointer',
-      backgroundSize: 'cover',
+  },
+
+  // ? ===============================
+  // ? ===== Business Name/Title =====
+  // ? ===============================
+
+  businessName: {
+    variant: 'text.headingLight',
+    position: 'absolute',
+    top: '50%',
+    textAlign: 'center',
+    width: '100%',
+    padding: '1rem',
+    transform: 'translateY(-50%)',
+    fontSize: '2rem',
+    textTransform: 'uppercase',
+  },
+
+  // ? ===========================
+  // ? ===== Contact Details =====
+  // ? ===========================
+
+  contactDetails: {
+    padding: ['1rem', '', '', '1rem 0rem'],
+    fontSize: ['1.5rem', '', '', '1rem', '1.25rem'],
+    textAlign: ['center', '', '', 'left'],
+    borderBottom: ['', '', '', '2px solid #EEEEEE'],
+    marginBottom: ['', '', '', '1rem'],
+    phone: {
+      marginBottom: '1rem',
+    },
+    directions: {},
+  },
+
+  // ? ===========================
+  // ? ====== Social Icons =======
+  // ? ===========================
+
+  socialIcons: {
+    display: 'flex',
+    flexDirection: ['row', '', '', 'column'],
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    link: {
+      textDecoration: 'none',
+      textAlign: 'center',
+      margin: '0.5rem',
+      display: ['', '', '', 'flex'],
       alignItems: 'center',
-      justifyContent: 'center',
+      svg: {
+        path: {
+          fill: 'secondary',
+        },
+      },
     },
-    albumTitle: {
-      color: 'white',
-      textShadow: '2px 2px black',
-      fontSize: 5,
-    },
-    albumContainer: {
-      flexWrap: 'wrap',
-      alignItems: 'stretch',
-      margin: '1rem auto',
-      justifyContent: 'center',
-    },
-    albumImage: {
-      width: ['50%', '33%', '25%', '20%'],
-      objectFit: 'cover',
-      height: '200px',
-      padding: 1,
-    },
-  },
-
-  // Events Styles
-
-  event: {
-    eventsContainer: {
-      justifyContent: 'center',
-      flexWrap: 'wrap',
-    },
-    eventItemContainer: {
-      margin: ['1%'],
-      width: ['48%', '31%', '23%', '18%'],
-      flexDirection: 'column',
-    },
-    eventItemImage: {
-      minHeight: '250px',
-      maxHeight: '300px',
-      objectFit: 'cover',
-    },
-    eventItemContent: {
-      flexGrow: '1',
-      paddingTop: 2,
-      paddingBottom: 2,
-      flexDirection: ['column', 'row'],
-    },
-    eventItemTitle: {
-      fontSize: 3,
-      textTransform: 'capitalize',
-      textAlign: 'left',
-      fontWeight: 'bolder',
-      fontFamily: 'heading',
-    },
-    eventItemDateContainer: {
-      textAlign: ['left', 'center'],
-      maxWidth: '50px',
-      maxHeight: '50px',
-      minWidth: 'unset',
-      marginRight: [0, 1],
-    },
-    eventDate: {
-      fontSize: 3,
-      color: 'primary',
-      fontWeight: 'bolder',
-      width: '100%',
-      marginBottom: 0,
-      fontFamily: 'body',
-    },
-    eventMonth: {
-      textTransform: 'uppercase',
-      marginBottom: 0,
-      width: '100%',
-      fontFamily: 'body',
-    },
-    modalContainer: {
-      position: 'fixed',
-      top: '0',
-      bottom: '0',
-      left: '0',
-      right: '0',
-    },
-    modalBackground: {
-      position: 'absolute',
-      top: '0',
-      bottom: '0',
-      left: '0',
-      right: '0',
-      backgroundColor: 'rgba(0,0,0,0.5)',
-    },
-    modal: {
-      padding: 0,
-      maxWidth: '767px',
-      zIndex: '1000',
-      position: 'absolute',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%,-50%)',
-      color: 'black',
-      backgroundColor: 'primary',
-      minWidth: '280px',
-      border: 'solid 6px white',
-    },
-    modalImage: {
-      maxHeight: ['175px', '250px', '500px'],
-      width: '100%',
-      objectFit: 'cover',
-    },
-
-    modalContentContainer: {
-      padding: 3,
-      color: 'white',
-    },
-
-    modalEventName: {
-      fontFamily: 'heading',
-      fontWeight: 'heading',
-      lineHeight: 'heading',
-      textTransform: 'capitalize',
+    text: {
+      marginLeft: ['', '', '', '0.5rem'],
       color: 'text',
-      fontSize: 3,
-      marginBottom: 3,
-      color: 'white',
-      textAlign: 'left',
-    },
-    modalEventDate: {
-      alignItems: 'center',
-      marginBottom: 3,
+      textDecoration: 'none',
     },
   },
 
-  // Menu Styles
-  menu: {
-    container: { border: '2px solid black', padding: [2, 3] },
-    sectionTitle: {
-      color: 'primary',
-      marginTop: 0,
-      fontFamily: 'heading',
-      marginBottom: 3,
-      fontSize: [5, 5, 6],
-      textAlign: 'center',
-    },
-    sectionDescription: {
-      textAlign: 'center',
-      fontFamily: 'heading',
-      maxWidth: '500px',
-      margin: '1.75rem auto',
+  // ? ===========================
+  // ? ====== Contact Form =======
+  // ? ===========================
+
+  // form styles
+  contactForm: {
+    border: ['', '', '', 'solid 1px #EEEEEE'],
+    borderRadius: ['', '', '', '10px'],
+    padding: '1rem 1rem',
+    width: ['calc(100% - 1rem)', 'calc(75% - 1rem)', 'calc(50% - 1rem)'],
+    border: ['', '', '', 'solid 1px #EEEEEE'],
+    margin: ['0 auto', '', '', '0.5rem'],
+    // maxWidth: '500px',
+    label: {
+      fontSize: 1,
       fontWeight: 'bold',
+      color: 'text',
+      marginBottom: 1,
     },
-    sectionContainer: {
-      alignItems: 'stretch',
-      flexWrap: 'wrap',
-    },
-    menuItemContainer: {
-      width: ['100%', '100%', '50%'],
-      marginBottom: 3,
-    },
-    menuItemInnerContainer: {
-      marginBottom: 3,
-      height: '100%',
-    },
-    menuItemImage: {
-      maxWidth: '30%',
-      objectFit: 'cover',
-    },
-    menuItemDefaultImage: {
-      maxWidth: '30%',
-      objectFit: 'contain',
-      objectPosition: 'top',
-    },
-    menuItemContentContainer: {
-      padding: 2,
-      flexGrow: '1',
-    },
-    menuPriceContainer: {
-      flexGrow: '1',
-      marginLeft: 3,
-      marginBottom: 2,
-    },
-
-    headingMenuSection: {
-      textAlign: 'center',
-      fontSize: 5,
+    label: {
       fontFamily: 'heading',
-      fontWeight: 'bolder',
-      marginBottom: 4,
+      color: 'text',
+      marginBottom: 1,
     },
-    menuItemName: {
-      fontSize: 3,
-      fontFamily: 'heading',
-      fontWeight: 'bolder',
-      marginBottom: 2,
+    input: {
+      borderColor: 'text',
+      '&:focus': {
+        borderColor: 'secondary',
+        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
+        outline: 'none',
+      },
     },
-    menuItemDescription: {
-      fontSize: 2,
-      marginBottom: 3,
-      fontFamily: 'heading',
+    select: {
+      borderColor: 'text',
+      '&:focus': {
+        borderColor: 'secondary',
+        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
+        outline: 'none',
+      },
     },
-
-    menuItemPriceLabel: {
-      fontSize: 2,
-      fontFamily: 'heading',
+    textarea: {
+      borderColor: 'text',
+      '&:focus': {
+        borderColor: 'secondary',
+        boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
+        outline: 'none',
+      },
     },
-    menuItemPrice: {
-      fontSize: 3,
-      fontFamily: 'heading',
-      fontWeight: 'bolder',
-      color: 'primary',
-      flexGrow: '1',
-      textAlign: 'right',
-    },
-    menuItemPriceVariants: {
-      fontSize: 2,
-      fontFamily: 'heading',
-      fontWeight: 'bolder',
-      color: 'primary',
+    slider: {
+      bg: 'muted',
     },
   },
 
-  // Hours
+  // ? ===========================
+  // ? ========= Hours ===========
+  // ? ===========================
 
   hours: {
     container: {
+      border: ['', '', '', 'solid 1px #EEEEEE'],
+      borderRadius: ['', '', '', '10px'],
       flexDirection: 'column',
-      color: 'white',
-      fontFamily: 'heading',
       flexGrow: '1',
-      width: '100%',
-      maxWidth: '400px',
+      width: ['calc(100% - 1rem)', 'calc(75% - 1rem)', 'calc(50% - 1rem)'],
       padding: [2, 2, 2, 4],
+      // border: ['', '', '', 'solid 1px black'],
+      margin: ['0 auto', '', '', '0.5rem'],
     },
-
-    labelHeading: {
-      fontFamily: 'heading',
-      fontWeight: 'heading',
-      fontSize: 3,
-      marginBottom: 3,
+    title: {
+      variant: 'text.sectionHeading',
+    },
+    hoursContainer: {
+      flexDirection: ['column'],
+      justifyContent: 'space-between',
+    },
+    dayContainer: {
+      textAlign: ['left', 'left', 'left'],
+      marginBottom: 2,
+      display: 'flex',
+      flexWrap: 'wrap',
+    },
+    dayOfTheWeek: {
       marginBottom: 1,
       textTransform: 'uppercase',
       fontSize: 2,
     },
-    hoursEntry: {
+
+    timeBlocksContainer: {},
+    timeBlock: {
       width: '100%',
       flexDirection: ['row', 'row', 'row'],
       marginBottom: 0,
     },
-    dayLabel: {
+
+    timeBlockLabel: {
       flexGrow: '1',
       marginBottom: 0,
       fontSize: 1,
-      textTransform: 'uppercase',
     },
-    timeLabel: {
+    time: {
       textAlign: 'right',
       marginBottom: 0,
       fontSize: 1,
     },
+    closed: {
+      width: 'unset',
+      flexGrow: '1',
+      marginBottom: 0,
+      fontSize: 1,
+      textAlign: 'right',
+    },
+    open24: {
+      flexGrow: '1',
+      marginBottom: 0,
+      fontSize: 1,
+      textAlign: 'right',
+    },
   },
+
+  // ? ====================================
+  // ? ====== Menu and Online Order =======
+  // ? ====================================
+
+  contentBoxesLinks: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'stretch',
+    width: ['100%', '', '', '50%'],
+    padding: ['2rem 1rem', '', '', '0rem'],
+    svg: {
+      fontSize: '2rem',
+      marginBottom: '1rem',
+    },
+    a: {
+      padding: '1rem',
+      height: '100%',
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      textAlign: 'center',
+      fontSize: '1.5rem',
+      ':hover': {
+        bg: 'secondary',
+        color: 'light',
+        borderRadius: ['', '', '', '10px'],
+      },
+    },
+  },
+
+  onlineOrder: {
+    width: 'calc(50% - 1rem)',
+    border: ['', '', '', 'solid 1px #EEEEEE'],
+    borderRadius: ['', '', '', '10px'],
+    margin: '0.5rem',
+  },
+
+  menu: {
+    width: 'calc(50% - 1rem)',
+    // border: 'solid 1px black',
+    border: ['', '', '', 'solid 1px #EEEEEE'],
+    borderRadius: ['', '', '', '10px'],
+    margin: '0.5rem',
+  },
+
+  // ? ===========================
+  // ? ========== About ==========
+  // ? ===========================
+
+  about: {
+    order: ['', '', '', '8'],
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    maxWidth: ['991px', '', '', 'unset'],
+    margin: ['0 auto', '', '', '0.5rem'],
+    padding: '2rem 1rem 2rem',
+    border: ['', '', '', 'solid 1px #EEEEEE'],
+    borderRadius: ['', '', '', '10px'],
+    width: '100%',
+    title: {
+      variant: 'text.sectionHeading',
+    },
+    text: {
+      textAlign: 'center',
+      maxWidth: '600px',
+      margin: '0 auto',
+      whiteSpace: 'pre-wrap',
+      padding: '1rem',
+    },
+  },
+
+  // ? ===========================
+  // ? ======= CTA Widget ========
+  // ? ===========================
+
+  CTAContainer: {
+    display: ['', '', '', 'none'],
+    position: 'fixed',
+    flexWrap: 'wrap',
+    bottom: '0',
+    left: '0',
+    width: '100%',
+    bg: 'primary',
+    alignItems: 'stretch',
+    borderTop: '1px solid white',
+    svg: {
+      marginRight: '0.5rem',
+    },
+    phone: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      background: 'primary',
+      width: '50%',
+      color: 'light',
+      textAlign: 'center',
+      padding: 3,
+      borderRight: 'solid 1px white',
+    },
+    directions: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      background: 'primary',
+      width: '50%',
+      padding: 3,
+      color: 'light',
+      textAlign: 'center',
+    },
+    order: {
+      flexGrow: '1',
+      width: '100%',
+      margin: 0,
+      background: 'primary',
+      width: '100%',
+      padding: '1rem',
+      textAlign: 'center',
+      borderRadius: 0,
+      color: 'light',
+      borderTop: '1px solid white',
+    },
+    CTAText: {},
+  },
+
+  // ? ===========================
+  // ? ========= Footer ==========
+  // ? ===========================
 
   // Footer Styles
 
   footer: {
-    backgroundColor: 'black',
-    padding: 4,
-    paddingBottom: 5,
-    paddingTop: 5,
+    order: '9',
+    backgroundColor: 'secondary',
+    padding: ['20px 1rem 120px', '', '', '1rem'],
     flexDirection: ['column', 'column', 'row'],
+    alignItems: 'center',
+    marginTop: '1rem',
+    width: '100%',
 
     heading: {
       color: 'text',
@@ -547,3 +646,288 @@ export default {
     },
   },
 }
+
+// ! ===========================
+// ! ===== Archived Styles =====
+// ! ===========================
+
+// // HERO Styles
+// hero: {
+//   container: {
+//     flexDirection: 'column',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     height: '60vh',
+//     bg: 'primary',
+//   },
+// },
+// // Gallery Styles
+// gallery: {
+//   albumsContainer: {
+//     width: '100%',
+//     flexWrap: 'wrap',
+//     justifyContent: 'center',
+//   },
+//   albumsCTA: {
+//     width: ['100%', '48%', '24%'],
+//     margin: [0, '1%'],
+//     marginBottom: ['1%'],
+//     height: '300px',
+//     cursor: 'pointer',
+//     backgroundSize: 'cover',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+//   albumTitle: {
+//     color: 'white',
+//     textShadow: '2px 2px black',
+//     fontSize: 5,
+//   },
+//   albumContainer: {
+//     flexWrap: 'wrap',
+//     alignItems: 'stretch',
+//     margin: '1rem auto',
+//     justifyContent: 'center',
+//   },
+//   albumImage: {
+//     width: ['50%', '33%', '25%', '20%'],
+//     objectFit: 'cover',
+//     height: '200px',
+//     padding: 1,
+//   },
+// },
+
+// // Events Styles
+
+// event: {
+//   eventsContainer: {
+//     justifyContent: 'center',
+//     flexWrap: 'wrap',
+//   },
+//   eventItemContainer: {
+//     margin: ['1%'],
+//     width: ['48%', '31%', '23%', '18%'],
+//     flexDirection: 'column',
+//   },
+//   eventItemImage: {
+//     minHeight: '250px',
+//     maxHeight: '300px',
+//     objectFit: 'cover',
+//   },
+//   eventItemContent: {
+//     flexGrow: '1',
+//     paddingTop: 2,
+//     paddingBottom: 2,
+//     flexDirection: ['column', 'row'],
+//   },
+//   eventItemTitle: {
+//     fontSize: 3,
+//     textTransform: 'capitalize',
+//     textAlign: 'left',
+//     fontWeight: 'bolder',
+//     fontFamily: 'heading',
+//   },
+//   eventItemDateContainer: {
+//     textAlign: ['left', 'center'],
+//     maxWidth: '50px',
+//     maxHeight: '50px',
+//     minWidth: 'unset',
+//     marginRight: [0, 1],
+//   },
+//   eventDate: {
+//     fontSize: 3,
+//     color: 'primary',
+//     fontWeight: 'bolder',
+//     width: '100%',
+//     marginBottom: 0,
+//     fontFamily: 'body',
+//   },
+//   eventMonth: {
+//     textTransform: 'uppercase',
+//     marginBottom: 0,
+//     width: '100%',
+//     fontFamily: 'body',
+//   },
+//   modalContainer: {
+//     position: 'fixed',
+//     top: '0',
+//     bottom: '0',
+//     left: '0',
+//     right: '0',
+//   },
+//   modalBackground: {
+//     position: 'absolute',
+//     top: '0',
+//     bottom: '0',
+//     left: '0',
+//     right: '0',
+//     backgroundColor: 'rgba(0,0,0,0.5)',
+//   },
+//   modal: {
+//     padding: 0,
+//     maxWidth: '767px',
+//     zIndex: '1000',
+//     position: 'absolute',
+//     top: '50%',
+//     left: '50%',
+//     transform: 'translate(-50%,-50%)',
+//     color: 'black',
+//     backgroundColor: 'primary',
+//     minWidth: '280px',
+//     border: 'solid 6px white',
+//   },
+//   modalImage: {
+//     maxHeight: ['175px', '250px', '500px'],
+//     width: '100%',
+//     objectFit: 'cover',
+//   },
+
+//   modalContentContainer: {
+//     padding: 3,
+//     color: 'white',
+//   },
+
+//   modalEventName: {
+//     fontFamily: 'heading',
+//     fontWeight: 'heading',
+//     lineHeight: 'heading',
+//     textTransform: 'capitalize',
+//     color: 'text',
+//     fontSize: 3,
+//     marginBottom: 3,
+//     color: 'white',
+//     textAlign: 'left',
+//   },
+//   modalEventDate: {
+//     alignItems: 'center',
+//     marginBottom: 3,
+//   },
+// },
+
+// // Menu Styles
+// menu: {
+//   container: { border: '2px solid black', padding: [2, 3] },
+//   sectionTitle: {
+//     color: 'primary',
+//     marginTop: 0,
+//     fontFamily: 'heading',
+//     marginBottom: 3,
+//     fontSize: [5, 5, 6],
+//     textAlign: 'center',
+//   },
+//   sectionDescription: {
+//     textAlign: 'center',
+//     fontFamily: 'heading',
+//     maxWidth: '500px',
+//     margin: '1.75rem auto',
+//     fontWeight: 'bold',
+//   },
+//   sectionContainer: {
+//     alignItems: 'stretch',
+//     flexWrap: 'wrap',
+//   },
+//   menuItemContainer: {
+//     width: ['100%', '100%', '50%'],
+//     marginBottom: 3,
+//   },
+//   menuItemInnerContainer: {
+//     marginBottom: 3,
+//     height: '100%',
+//   },
+//   menuItemImage: {
+//     maxWidth: '30%',
+//     objectFit: 'cover',
+//   },
+//   menuItemDefaultImage: {
+//     maxWidth: '30%',
+//     objectFit: 'contain',
+//     objectPosition: 'top',
+//   },
+//   menuItemContentContainer: {
+//     padding: 2,
+//     flexGrow: '1',
+//   },
+//   menuPriceContainer: {
+//     flexGrow: '1',
+//     marginLeft: 3,
+//     marginBottom: 2,
+//   },
+
+//   headingMenuSection: {
+//     textAlign: 'center',
+//     fontSize: 5,
+//     fontFamily: 'heading',
+//     fontWeight: 'bolder',
+//     marginBottom: 4,
+//   },
+//   menuItemName: {
+//     fontSize: 3,
+//     fontFamily: 'heading',
+//     fontWeight: 'bolder',
+//     marginBottom: 2,
+//   },
+//   menuItemDescription: {
+//     fontSize: 2,
+//     marginBottom: 3,
+//     fontFamily: 'heading',
+//   },
+
+//   menuItemPriceLabel: {
+//     fontSize: 2,
+//     fontFamily: 'heading',
+//   },
+//   menuItemPrice: {
+//     fontSize: 3,
+//     fontFamily: 'heading',
+//     fontWeight: 'bolder',
+//     color: 'primary',
+//     flexGrow: '1',
+//     textAlign: 'right',
+//   },
+//   menuItemPriceVariants: {
+//     fontSize: 2,
+//     fontFamily: 'heading',
+//     fontWeight: 'bolder',
+//     color: 'primary',
+//   },
+// },
+
+// Hours
+
+// hours: {
+//   container: {
+//     flexDirection: 'column',
+//     color: 'white',
+//     fontFamily: 'heading',
+//     flexGrow: '1',
+//     width: '100%',
+//     maxWidth: '400px',
+//     padding: [2, 2, 2, 4],
+//   },
+
+//   labelHeading: {
+//     fontFamily: 'heading',
+//     fontWeight: 'heading',
+//     fontSize: 3,
+//     marginBottom: 3,
+//     marginBottom: 1,
+//     textTransform: 'uppercase',
+//     fontSize: 2,
+//   },
+//   hoursEntry: {
+//     width: '100%',
+//     flexDirection: ['row', 'row', 'row'],
+//     marginBottom: 0,
+//   },
+//   dayLabel: {
+//     flexGrow: '1',
+//     marginBottom: 0,
+//     fontSize: 1,
+//     textTransform: 'uppercase',
+//   },
+//   timeLabel: {
+//     textAlign: 'right',
+//     marginBottom: 0,
+//     fontSize: 1,
+//   },
+// },

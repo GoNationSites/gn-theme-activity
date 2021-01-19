@@ -4,26 +4,18 @@ import React from 'react'
 import { Box, Text, Styled } from 'theme-ui'
 
 const About = ({ description }) => (
-  <>
-    {description ? (
-      <Box sx={{ marginBottom: 4 }}>
-        {console.log(description)}
-        <Text variant='sectionHeading'>About us</Text>
-        <Text
-          variant='default'
-          sx={{
-            textAlign: 'center',
-            maxWidth: '600px',
-            margin: '0 auto',
-            whiteSpace: 'pre-wrap',
-          }}>
+  <Box variant='about'>
+    {description && (
+      <>
+        <Text as='h3' variant='about.title'>
+          About us
+        </Text>
+        <Text as='p' variant='about.text'>
           {description}
         </Text>
-      </Box>
-    ) : (
-      ''
+      </>
     )}
-  </>
+  </Box>
 )
 
 export default About
