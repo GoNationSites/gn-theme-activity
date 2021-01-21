@@ -29,9 +29,9 @@ export default function Home({ data }) {
     gonationID,
     poweredID,
     seoKeywords,
-    hasHeroTitle,
+    // hasHeroTitle,
     hasAbout,
-    // hasMenu,
+    hasMenu,
     // hasMenuImages,
     hasShout,
     // hasEvents,
@@ -84,8 +84,6 @@ export default function Home({ data }) {
         keywords={seoKeywords}
       />
 
-      {console.log(data.allGoNationBusinessData.edges[0].node)}
-
       <Box variant='pageContainer'>
         <Box variant='column1'>
           <Logo logoImageId={avatarCloudinaryId} />
@@ -121,17 +119,18 @@ export default function Home({ data }) {
         <Box variant='column2'>
           <Cover coverImageId={coverCloudinaryId} />
 
-          {hasShout ? (
-            <Shout gonationID={gonationID} poweredID={poweredID} />
-          ) : null}
+          {hasShout && <Shout gonationID={gonationID} poweredID={poweredID} />}
 
-          <Box variant='contentBoxesLinks'>
-            <MenuLink gonationSlug={slug} />
+          {hasMenu ||
+            (orderOnlineLink && (
+              <Box variant='contentBoxesLinks'>
+                {hasMenu && <MenuLink gonationSlug={slug} />}
 
-            {orderOnlineLink && (
-              <OrderOnline orderOnlineLink={orderOnlineLink} />
-            )}
-          </Box>
+                {orderOnlineLink && (
+                  <OrderOnline orderOnlineLink={orderOnlineLink} />
+                )}
+              </Box>
+            ))}
 
           {hasAbout ? (
             <About gonationID={gonationID} description={description} />

@@ -9,14 +9,8 @@
   },
   "workspaces": [
     "gatsby-theme-minimal",
-    "example",
-    "del-italia",
-    "milfordsports",
-    "585-main",
-    "ferrazzi-limo",
-    "pizzapalace",
-    "del-italianew",
-    "bankSportsBar"
+    "bankSportsBar",
+    "theKitchen"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",

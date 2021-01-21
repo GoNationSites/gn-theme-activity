@@ -3,16 +3,16 @@ export default {
   colors: {
     text: '#333',
     background: '#fefefe',
-    primary: '#231f20',
-    secondary: '#fbad18',
+    primary: '#ead28c',
+    secondary: '#c99c3c',
     light: '#FFF',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   breakpoints: ['480px', '768px', '1024px', '1500px', '2000px'],
   fonts: {
-    body: 'Roboto, sans-serif',
-    heading: 'Lato, sans-serif',
+    body: 'Playfair Display, serif',
+    heading: 'Merriweather, serif',
     monospace: 'Menlo, monospace',
     /* fontOptions 
     /* font-family: 'Roboto', sans-serif;

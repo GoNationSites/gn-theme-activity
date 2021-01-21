@@ -1,16 +1,16 @@
 import React from 'react'
-import { Label, Input, Textarea, Button, Box } from 'theme-ui'
+import { Flex, Label, Input, Textarea, Button, Box } from 'theme-ui'
 
 export default function ContactForm() {
   return (
-    <Box
+    <Flex
       as='form'
       variant='contactForm'
-      name='contact'
+      name='contactform'
       method='POST'
       data-netlify='true'
       data-netlify-honeypot='bot-field'>
-      <Input type='hidden' name='form-name' value='contact' />
+      <Input type='hidden' name='form-name' value='contactform' />
 
       <Label variant='contactForm.label' htmlFor='name'>
         Name
@@ -30,17 +30,18 @@ export default function ContactForm() {
         Message
       </Label>
       <Textarea
-        variant='contactForm.textarea'
+        variant='contactForm.textArea'
         name='message'
         id='message'
-        rows='6'
+        rows='3'
         mb={3}
       />
       <Button
         sx={{ width: '100%', fontWeight: 'bolder', textTransform: 'uppercase' }}
-        variant='secondary'>
+        variant='secondary'
+        type='submit'>
         Submit
       </Button>
-    </Box>
+    </Flex>
   )
 }

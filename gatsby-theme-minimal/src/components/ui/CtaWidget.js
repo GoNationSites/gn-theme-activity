@@ -25,12 +25,16 @@ export default function CtaWidget({
 }) {
   return (
     <Flex variant='CTAContainer'>
-      <Link href={`tel:${phone}`} variant='CTAContainer.phone'>
+      <Link
+        href={`tel:${phone}`}
+        variant='CTAContainer.phone'
+        className='phone'>
         <FontAwesomeIcon icon={faPhone} /> <Text variant='CTAText'>Call</Text>
       </Link>
 
       <Link
         variant='CTAContainer.directions'
+        className='directions'
         href={`https://www.google.com/maps/dir/?api=1&destination=${street}+${city}+${state}+${postalCode}+${country}`}
         target='_blank'>
         <FontAwesomeIcon icon={faMapMarkerAlt} />
