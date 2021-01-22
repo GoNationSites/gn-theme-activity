@@ -15,7 +15,7 @@ export default function EventItem({
 
   return (
     <Flex key={_id} variant='event.eventItemContainer'>
-      <Image variant='event.eventItemImage' src={imageurl} />
+      <Image variant='event.eventItemImage' src={imageurl} alt='event' />
       <Flex variant='event.eventItemContent'>
         <EventDate date={starts} />
         <Box>

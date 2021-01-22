@@ -17,7 +17,7 @@ export default function EventsModal({ event, modalShowing, closeModal, slug }) {
     <Box variant='event.modalContainer'>
       <Box variant='event.modalBackground' onClick={() => closeModal()} />
       <Box variant='event.modal'>
-        <Image variant='event.modalImage' src={imageurl} />
+        <Image variant='event.modalImage' src={imageurl} alt='event' />
 
         <Box variant='event.modalContentContainer'>
           <Text variant='event.modalEventName'>
@@ -74,7 +74,9 @@ export default function EventsModal({ event, modalShowing, closeModal, slug }) {
             </Text>
           </Flex>
 
-          <a href={`https://www.gonation.com/place/${slug}/events/${_id}`}>
+          <a
+            href={`https://www.gonation.com/place/${slug}/events/${_id}`}
+            rel='noreferrer'>
             <Button variant='secondary'>See Full Details</Button>
           </a>
         </Box>

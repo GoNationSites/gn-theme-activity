@@ -49,6 +49,7 @@ const Shout = ({ gonationID, poweredID }) => {
               <Image
                 src={`${shout.shoutData.imageBaseUrl}/${shout.shoutData.shout.image.image.cloudinaryId}`}
                 variant='shout.shoutImage'
+                alt='branding'
               />
             </Box>
 

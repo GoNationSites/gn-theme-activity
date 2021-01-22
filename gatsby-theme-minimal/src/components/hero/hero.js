@@ -12,6 +12,7 @@ export default function hero({ businessName, logo, hasHeroTitle, coverImage }) {
       <Image
         src={`https://res.cloudinary.com/gonation/w_1000,c_fit,fl_lossy,f_auto,q_auto/${logo}`}
         variant='hero.logo'
+        alt='cover hero'
       />
       {hasHeroTitle ? (
         <Styled.h1 style={{ textAlign: 'center' }}>{businessName}</Styled.h1>

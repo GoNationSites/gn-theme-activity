@@ -9,7 +9,8 @@ export default function MenuLink({ gonationSlug }) {
       <Link
         variant='menu.link'
         target='_blank'
-        href={`https://gonation.com/place/${gonationSlug}/items`}>
+        href={`https://gonation.com/place/${gonationSlug}/items`}
+        rel='noreferrer'>
         <FontAwesomeIcon icon={faMap} />
         <Text variant='menu.text'>See Our Menu</Text>
       </Link>

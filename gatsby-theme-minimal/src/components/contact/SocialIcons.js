@@ -14,7 +14,11 @@ export default function SocialIcons({
   return (
     <Box variant='socialIcons'>
       {facebook ? (
-        <Link variant='socialIcons.link' href={facebook} target='_blank'>
+        <Link
+          variant='socialIcons.link'
+          href={facebook}
+          target='_blank'
+          rel='noreferrer'>
           <Facebook height={'30px'} width={'30px'} />
           <Text variant='socialIcons.text'>Facebook</Text>
         </Link>
@@ -22,7 +26,11 @@ export default function SocialIcons({
         ''
       )}
       {instagram ? (
-        <Link variant='socialIcons.link' href={instagram} target='_blank'>
+        <Link
+          variant='socialIcons.link'
+          href={instagram}
+          target='_blank'
+          rel='noreferrer'>
           <Instagram height={'30px'} width={'30px'} />
           <Text variant='socialIcons.text'>Instagram</Text>
         </Link>
@@ -30,7 +38,11 @@ export default function SocialIcons({
         ''
       )}
       {twitter ? (
-        <Link variant='socialIcons.link' href={twitter} target='_blank'>
+        <Link
+          variant='socialIcons.link'
+          href={twitter}
+          target='_blank'
+          rel='noreferrer'>
           <Twitter height={'30px'} width={'30px'} />
           <Text variant='socialIcons.text'>Twitter</Text>
         </Link>
@@ -42,7 +54,8 @@ export default function SocialIcons({
         <Link
           variant='socialIcons.link'
           href={`https://www.gonation.com/place/${gonationSlug}/pulse`}
-          target='_blank'>
+          target='_blank'
+          rel='noreferrer'>
           <GoNationMan height={'30px'} width={'30px'} />
           <Text variant='socialIcons.text'>GoNation</Text>
         </Link>

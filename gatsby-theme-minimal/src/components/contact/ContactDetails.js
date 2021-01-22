@@ -15,7 +15,7 @@ export default function ContactDetails({
   return (
     <Box variant='contactDetails' className='contactDetails'>
       <Text variant='contactDetails.phone' className='phone'>
-        <Link href={`tel:${phone}`}>
+        <Link href={`tel:${phone}`} rel='noreferrer'>
           <FontAwesomeIcon icon={faPhone} />
           {phone}
         </Link>
@@ -24,7 +24,8 @@ export default function ContactDetails({
       <Text variant='contactDetails.directions' className='directions'>
         <Link
           href={`https://www.google.com/maps/dir/?api=1&destination=${street}+${city}+${state}+${postalCode}+${country}`}
-          target='_blank'>
+          target='_blank'
+          rel='noreferrer'>
           <FontAwesomeIcon icon={faMapMarkerAlt} />
           <Text variant='contactDetails.directions'>
             {street},<br></br>

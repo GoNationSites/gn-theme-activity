@@ -9,7 +9,8 @@ export default function OrderOnline({ orderOnlineLink }) {
       <Link
         variant='onlineOrder.link'
         href={`${orderOnlineLink}`}
-        target='_blank'>
+        target='_blank'
+        rel='noreferrer'>
         <FontAwesomeIcon icon={faTruck} />
         <Text variant='onlineOrder.text'>Online Ordering</Text>
       </Link>

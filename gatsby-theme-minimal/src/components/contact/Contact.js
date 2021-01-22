@@ -44,7 +44,7 @@ export default function Contact({
           </Text>
 
           <Text variant='default'>
-            <Styled.a href={`tel:${phone}`}>
+            <Styled.a href={`tel:${phone}`} rel='noreferrer'>
               <FontAwesomeIcon icon={faPhone} />
               &nbsp;&nbsp;{phone}
             </Styled.a>
@@ -53,7 +53,8 @@ export default function Contact({
           <Text variant='default'>
             <Styled.a
               href={`https://www.google.com/maps/dir/?api=1&destination=${street}+${city}+${state}+${postalCode}+${country}`}
-              target='_blank'>
+              target='_blank'
+              rel='noreferrer'>
               <FontAwesomeIcon icon={faMapMarkerAlt} />
               &nbsp;&nbsp;{street}, {city}, {state}, {postalCode}, {country}
             </Styled.a>

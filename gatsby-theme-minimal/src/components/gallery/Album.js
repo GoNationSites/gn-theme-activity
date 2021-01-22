@@ -53,6 +53,7 @@ export default function Album({ albumOpenID, backToAlbumView }) {
               variant='gallery.albumImage'
               key={cloudinaryId}
               src={`https://res.cloudinary.com/gonation/w_1000,c_fit,fl_lossy,f_auto,q_auto/${cloudinaryId}`}
+              alt='grid'
             />
           ))
         ) : (

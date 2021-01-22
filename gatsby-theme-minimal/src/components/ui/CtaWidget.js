@@ -18,7 +18,8 @@ export default function CtaWidget({
       <Link
         href={`tel:${phone}`}
         variant='CTAContainer.phone'
-        className='phone'>
+        className='phone'
+        rel='noreferrer'>
         <FontAwesomeIcon icon={faPhone} /> <Text variant='CTAText'>Call</Text>
       </Link>
 
@@ -26,7 +27,8 @@ export default function CtaWidget({
         variant='CTAContainer.directions'
         className='directions'
         href={`https://www.google.com/maps/dir/?api=1&destination=${street}+${city}+${state}+${postalCode}+${country}`}
-        target='_blank'>
+        target='_blank'
+        rel='noreferrer'>
         <FontAwesomeIcon icon={faMapMarkerAlt} />
         <Text variant='CTAText'>Directions</Text>
       </Link>
@@ -35,7 +37,8 @@ export default function CtaWidget({
         <Link
           variant='CTAContainer.order'
           href={`${orderOnlineLink}`}
-          target='_blank'>
+          target='_blank'
+          rel='noreferrer'>
           <Text variant='CTAText'>Order Online</Text>
         </Link>
       ) : (

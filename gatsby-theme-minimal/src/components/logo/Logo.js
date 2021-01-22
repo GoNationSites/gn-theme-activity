@@ -22,6 +22,7 @@ export default function Logo({ logoImageId }) {
     <Image
       src={`https://res.cloudinary.com/gonation/${logoImageId}`}
       variant={`logo.${!scrolled ? 'logo' : 'logoScrolled'}`}
+      alt='brand'
     />
   )
 }
