@@ -96,6 +96,7 @@ exports.sourceNodes = async (
     hasShout,
     hasEvents,
     hasGallery,
+    hasHours,
     hasContact,
     orderOnlineLink,
   }
@@ -120,6 +121,7 @@ exports.sourceNodes = async (
     hasShout,
     hasEvents,
     hasGallery,
+    hasHours,
     hasContact,
     orderOnlineLink,
   }

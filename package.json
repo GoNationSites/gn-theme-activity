@@ -10,7 +10,8 @@
   "workspaces": [
     "gatsby-theme-minimal",
     "bankSportsBar",
-    "theKitchen"
+    "theKitchen",
+    "archiesTapandTable"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",

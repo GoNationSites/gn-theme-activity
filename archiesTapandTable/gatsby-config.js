@@ -3,13 +3,13 @@ module.exports = {
     {
       resolve: `gatsby-theme-minimal`,
       options: {
-        gonationID: 'bzn-xgVLP2o_QQKGSD4eOz6r4Q',
-        poweredID: 'bzn-xgVLP2o_QQKGSD4eOz6r4Q',
+        gonationID: 'bzn-QaBzSmhTSd_1FJFGaon9-g',
+        poweredID: 'bzn-QaBzSmhTSd_1FJFGaon9-g',
         seoKeywords: '',
         hasHeroTitle: true,
         hasAbout: true,
         hasMenu: true,
-        hasMenuImages: true,
+        hasMenuImages: false,
         hasShout: true,
         hasEvents: false,
         hasGallery: false,

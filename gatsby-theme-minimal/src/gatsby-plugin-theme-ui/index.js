@@ -235,8 +235,8 @@ export default {
   logo: {
     logo: {
       position: ['fixed', '', '', 'static'],
-      height: '100%',
-      maxHeight: '150px',
+      height: ['100%', '', '', 'unset'],
+      maxHeight: ['150px', '', '', 'unset'],
       margin: ['0 auto', '', '', '5rem 0rem 0'],
       left: '50%',
       top: '20%',
@@ -248,8 +248,11 @@ export default {
     logoScrolled: {
       variant: 'logo.logo',
       position: ['fixed', '', '', 'static'],
-      // top: '0%',
+      height: ['100%', '', '', 'unset'],
+      maxHeight: ['150px', '', '', 'unset'],
+      margin: ['0 auto', '', '', '5rem 0rem 0'],
       transform: ['translate(-50%,-50%)', '', '', 'none'],
+      // top: '0%',
       // maxHeight: ['75px', '', '', '150px'],
       // display: ['none', '', '', 'block'],
     },
@@ -378,8 +381,10 @@ export default {
     },
     directions: {
       a: {
-        display: 'flex',
-        flexWrap: 'no-wrap',
+        display: ['inline', '', '', 'flex'],
+        flexWrap: 'nowrap',
+        justifyContent: ['center', '', '', 'flex-start'],
+        alignItems: 'baseline',
         lineHeight: '1.7',
         flexDirection: 'row',
       },
@@ -387,7 +392,7 @@ export default {
         marginRight: '0.75rem',
         fontSize: '1.5rem',
       },
-      text: { display: ['inline', '', '', 'flex'] },
+      div: { display: ['inline', '', '', 'flex'] },
     },
   },
 
@@ -425,6 +430,7 @@ export default {
 
   // form styles
   contactForm: {
+    flexGrow: '1',
     backgroundColor: ['', '', '', 'white'],
     flexDirection: 'column',
     padding: '2rem 1rem 2rem',

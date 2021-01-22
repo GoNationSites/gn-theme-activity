@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../index.css'
 import { graphql } from 'gatsby'
 import { jsx, Box, Image, Flex, Heading, Text, Styled, Link } from 'theme-ui'
@@ -18,9 +18,14 @@ import SocialIcons from '../components/contact/SocialIcons'
 import ContactForm from '../components/contact/ContactForm'
 import MenuLink from '../components/menu/MenuLink'
 import OrderOnline from '../components/ui/OrderOnline'
+import getMenu from '../helpers/getMenu'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home({ data }) {
-  // ! destructing all variables for use.
+  // ! ==========================================
+  // ! === destructing all variables for use ====
+  // ! ==========================================
+
   // ? ==========================================
   // ? =====  Data From Gatsby Config File  =====
   // ? ==========================================
@@ -73,9 +78,54 @@ export default function Home({ data }) {
     country,
   } = location.address
 
+  // ? ===================================
+  // ? ===========  State   ==============
+  // ? ===================================
+
+  const [menuHasItems, setMenuHasItems] = useState(false)
+
+  // ? ====================================
+  // ? =========== Functions ==============
+  // ? ====================================
+
+  const checkForMenuItems = async () => {
+    const data = await getMenu(poweredID)
+    if (data?.length) {
+      // *maps through powered lists and checks if there is any sections to show
+      const checkIfListshaveSections = data.map(poweredList => {
+        return poweredList.inventory.length ? 'hasItems' : ''
+      })
+
+      // *checks if any of the powered sections have something to show then it will show it.
+      if (checkIfListshaveSections.some(element => element)) {
+        setMenuHasItems(true)
+      }
+    }
+  }
+
+  const checkHours = () => {
+    const hoursArray = Object.values(hours)
+
+    return hoursArray
+      .map(dayBlock => {
+        if (dayBlock?.length > 0) {
+          return dayBlock[0]?.isClosed ? false : true
+        } else {
+          return false
+        }
+      })
+      .some(element => element)
+  }
+
   // ? ==========================================
   // ? ===========  Rendering JSX  ==============
   // ? ==========================================
+
+  useEffect(() => {
+    checkForMenuItems()
+    checkHours()
+    return () => {}
+  }, [])
 
   return (
     <>
@@ -125,9 +175,13 @@ export default function Home({ data }) {
               <Shout gonationID={gonationID} poweredID={poweredID} />
             )}
 
-            {hasMenu || orderOnlineLink ? (
+            {(hasMenu && menuHasItems) || orderOnlineLink ? (
               <Box variant='contentBoxesLinks'>
-                {hasMenu && <MenuLink gonationSlug={slug} />}
+                {hasMenu && menuHasItems ? (
+                  <MenuLink gonationSlug={slug} />
+                ) : (
+                  ''
+                )}
 
                 {orderOnlineLink && (
                   <OrderOnline orderOnlineLink={orderOnlineLink} />
@@ -137,7 +191,8 @@ export default function Home({ data }) {
               ''
             )}
 
-            {hasAbout ? (
+            {/* ? so if about setting is true and the checks if there is an about to render */}
+            {hasAbout && description !== null ? (
               <About gonationID={gonationID} description={description} />
             ) : null}
 
@@ -166,9 +221,10 @@ export default function Home({ data }) {
             </Box>
             {/* // ! ================================ */}
 
-            {hasHours && <Hours hours={hours} />}
-            <ContactForm />
+            {/* * check if hours is on and also if there are any days that is it open */}
+            {hasHours && checkHours() ? <Hours hours={hours} /> : ''}
 
+            <ContactForm />
             <Footer businessName={businessName} />
           </Box>
         </Box>
@@ -203,6 +259,7 @@ export const query = graphql`
           hasShout
           hasEvents
           hasGallery
+          hasHours
           hasContact
           orderOnlineLink
         }
