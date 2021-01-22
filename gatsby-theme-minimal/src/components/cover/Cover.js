@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Flex, Styled } from 'theme-ui'
+import { Flex } from 'theme-ui'
 export default function Cover({ coverImageId }) {
   return (
     <Flex

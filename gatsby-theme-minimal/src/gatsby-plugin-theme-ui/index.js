@@ -241,7 +241,6 @@ export default {
       left: '50%',
       top: '20%',
       transform: ['translate(-50%,-50%)', '', '', 'none'],
-      zIndex: '10',
       transition: 'all ease-in-out 0.2s',
       zIndex: '0',
     },
@@ -449,18 +448,14 @@ export default {
       margin: '0 auto 1.5rem',
     },
 
-    // maxWidth: '500px',
     label: {
       fontSize: 1,
       fontWeight: 'bold',
-      color: 'text',
-      marginBottom: 1,
-    },
-    label: {
       fontFamily: 'heading',
       color: 'text',
       marginBottom: 1,
     },
+
     input: {
       borderColor: '#c4c4c4',
       padding: '1rem 1.5rem',
@@ -688,16 +683,14 @@ export default {
       flexGrow: '1',
     },
     order: {
-      flexGrow: '1',
       width: '100%',
       margin: 0,
-      background: 'primary',
-      width: '100%',
       padding: '1rem',
       textAlign: 'center',
-      borderRadius: 0,
       color: 'light',
+      background: 'primary',
       borderTop: '1px solid white',
+      borderRadius: 0,
       flexGrow: '1',
     },
     CTAText: {},
@@ -719,12 +712,10 @@ export default {
     width: '100%',
 
     heading: {
-      color: 'text',
       marginTop: 0,
       fontFamily: 'heading',
       marginBottom: 3,
       fontSize: 5,
-      textAlign: 'center',
       color: 'light',
       textAlign: ['center', 'center', 'left'],
     },

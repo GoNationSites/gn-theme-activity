@@ -1,11 +1,11 @@
 import React from 'react'
-import { Box, Flex, Text, Styled, Link } from 'theme-ui'
+import { Box, Text, Link } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 export default function ContactDetails({
   street,
-  indicator,
+  // indicator,
   city,
   state,
   postalCode,

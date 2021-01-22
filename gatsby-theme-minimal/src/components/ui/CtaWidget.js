@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import {
-  jsx,
-  Box,
-  Image,
-  Flex,
-  Heading,
-  Text,
-  Styled,
-  Button,
-  Link,
-} from 'theme-ui'
+import React from 'react'
+import { Flex, Text, Link } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 export default function CtaWidget({
-  businessName,
+  // businessName,
   phone,
   street,
   city,

@@ -6,13 +6,9 @@ module.exports = {
         gonationID: 'bzn-xgVLP2o_QQKGSD4eOz6r4Q',
         poweredID: 'bzn-xgVLP2o_QQKGSD4eOz6r4Q',
         seoKeywords: '',
-        hasHeroTitle: true,
         hasAbout: true,
         hasMenu: true,
-        hasMenuImages: true,
         hasShout: true,
-        hasEvents: false,
-        hasGallery: false,
         hasHours: true,
         hasContact: true,
         orderOnlineLink: '', // leave as empty string if not needed

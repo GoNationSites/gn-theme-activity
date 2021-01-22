@@ -3,16 +3,6 @@ import { Box, Flex, Text } from 'theme-ui'
 import moment from 'moment'
 
 export default function hours({ hours }) {
-  const {
-    monday,
-    tuesday,
-    wednesday,
-    thursday,
-    friday,
-    saturday,
-    sunday,
-  } = hours
-
   // put all variables into an array for looping through
   const daysOfWeek = Object.values(hours)
   // [monday, tuesday, wednesday, thursday, friday, saturday, sunday]

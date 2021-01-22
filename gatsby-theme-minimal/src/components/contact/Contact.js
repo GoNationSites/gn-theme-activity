@@ -7,15 +7,20 @@ import ContactForm from './ContactForm'
 import Hours from '../hours/hoursOld'
 
 export default function Contact({
-  goNationID,
+  // goNationID,
   contact,
   address,
-  businessName,
+  // businessName,
   hours,
 }) {
-  const { facebook, instagram, phone, url } = contact
+  const {
+    facebook,
+    instagram,
+    phone,
+    // url
+  } = contact
 
-  const { street, indicator, city, state, postalCode, country } = address
+  const { street, city, state, postalCode, country } = address
 
   return (
     <Box sx={{ bg: 'primary', padding: 2 }}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Label, Input, Text, Textarea, Button, Box } from 'theme-ui'
+import { Flex, Input, Text, Textarea, Button } from 'theme-ui'
 
 export default function ContactForm() {
   return (
@@ -16,9 +16,6 @@ export default function ContactForm() {
 
       <Input type='hidden' name='form-name' value='contactform' />
 
-      {/* <Label variant='contactForm.label' htmlFor='name'     placeholder="Name">
-        Name
-      </Label> */}
       <Input
         variant='contactForm.input'
         name='name'
@@ -26,9 +23,7 @@ export default function ContactForm() {
         mb={3}
         placeholder='Name'
       />
-      {/* <Label variant='contactForm.label' htmlFor='email'>
-        Email
-      </Label> */}
+
       <Input
         placeholder='Email'
         variant='contactForm.input'
@@ -37,9 +32,7 @@ export default function ContactForm() {
         id='email'
         mb={3}
       />
-      {/* <Label variant='contactForm.label' htmlFor='message'>
-        Message
-      </Label> */}
+
       <Textarea
         variant='contactForm.textArea'
         placeholder='Message'

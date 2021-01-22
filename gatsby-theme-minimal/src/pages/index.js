@@ -1,14 +1,10 @@
-/** @jsx jsx */
 import React, { useEffect, useState } from 'react'
-import '../index.css'
 import { graphql } from 'gatsby'
-import { jsx, Box, Image, Flex, Heading, Text, Styled, Link } from 'theme-ui'
+import { Box, Text } from 'theme-ui'
 import SEO from '../components/seo'
-import Hero from '../components/hero/hero'
 import Shout from '../components/Shout'
 import About from '../components/About'
 import Hours from '../components/hours/hoursOld'
-import Contact from '../components/contact/Contact'
 import Footer from '../components/Footer/Footer'
 import CtaWidget from '../components/ui/CtaWidget'
 import Logo from '../components/logo/Logo'
@@ -19,7 +15,7 @@ import ContactForm from '../components/contact/ContactForm'
 import MenuLink from '../components/menu/MenuLink'
 import OrderOnline from '../components/ui/OrderOnline'
 import getMenu from '../helpers/getMenu'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import '../index.css'
 
 export default function Home({ data }) {
   // ! ==========================================
@@ -252,13 +248,9 @@ export const query = graphql`
           gonationID
           poweredID
           seoKeywords
-          hasHeroTitle
           hasAbout
           hasMenu
-          hasMenuImages
           hasShout
-          hasEvents
-          hasGallery
           hasHours
           hasContact
           orderOnlineLink
@@ -356,23 +348,3 @@ export const query = graphql`
     }
   }
 `
-
-{
-  /* {hasEvents ? (
-          <Events gonationID={gonationID} slug={slug} poweredID={poweredID} />
-        ) : null}
-
-        {hasMenu ? (
-          <Menus
-            gonationID={gonationID}
-            hasMenuImages={hasMenuImages}
-            poweredID={poweredID}
-          />
-        ) : (
-          ''
-        )} */
-}
-
-{
-  /* {hasGallery ? <Gallery gonationID={gonationID} /> : null} */
-}

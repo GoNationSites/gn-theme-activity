@@ -1,5 +1,5 @@
 import React from 'react'
-import { jsx, Box, Image, Flex, Heading, Text, Styled, Link } from 'theme-ui'
+import { Box, Text, Link } from 'theme-ui'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMap } from '@fortawesome/free-solid-svg-icons'
 

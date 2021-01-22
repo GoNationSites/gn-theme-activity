@@ -1,7 +1,5 @@
-/** @jsx jsx */
-import { jsx } from 'theme-ui'
 import React from 'react'
-import { Box, Text, Styled } from 'theme-ui'
+import { Box, Text } from 'theme-ui'
 
 const About = ({ description }) => (
   <Box variant='about'>
