@@ -38,7 +38,7 @@ const Shout = ({ gonationID, poweredID }) => {
         console.log('error : ', console.e)
         setShout({ ...shout, isLoading: false })
       })
-  }, [poweredID, shout])
+  }, [])
 
   return (
     <>
