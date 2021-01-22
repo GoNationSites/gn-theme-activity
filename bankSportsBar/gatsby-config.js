@@ -13,7 +13,7 @@ module.exports = {
         hasShout: true,
         hasEvents: false,
         hasGallery: false,
-        hasHours: true,
+        hasHours: false,
         hasContact: true,
         orderOnlineLink: '', // leave as empty string if not needed
       },

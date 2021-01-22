@@ -1,6 +1,7 @@
 import React from 'react'
 import { Flex, Text } from 'theme-ui'
 import GoNationMan from '../icons/GoNationMan'
+import GoNationPoweredBy from '../icons/GoNationPoweredBy'
 export default function Footer({ businessName }) {
   return (
     <Flex variant='footer'>
@@ -11,7 +12,8 @@ export default function Footer({ businessName }) {
       </Text>
       <a href='https://www.gonation.com/' target='_blank'>
         <Flex sx={{ alignItems: 'center', marginTop: 2, marginBottom: 2 }}>
-          <GoNationMan
+          <GoNationPoweredBy />
+          {/* <GoNationMan
             color={'#FFF'}
             height={'20px'}
             width={'20px'}
@@ -19,7 +21,7 @@ export default function Footer({ businessName }) {
           />
           <Text sx={{ marginBottom: 0, color: 'light' }} variant='default'>
             Local Powered By GoNation
-          </Text>
+          </Text> */}
         </Flex>
       </a>
     </Flex>

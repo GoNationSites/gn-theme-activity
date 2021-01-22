@@ -44,7 +44,7 @@ export default function SocialIcons({
           href={`https://www.gonation.com/place/${gonationSlug}/pulse`}
           target='_blank'>
           <GoNationMan height={'30px'} width={'30px'} />
-          <Text variant='socialIcons.text'>Gonation</Text>
+          <Text variant='socialIcons.text'>GoNation</Text>
         </Link>
       ) : (
         ''

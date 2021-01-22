@@ -36,7 +36,8 @@ export default function Home({ data }) {
     hasShout,
     // hasEvents,
     // hasGallery,
-    hasContact,
+    hasHours,
+    // hasContact,
     orderOnlineLink,
   } = data.allGoNationData.edges[0].node
 
@@ -93,7 +94,7 @@ export default function Home({ data }) {
             variant='contactInfo'
             sx={{ display: ['none', '', '', 'block'] }}>
             <Text variant='contactInfo.title' as='h3'>
-              Contact Us
+              Contact
             </Text>
 
             <ContactDetails
@@ -119,10 +120,12 @@ export default function Home({ data }) {
         <Box variant='column2'>
           <Cover coverImageId={coverCloudinaryId} />
 
-          {hasShout && <Shout gonationID={gonationID} poweredID={poweredID} />}
+          <Box variant='column2.boxesContainers'>
+            {hasShout && (
+              <Shout gonationID={gonationID} poweredID={poweredID} />
+            )}
 
-          {hasMenu ||
-            (orderOnlineLink && (
+            {hasMenu || orderOnlineLink ? (
               <Box variant='contentBoxesLinks'>
                 {hasMenu && <MenuLink gonationSlug={slug} />}
 
@@ -130,42 +133,44 @@ export default function Home({ data }) {
                   <OrderOnline orderOnlineLink={orderOnlineLink} />
                 )}
               </Box>
-            ))}
+            ) : (
+              ''
+            )}
 
-          {hasAbout ? (
-            <About gonationID={gonationID} description={description} />
-          ) : null}
+            {hasAbout ? (
+              <About gonationID={gonationID} description={description} />
+            ) : null}
 
-          {/* // ! Only Shows on Mobile and Tablet */}
-          <Box variant='contactInfo' sx={{ display: ['', '', '', 'none'] }}>
-            <Text variant='contactInfo.title' as='h3'>
-              Contact Us
-            </Text>
+            {/* // ! Only Shows on Mobile and Tablet */}
+            <Box variant='contactInfo' sx={{ display: ['', '', '', 'none'] }}>
+              <Text variant='contactInfo.title' as='h3'>
+                Contact
+              </Text>
 
-            <ContactDetails
-              street={street}
-              indicator={indicator}
-              city={city}
-              state={state}
-              postalCode={postalCode}
-              country={country}
-              phone={contact.phone}
-            />
+              <ContactDetails
+                street={street}
+                indicator={indicator}
+                city={city}
+                state={state}
+                postalCode={postalCode}
+                country={country}
+                phone={contact.phone}
+              />
 
-            <SocialIcons
-              facebook={facebook}
-              instagram={instagram}
-              twitter={twitter}
-              gonationSlug={slug}
-            />
+              <SocialIcons
+                facebook={facebook}
+                instagram={instagram}
+                twitter={twitter}
+                gonationSlug={slug}
+              />
+            </Box>
+            {/* // ! ================================ */}
+
+            {hasHours && <Hours hours={hours} />}
+            <ContactForm />
+
+            <Footer businessName={businessName} />
           </Box>
-          {/* // ! ================================ */}
-
-          <ContactForm />
-
-          <Hours hours={hours} />
-
-          <Footer businessName={businessName} />
         </Box>
       </Box>
 

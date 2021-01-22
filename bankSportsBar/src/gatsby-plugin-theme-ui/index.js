@@ -261,7 +261,7 @@ export default {
 
   cover: {
     backgroundSize: 'cover',
-    backgroundAttachment: ['fixed', '', '', 'unset'],
+    backgroundAttachment: 'fixed',
     backgroundPosition: 'center center',
     backgroundRepeat: ' no-repeat',
     height: ['100vh', '', '', '60vh'],
@@ -382,12 +382,15 @@ export default {
         flexWrap: 'no-wrap',
         lineHeight: '1.7',
         flexDirection: 'row',
+        justifyContent: ['center', '', '', 'flex-start'],
+        textAlign: ['center', '', '', 'left'],
       },
       svg: {
+        display: ['none', '', '', 'inline'],
         marginRight: '0.75rem',
         fontSize: '1.5rem',
       },
-      text: { display: ['inline', '', '', 'flex'] },
+      'a > div': { display: ['inline', '', '', 'flex'] },
     },
   },
 
@@ -428,7 +431,7 @@ export default {
     backgroundColor: ['', '', '', 'white'],
     flexDirection: 'column',
     padding: '2rem 1rem 2rem',
-    width: ['calc(100% - 1rem)', 'calc(75% - 1rem)', 'calc(50% - 1rem)'],
+    width: ['calc(100% - 1rem)', 'calc(75% - 1rem)', 'calc(100% - 1rem)'],
     border: ['', '', '', 'solid 1px #EEEEEE'],
     borderRadius: ['', '', '', '10px'],
     margin: ['0 auto', '', '', '0.5rem'],
@@ -655,6 +658,7 @@ export default {
     bg: 'primary',
     alignItems: 'stretch',
     borderTop: '1px solid white',
+    fontSize: '1.2rem',
     svg: {
       marginRight: '0.5rem',
     },
@@ -706,7 +710,7 @@ export default {
   footer: {
     order: '9',
     backgroundColor: '#737373',
-    padding: ['20px 1rem 120px', '', '', '1rem'],
+    padding: ['20px 1rem 100px', '', '', '1rem'],
     flexDirection: ['column', 'column', 'row'],
     alignItems: 'center',
     marginTop: '1rem',
