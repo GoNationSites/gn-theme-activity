@@ -10,7 +10,11 @@ export default function Footer({ businessName }) {
         sx={{ flexGrow: '1', marginTop: 2, marginBottom: 2, color: 'light' }}>
         © Copyright {new Date().getFullYear()}, {businessName}
       </Text>
-      <a href='https://www.gonation.com/' target='_blank' rel='noreferrer'>
+      <a
+        href='https://www.gonation.com/'
+        target='_blank'
+        rel='noreferrer'
+        ariaLabel='GoNation'>
         <Flex sx={{ alignItems: 'center', marginTop: 2, marginBottom: 2 }}>
           <GoNationPoweredBy />
         </Flex>

@@ -14,7 +14,12 @@ export default function ContactForm() {
         Reach Out
       </Text>
 
-      <Input type='hidden' name='form-name' value='contactform' />
+      <Input
+        type='hidden'
+        name='form-name'
+        value='contactform'
+        ariaLabelledBy='hidden'
+      />
 
       <Input
         variant='contactForm.input'
@@ -22,6 +27,7 @@ export default function ContactForm() {
         id='name'
         mb={3}
         placeholder='Name'
+        ariaLabelledBy='name'
       />
 
       <Input
@@ -30,6 +36,7 @@ export default function ContactForm() {
         type='email'
         name='email'
         id='email'
+        ariaLabelledBy='email'
         mb={3}
       />
 
@@ -38,6 +45,7 @@ export default function ContactForm() {
         placeholder='Message'
         name='message'
         id='message'
+        ariaLabelledBy='Message'
         rows='4'
         mb={3}
       />
