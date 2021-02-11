@@ -14,7 +14,7 @@ export default function Footer({ businessName }) {
         href='https://www.gonation.com/'
         target='_blank'
         rel='noreferrer'
-        ariaLabel='GoNation'>
+        aria-label='GoNation'>
         <Flex sx={{ alignItems: 'center', marginTop: 2, marginBottom: 2 }}>
           <GoNationPoweredBy />
         </Flex>

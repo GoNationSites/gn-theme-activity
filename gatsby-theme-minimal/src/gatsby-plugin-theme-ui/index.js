@@ -1,11 +1,9 @@
+import colors from './colors'
+
 export default {
   // ======== base styles ========
   colors: {
-    text: '#333',
-    background: '#fefefe',
-    primary: '#231f20',
-    secondary: '#fbad18',
-    light: '#FFF',
+    ...colors,
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],

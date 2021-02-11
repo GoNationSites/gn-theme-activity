@@ -11,7 +11,8 @@
     "gatsby-theme-minimal",
     "bankSportsBar",
     "theKitchen",
-    "archiesTapandTable"
+    "archiesTapandTable",
+    "pier131"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
