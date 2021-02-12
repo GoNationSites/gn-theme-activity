@@ -261,7 +261,7 @@ export default {
 
   cover: {
     backgroundSize: 'cover',
-    backgroundAttachment: ['fixed', '', '', 'unset'],
+    backgroundAttachment: ['initial', '', '', 'unset'],
     backgroundPosition: 'center center',
     backgroundRepeat: ' no-repeat',
     height: ['100vh', '', '', '60vh'],
