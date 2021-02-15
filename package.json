@@ -12,7 +12,8 @@
     "bankSportsBar",
     "theKitchen",
     "archiesTapandTable",
-    "pier131"
+    "pier131",
+    "blackRockSocial"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
