@@ -13,7 +13,8 @@
     "theKitchen",
     "archiesTapandTable",
     "pier131",
-    "blackRockSocial"
+    "blackRockSocial",
+    "lzur"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",

@@ -637,6 +637,13 @@ export default {
       lineHeight: '1.5',
       fontSize: '18px',
       opacity: '0.9',
+      maxHeight: '325px',
+      overflowY: 'scroll',
+      scrollbarWidth: 'none',
+      MsOverflowStyle: 'none',
+      '::-webkit-scrollbar': {
+        display: 'none',
+      },
     },
   },
 

@@ -79,6 +79,7 @@ export default function Home({ data }) {
   // ? ===================================
 
   const [menuHasItems, setMenuHasItems] = useState(false)
+  const [menuOrServices, setMenuOrServices] = useState('Menu')
 
   // ? ====================================
   // ? =========== Functions ==============
@@ -86,11 +87,14 @@ export default function Home({ data }) {
 
   const checkForMenuItems = async () => {
     const data = await getMenu(poweredID)
+
     if (data?.length) {
       // *maps through powered lists and checks if there is any sections to show
       const checkIfListshaveSections = data.map(poweredList => {
         return poweredList.inventory.length ? 'hasItems' : ''
       })
+
+      setMenuOrServices(data[0].menumask)
 
       // *checks if any of the powered sections have something to show then it will show it.
       if (checkIfListshaveSections.some(element => element)) {
@@ -174,7 +178,10 @@ export default function Home({ data }) {
             {(hasMenu && menuHasItems) || orderOnlineLink ? (
               <Box variant='contentBoxesLinks'>
                 {hasMenu && menuHasItems ? (
-                  <MenuLink gonationSlug={slug} />
+                  <MenuLink
+                    gonationSlug={slug}
+                    menuOrServices={menuOrServices}
+                  />
                 ) : (
                   ''
                 )}
