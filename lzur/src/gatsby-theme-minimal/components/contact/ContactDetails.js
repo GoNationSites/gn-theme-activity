@@ -26,7 +26,7 @@ export default function ContactDetails({
         <FontAwesomeIcon icon={faEnvelope} />
         lzurskincare@gmail.com
       </Text>
-
+      {/* 
       <Text variant='contactDetails.directions' className='directions'>
         <Link
           href={`https://www.google.com/maps/dir/?api=1&destination=${street}+${city}+${state}+${postalCode}+${country}`}
@@ -38,7 +38,7 @@ export default function ContactDetails({
             {city}, {state}, {postalCode}
           </Text>
         </Link>
-      </Text>
+      </Text> */}
     </Box>
   )
 }
