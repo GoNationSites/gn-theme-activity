@@ -232,6 +232,8 @@ export default {
 
   logo: {
     logo: {
+      background: 'black',
+      padding: '1rem',
       position: ['fixed', '', '', 'static'],
       height: ['100%', '', '', 'unset'],
       maxHeight: ['150px', '', '', 'unset'],
