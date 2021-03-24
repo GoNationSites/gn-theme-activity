@@ -1,0 +1,18 @@
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-theme-minimal`,
+      options: {
+        gonationID: 'bzn-AUntd0ZdRXi1VAejaBgiuw',
+        poweredID: 'bzn-AUntd0ZdRXi1VAejaBgiuw',
+        seoKeywords: '',
+        hasAbout: true,
+        hasMenu: true,
+        hasShout: true,
+        hasHours: true,
+        hasContact: true,
+        orderOnlineLink: '', // leave as empty string if not needed
+      },
+    },
+  ],
+}

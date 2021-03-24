@@ -14,7 +14,8 @@
     "archiesTapandTable",
     "pier131",
     "blackRockSocial",
-    "lzur"
+    "lzur",
+    "bulldog"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
