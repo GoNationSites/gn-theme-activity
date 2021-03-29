@@ -18,14 +18,13 @@ export default function ContactDetails({
 }) {
   return (
     <Box variant='contactDetails' className='contactDetails'>
-      {/* <Text variant='contactDetails.phone' className='phone'> */}
-        {/* <Link href={`tel:${phone}`} rel='noreferrer'>
+      <Text variant='contactDetails.phone' className='phone'>
+        <Link href={`tel:${phone}`} rel='noreferrer'>
           <FontAwesomeIcon icon={faPhone} />
           {phone}
-        </Link> */}
-       
-      {/* </Text> */}
-      
+        </Link>
+      </Text>
+
       <Text variant='contactDetails.directions' className='directions'>
         <Link
           href={`https://www.google.com/maps/dir/?api=1&destination=${street}+${city}+${state}+${postalCode}+${country}`}
