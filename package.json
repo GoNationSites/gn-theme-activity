@@ -15,7 +15,8 @@
     "pier131",
     "blackRockSocial",
     "lzur",
-    "bulldog"
+    "bulldog",
+    "kikiLounge"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
