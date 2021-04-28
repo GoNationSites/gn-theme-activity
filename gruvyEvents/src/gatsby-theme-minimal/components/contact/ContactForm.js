@@ -11,7 +11,7 @@ export default function ContactForm() {
       data-netlify='true'
       data-netlify-honeypot='bot-field'>
       <Text variant='contactForm.title' as='h3'>
-        Reach Out
+        Share Your Vision.
       </Text>
 
       <Input type='hidden' name='form-name' value='contactform' ariaLabelledBy='hidden' />
