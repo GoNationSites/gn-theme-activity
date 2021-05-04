@@ -17,7 +17,8 @@
     "lzur",
     "bulldog",
     "kikiLounge",
-    "gruvyEvents"
+    "gruvyEvents",
+    "bigAppleSmoothie"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
