@@ -14,14 +14,13 @@ export default function ContactDetails({
 }) {
   return (
     <Box variant='contactDetails' className='contactDetails'>
-      {/* <Text variant='contactDetails.phone' className='phone'> */}
-      {/* <Link href={`tel:${phone}`} rel='noreferrer'>
+      <Text variant='contactDetails.phone' className='phone'>
+        <Link href={`tel:${phone}`} rel='noreferrer'>
           <FontAwesomeIcon icon={faPhone} />
           {phone}
-        </Link> */}
-      {/* <FontAwesomeIcon icon={faEnvelope} />
-        lzurskincare@gmail.com */}
-      {/* </Text> */}
+        </Link>
+        {/* <FontAwesomeIcon icon={faEnvelope} /> */}
+      </Text>
 
       <Text variant='contactDetails.directions' className='directions'>
         <Link
