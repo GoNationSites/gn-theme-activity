@@ -18,15 +18,21 @@ export default function Logo({ logoImageId }) {
     document.addEventListener('scroll', handleScroll)
   }, [])
 
-  return (
-    // <Image
-    //   src={`https://res.cloudinary.com/gonation/${logoImageId}`}
-    //   variant={`logo.${!scrolled ? 'logo' : 'logoScrolled'}`}
-    //   alt='brand'
-    // />
+  const defaultLogoURL = 'gonation.data.prod/default/img-bzn-avatar-full.png'
 
-    <Heading as='h1' sx={{ padding: ['1.5rem 1rem', '', '3rem 1rem'] }}>
-      Gabriel's Bar & Grill
-    </Heading>
+  return (
+    <>
+      {logoImageId !== defaultLogoURL ? (
+        <Image
+          src={`https://res.cloudinary.com/gonation/${logoImageId}`}
+          variant={`logo.${!scrolled ? 'logo' : 'logoScrolled'}`}
+          alt='brand'
+        />
+      ) : (
+        <Heading as='h1' sx={{ padding: ['1.5rem 1rem', '', '3rem 1rem'] }}>
+          Gabriel's Bar & Grill
+        </Heading>
+      )}
+    </>
   )
 }
