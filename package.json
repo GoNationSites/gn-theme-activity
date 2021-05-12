@@ -19,7 +19,8 @@
     "kikiLounge",
     "gruvyEvents",
     "bigAppleSmoothie",
-    "sicilyCoalFiredPizza"
+    "sicilyCoalFiredPizza",
+    "gabrielsBarAndGrill"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
