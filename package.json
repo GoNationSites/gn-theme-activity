@@ -21,7 +21,8 @@
     "bigAppleSmoothie",
     "sicilyCoalFiredPizza",
     "gabrielsBarAndGrill",
-    "reinOsteria"
+    "reinOsteria",
+    "thief"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
