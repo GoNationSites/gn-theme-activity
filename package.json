@@ -22,7 +22,8 @@
     "sicilyCoalFiredPizza",
     "gabrielsBarAndGrill",
     "reinOsteria",
-    "thief"
+    "thief",
+    "micalizzis"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
