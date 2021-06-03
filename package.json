@@ -24,7 +24,8 @@
     "reinOsteria",
     "thief",
     "micalizzis",
-    "laPicanteBistro"
+    "laPicanteBistro",
+    "avenueGyro"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
