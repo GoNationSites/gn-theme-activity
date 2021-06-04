@@ -17,6 +17,7 @@
     "moment": "^2.27.0",
     "node-fetch": "^2.6.0",
     "react-helmet": "^6.1.0",
+    "react-image-lightbox": "^5.1.1",
     "theme-ui": "^0.3.1"
   }
 }

@@ -325,6 +325,15 @@ export default {
       fontWeight: '400',
       lineHeight: '1.3',
     },
+    ctas: {},
+    cta: {
+      border: 'solid 1px',
+      borderColor: ['light', '', '', 'text'],
+      color: ['light', '', '', 'text'],
+      padding: '0.5rem',
+      width: 'fit-content',
+      margin: '1rem 1rem 1rem 0rem',
+    },
   },
 
   // ? ===============================
