@@ -49,18 +49,6 @@ const Shout = ({ gonationID, poweredID }) => {
       })
   }, [])
 
-  const hasCTAS = ctaObject => {
-    // takes {cta1:'', cta2:''}
-    console.log('function hit')
-    console.log(ctaObject)
-    if (ctaObject.cta1 || ctaObject.cta2) {
-      console.log('returning true')
-      Object.values(ctaObject)
-
-      return true
-    }
-  }
-
   return (
     <>
       {!shout.isLoading && shout.shoutData ? (
@@ -89,27 +77,30 @@ const Shout = ({ gonationID, poweredID }) => {
                 <FontAwesomeIcon icon={faComment} /> Recent Shout
               </Text>
               <Text variant='shout.text' sx={{ fontSize: 2, margin: 0 }}>
-                {shout.shoutData.shout.text}
+                {shout?.shoutData?.shout?.text}
               </Text>
 
-              {Object.keys(shout?.shoutData?.shout?.ctas).map((ctaName, index) => {
-                if (ctaName === 'cta1' || ctaName === 'cta2') {
-                  return ''
-                } else {
-                  return (
-                    <Link
-                      key={ctaName + index}
-                      variant={`shout.cta`}
-                      className='shoutCTA'
-                      href={shout?.shoutData?.shout?.ctas[ctaName]}
-                      target={
-                        checkIfExternalLink(shout?.shoutData?.shout?.ctas[ctaName]) ? '_blank' : ''
-                      }>
-                      {ctaName}
-                    </Link>
-                  )
-                }
-              })}
+              {shout?.shoutData?.shout?.ctas &&
+                Object.keys(shout?.shoutData?.shout?.ctas).map((ctaName, index) => {
+                  if (ctaName === 'cta1' || ctaName === 'cta2') {
+                    return ''
+                  } else {
+                    return (
+                      <Link
+                        key={ctaName + index}
+                        variant={`shout.cta`}
+                        className='shoutCTA'
+                        href={shout?.shoutData?.shout?.ctas[ctaName]}
+                        target={
+                          checkIfExternalLink(shout?.shoutData?.shout?.ctas[ctaName])
+                            ? '_blank'
+                            : ''
+                        }>
+                        {ctaName}
+                      </Link>
+                    )
+                  }
+                })}
             </Box>
           </Flex>
         </Box>
