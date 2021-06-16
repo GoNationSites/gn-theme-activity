@@ -26,7 +26,8 @@
     "micalizzis",
     "laPicanteBistro",
     "avenueGyro",
-    "organikaCafe"
+    "organikaCafe",
+    "hudsonWest"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",

@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from 'react'
-import { graphql } from 'gatsby'
-import { Box, Text } from 'theme-ui'
-import SEO from '../components/seo'
-import Shout from '../components/Shout'
-import About from '../components/About'
-import Hours from '../components/hours/hoursOld'
-import Footer from '../components/Footer/Footer'
-import CtaWidget from '../components/ui/CtaWidget'
-import Logo from '../components/logo/Logo'
-import Cover from '../components/cover/Cover'
-import ContactDetails from '../components/contact/ContactDetails'
-import SocialIcons from '../components/contact/SocialIcons'
-import ContactForm from '../components/contact/ContactForm'
-import MenuLink from '../components/menu/MenuLink'
-import OrderOnline from '../components/ui/OrderOnline'
-import getMenu from '../helpers/getMenu'
-import '../index.css'
+import React, { useEffect, useState } from 'react';
+import { graphql } from 'gatsby';
+import { Box, Text } from 'theme-ui';
+import SEO from '../components/seo';
+import Shout from '../components/Shout';
+import About from '../components/About';
+import Hours from '../components/hours/hoursOld';
+import Footer from '../components/Footer/Footer';
+import CtaWidget from '../components/ui/CtaWidget';
+import Logo from '../components/logo/Logo';
+import Cover from '../components/cover/Cover';
+import ContactDetails from '../components/contact/ContactDetails';
+import SocialIcons from '../components/contact/SocialIcons';
+import ContactForm from '../components/contact/ContactForm';
+import MenuLink from '../components/menu/MenuLink';
+import OrderOnline from '../components/ui/OrderOnline';
+import getMenu from '../helpers/getMenu';
+import '../index.css';
 
 export default function Home({ data }) {
   // ! ==========================================
@@ -40,13 +40,13 @@ export default function Home({ data }) {
     hasHours,
     // hasContact,
     orderOnlineLink,
-  } = data.allGoNationData.edges[0].node
+  } = data.allGoNationData.edges[0].node;
 
   // ? ==========================================
   // ? ======  Data From Gonation Business  =====
   // ? ==========================================
 
-  const businessData = data.allGoNationBusinessData.edges[0].node
+  const businessData = data.allGoNationBusinessData.edges[0].node;
 
   const {
     name: businessName,
@@ -59,11 +59,11 @@ export default function Home({ data }) {
     },
     location,
     publishableData,
-  } = businessData
+  } = businessData;
 
-  const { description, contact, hours } = publishableData
+  const { description, contact, hours } = publishableData;
 
-  const { facebook, instagram, twitter } = contact
+  const { facebook, instagram, twitter } = contact;
 
   const {
     street,
@@ -72,60 +72,60 @@ export default function Home({ data }) {
     state,
     postalCode,
     country,
-  } = location.address
+  } = location.address;
 
   // ? ===================================
   // ? ===========  State   ==============
   // ? ===================================
 
-  const [menuHasItems, setMenuHasItems] = useState(false)
-  const [menuOrServices, setMenuOrServices] = useState('Menu')
+  const [menuHasItems, setMenuHasItems] = useState(false);
+  const [menuOrServices, setMenuOrServices] = useState('Menu');
 
   // ? ====================================
   // ? =========== Functions ==============
   // ? ====================================
 
   const checkForMenuItems = async () => {
-    const data = await getMenu(poweredID)
+    const data = await getMenu(poweredID);
 
     if (data?.length) {
       // *maps through powered lists and checks if there is any sections to show
-      const checkIfListshaveSections = data.map(poweredList => {
-        return poweredList.inventory.length ? 'hasItems' : ''
-      })
+      const checkIfListshaveSections = data.map((poweredList) => {
+        return poweredList.inventory.length ? 'hasItems' : '';
+      });
 
-      setMenuOrServices(data[0].menumask)
+      setMenuOrServices(data[0].menumask);
 
       // *checks if any of the powered sections have something to show then it will show it.
-      if (checkIfListshaveSections.some(element => element)) {
-        setMenuHasItems(true)
+      if (checkIfListshaveSections.some((element) => element)) {
+        setMenuHasItems(true);
       }
     }
-  }
+  };
 
   const checkHours = () => {
-    const hoursArray = Object.values(hours)
+    const hoursArray = Object.values(hours);
 
     return hoursArray
-      .map(dayBlock => {
+      .map((dayBlock) => {
         if (dayBlock?.length > 0) {
-          return dayBlock[0]?.isClosed ? false : true
+          return dayBlock[0]?.isClosed ? false : true;
         } else {
-          return false
+          return false;
         }
       })
-      .some(element => element)
-  }
+      .some((element) => element);
+  };
 
   // ? ==========================================
   // ? ===========  Rendering JSX  ==============
   // ? ==========================================
 
   useEffect(() => {
-    checkForMenuItems()
-    checkHours()
-    return () => {}
-  }, [])
+    checkForMenuItems();
+    checkHours();
+    return () => {};
+  }, []);
 
   return (
     <>
@@ -135,14 +135,16 @@ export default function Home({ data }) {
         keywords={seoKeywords}
       />
 
-      <Box variant='pageContainer'>
-        <Box variant='column1'>
+      <Box variant='pageContainer' className='pageContainer'>
+        <Box variant='column1' className='column1'>
           <Logo logoImageId={avatarCloudinaryId} />
 
           {/* // ! Only Shows on Desktop */}
           <Box
             variant='contactInfo'
-            sx={{ display: ['none', '', '', 'block'] }}>
+            sx={{ display: ['none', '', '', 'block'] }}
+            className='contactInfo'
+          >
             <Text variant='contactInfo.title' as='h3'>
               Contact
             </Text>
@@ -167,16 +169,16 @@ export default function Home({ data }) {
           {/* // ! ================================ */}
         </Box>
 
-        <Box variant='column2'>
+        <Box variant='column2' className='column2'>
           <Cover coverImageId={coverCloudinaryId} />
 
-          <Box variant='column2.boxesContainers'>
+          <Box variant='column2.boxesContainers' className='boxesContainers'>
             {hasShout && (
               <Shout gonationID={gonationID} poweredID={poweredID} />
             )}
 
             {(hasMenu && menuHasItems) || orderOnlineLink ? (
-              <Box variant='contentBoxesLinks'>
+              <Box variant='contentBoxesLinks' className='contentBoxesLinks'>
                 {hasMenu && menuHasItems ? (
                   <MenuLink
                     gonationSlug={slug}
@@ -244,7 +246,7 @@ export default function Home({ data }) {
         orderOnlineLink={orderOnlineLink}
       />
     </>
-  )
+  );
 }
 
 export const query = graphql`
@@ -354,4 +356,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

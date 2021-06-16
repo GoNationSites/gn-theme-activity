@@ -1,9 +1,9 @@
-import React from 'react'
-import { Text, Box, Link } from 'theme-ui'
-import Facebook from '../icons/Facebook'
-import Instagram from '../icons/Instagram'
-import Twitter from '../icons/Twitter'
-import GoNationMan from '../icons/GoNationMan'
+import React from 'react';
+import { Text, Box, Link } from 'theme-ui';
+import Facebook from '../icons/Facebook';
+import Instagram from '../icons/Instagram';
+import Twitter from '../icons/Twitter';
+import GoNationMan from '../icons/GoNationMan';
 
 export default function SocialIcons({
   instagram,
@@ -12,13 +12,14 @@ export default function SocialIcons({
   gonationSlug,
 }) {
   return (
-    <Box variant='socialIcons'>
+    <Box variant='socialIcons' className='socialIcons'>
       {facebook ? (
         <Link
           variant='socialIcons.link'
           href={facebook}
           target='_blank'
-          rel='noreferrer'>
+          rel='noreferrer'
+        >
           <Facebook height={'30px'} width={'30px'} />
           <Text variant='socialIcons.text'>Facebook</Text>
         </Link>
@@ -30,7 +31,8 @@ export default function SocialIcons({
           variant='socialIcons.link'
           href={instagram}
           target='_blank'
-          rel='noreferrer'>
+          rel='noreferrer'
+        >
           <Instagram height={'30px'} width={'30px'} />
           <Text variant='socialIcons.text'>Instagram</Text>
         </Link>
@@ -42,7 +44,8 @@ export default function SocialIcons({
           variant='socialIcons.link'
           href={twitter}
           target='_blank'
-          rel='noreferrer'>
+          rel='noreferrer'
+        >
           <Twitter height={'30px'} width={'30px'} />
           <Text variant='socialIcons.text'>Twitter</Text>
         </Link>
@@ -55,7 +58,8 @@ export default function SocialIcons({
           variant='socialIcons.link'
           href={`https://www.gonation.com/place/${gonationSlug}/pulse`}
           target='_blank'
-          rel='noreferrer'>
+          rel='noreferrer'
+        >
           <GoNationMan height={'30px'} width={'30px'} />
           <Text variant='socialIcons.text'>GoNation</Text>
         </Link>
@@ -63,5 +67,5 @@ export default function SocialIcons({
         ''
       )}
     </Box>
-  )
+  );
 }
