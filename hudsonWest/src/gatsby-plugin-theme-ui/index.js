@@ -388,7 +388,7 @@ export default {
     phone: {
       marginBottom: '1rem',
       a: {
-        color: 'white',
+        color: ['', '', '', 'white'],
       },
       svg: {
         marginRight: '0.5rem',
@@ -404,7 +404,7 @@ export default {
         alignItems: 'baseline',
         lineHeight: '1.7',
         flexDirection: 'row',
-        color: 'white',
+        color: ['', '', '', 'white'],
       },
       svg: {
         marginRight: '0.75rem',
