@@ -11,6 +11,23 @@
 /* font-family: 'Playfair Display', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://www.gonation.biz/fonts/comfortaa/comfortaa-light.css');
+@import url('https://www.gonation.biz/fonts/comfortaa/comfortaa-regular.css');
+@import url('https://www.gonation.biz/fonts/comfortaa/comfortaa-bold.css');
+
+/* @font-face {
+  font-family: Comfortaa Light;
+  src: url('https://www.gonation.biz/fonts/comfortaa/comfortaa-light.ttf');
+}
+@font-face {
+  font-family: ComfortaaRegular;
+  src: url('https://www.gonation.biz/fonts/comfortaa/comfortaa-regular.ttf');
+}
+@font-face {
+  font-family: Comfortaa Bold;
+  src: url('https://www.gonation.biz/fonts/comfortaa/comfortaa-bold.ttf');
+} */
+
 body {
   margin: 0;
 }
@@ -28,9 +45,9 @@ body {
   padding: 1rem;
 }
 
-.shoutContent .shoutCTA:hover {
+/* .shoutContent .shoutCTA:hover {
   background-color: black;
   color: white;
-}
+} */
 
 /* Please click here to make reservations via Ousia's Open Table */
