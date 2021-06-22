@@ -18,3 +18,15 @@ body {
 .phone {
   display: none !important;
 }
+
+.column1 {
+  background-color: #831215 !important;
+}
+
+.directions a {
+  color: white;
+}
+
+.socialIcons a div {
+  color: white;
+}
