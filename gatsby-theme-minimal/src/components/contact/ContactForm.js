@@ -23,6 +23,7 @@ export default function ContactForm() {
         mb={3}
         placeholder='Name'
         ariaLabelledBy='name'
+        required={true}
       />
 
       <Input
@@ -33,6 +34,7 @@ export default function ContactForm() {
         id='email'
         ariaLabelledBy='email'
         mb={3}
+        required={true}
       />
 
       <Textarea
@@ -43,6 +45,7 @@ export default function ContactForm() {
         ariaLabelledBy='Message'
         rows='4'
         mb={3}
+        required={true}
       />
       <Button
         sx={{
