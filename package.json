@@ -27,7 +27,9 @@
     "laPicanteBistro",
     "avenueGyro",
     "organikaCafe",
-    "hudsonWest"
+    "hudsonWest",
+    "spiceMantra",
+    "tsPizzaKitchen"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
