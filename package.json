@@ -28,7 +28,9 @@
     "avenueGyro",
     "organikaCafe",
     "hudsonWest",
-    "simkosBarAndGrill"
+    "simkosBarAndGrill",
+    "spiceMantra",
+    "tsPizzaKitchen"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
