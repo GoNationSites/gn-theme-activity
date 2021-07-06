@@ -4,6 +4,7 @@ export default function hero({ businessName, logo, hasHeroTitle, coverImage }) {
   return (
     <Flex
       variant='hero.container'
+      className='hero'
       sx={{
         background: '',
         backgroundImage: `linear-gradient(45deg, black, transparent) url('https://res.cloudinary.com/gonation/${coverImage}') no-repeat`,
@@ -14,11 +15,7 @@ export default function hero({ businessName, logo, hasHeroTitle, coverImage }) {
         variant='hero.logo'
         alt='cover hero'
       />
-      {hasHeroTitle ? (
-        <Styled.h1 style={{ textAlign: 'center' }}>{businessName}</Styled.h1>
-      ) : (
-        ''
-      )}
+      {hasHeroTitle ? <Styled.h1 style={{ textAlign: 'center' }}>{businessName}</Styled.h1> : ''}
     </Flex>
   )
 }
