@@ -27,7 +27,8 @@
     "laPicanteBistro",
     "avenueGyro",
     "organikaCafe",
-    "hudsonWest"
+    "hudsonWest",
+    "simkosBarAndGrill"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
