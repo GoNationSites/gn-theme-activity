@@ -32,7 +32,8 @@
     "spiceMantra",
     "tsPizzaKitchen",
     "castIronKitchen",
-    "houseOfHumbled"
+    "houseOfHumbled",
+    "villaLulu"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
