@@ -35,7 +35,8 @@
     "houseOfHumbled",
     "villaLulu",
     "sohoBar",
-    "tacoHouse"
+    "tacoHouse",
+    "theAmericas"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
