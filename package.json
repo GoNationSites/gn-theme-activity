@@ -36,7 +36,8 @@
     "villaLulu",
     "sohoBar",
     "tacoHouse",
-    "theAmericas"
+    "theAmericas",
+    "bridgeportFlyer"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
