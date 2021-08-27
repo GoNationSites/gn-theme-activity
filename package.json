@@ -38,7 +38,8 @@
     "tacoHouse",
     "theAmericas",
     "bridgeportFlyer",
-    "limaniGrille"
+    "limaniGrille",
+    "theDiningRoom"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
