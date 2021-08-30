@@ -39,7 +39,8 @@
     "theAmericas",
     "bridgeportFlyer",
     "limaniGrille",
-    "theDiningRoom"
+    "theDiningRoom",
+    "viaGastrobar"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
