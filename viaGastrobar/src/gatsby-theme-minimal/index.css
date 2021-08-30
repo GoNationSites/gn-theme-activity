@@ -34,9 +34,9 @@ body {
 .column1 {
   background-color: #080f18 !important;
 }
-.column1 img {
-filter:brightness(0) invert(1)
-}
+/* .column1 img {
+  filter: brightness(0) invert(1);
+} */
 
 .column1 .contactDetails a {
   color: white;
