@@ -137,8 +137,8 @@ exports.sourceNodes = async (
       },
     }
   )
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       console.log(data)
       const { business: businessData } = data
       // creates the graphql schema
@@ -156,7 +156,7 @@ exports.sourceNodes = async (
       const node = Object.assign({}, businessData, goNationBusinessDataNode)
       createNode(node)
     })
-    .catch(e => {
+    .catch((e) => {
       console.log('error : ', console.e)
     })
 }
