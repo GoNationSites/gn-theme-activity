@@ -41,7 +41,8 @@
     "limaniGrille",
     "theDiningRoom",
     "viaGastrobar",
-    "catsKitchen"
+    "catsKitchen",
+    "allium"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
