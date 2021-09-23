@@ -4,12 +4,13 @@ import { Text, Box, Flex } from '@theme-ui/components'
 const Price = ({ variants, withDollar, toSide }) => {
   const renderPrices = () =>
     variants
-      .filter(el => {
+      .filter((el) => {
         return el.label !== ''
       })
-      .map(variant => (
+      .map((variant) => (
         <Box
-          key={(((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)}>
+          key={(((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1)}
+        >
           {variant.labelTitle ? <Flex>{variant.labelTitle}</Flex> : ''}
           <Flex sx={{ marginBottom: 2 }}>
             <Text sx={{ marginRight: 3 }} variant='menu.menuItemPriceLabel'>

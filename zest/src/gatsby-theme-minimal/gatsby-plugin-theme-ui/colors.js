@@ -1,7 +1,7 @@
 export default {
   text: 'black',
   background: 'white',
-  primary: 'gold',
-  secondary: 'gold',
+  primary: '#d83189',
+  secondary: '#d83189',
   light: '#FFF',
 }

@@ -13,6 +13,7 @@
 
 body {
   margin: 0;
+  /* background-color: #501a84; */
 }
 
 /* .phone {
@@ -23,9 +24,12 @@ body {
   display: none !important;
 } */
 
-/* .column1 {
-  background-color: #831215 !important;
-} */
+.column1 {
+  background-color: #f6f251 !important;
+}
+.column2 {
+  background-color: #501a84;
+}
 /* 
 .column1 .directions a {
   color: white;
@@ -46,7 +50,23 @@ body {
 .column1 .socialIcons {
   filter: brightness(0) invert(1);
 }
+ */
 
-.footer {
+body .footer {
   background-color: black !important;
-} */
+  margin-top: 0rem;
+  padding: 0.5rem 1rem 4rem;
+}
+@media only screen and (min-width: 1024px) {
+  body .footer {
+    background-color: black !important;
+    margin-top: 0rem;
+    padding: 0rem 1rem;
+  }
+}
+
+body .contactDetails {
+  border-bottom: solid 1px black;
+  text-align: center;
+  margin-bottom: 1rem;
+}
