@@ -43,7 +43,8 @@
     "viaGastrobar",
     "catsKitchen",
     "allium",
-    "zest"
+    "zest",
+    "hardHatCafe"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
