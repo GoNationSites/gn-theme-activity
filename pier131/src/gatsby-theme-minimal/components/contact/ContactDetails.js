@@ -29,8 +29,7 @@ export default function ContactDetails({
         >
           <FontAwesomeIcon icon={faMapMarkerAlt} />
           <Text variant='contactDetails.directions'>
-            {street},<br></br>
-            {city}, {state}, {postalCode}
+            9 Riverside Drive Shelton, CT 06484
           </Text>
         </Link>
       </Text>
