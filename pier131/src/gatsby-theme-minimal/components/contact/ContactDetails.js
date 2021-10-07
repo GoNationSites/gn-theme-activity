@@ -23,9 +23,10 @@ export default function ContactDetails({
 
       <Text variant='contactDetails.directions' className='directions'>
         <Link
-          href={`https://www.google.com/maps/dir/?api=1&destination=${street}+${city}+${state}+${postalCode}+${country}`}
+          href={`https://goo.gl/maps/SSWGMgXr8gu145sW7`}
           target='_blank'
-          rel='noreferrer'>
+          rel='noreferrer'
+        >
           <FontAwesomeIcon icon={faMapMarkerAlt} />
           <Text variant='contactDetails.directions'>
             {street},<br></br>
