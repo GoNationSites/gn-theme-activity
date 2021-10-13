@@ -45,7 +45,7 @@
     "allium",
     "zest",
     "hardHatCafe",
-    "daveAndCharliesHowntownDeli"
+    "daveAndCharliesHometownDeli"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
