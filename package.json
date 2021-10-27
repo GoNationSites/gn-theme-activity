@@ -46,7 +46,8 @@
     "zest",
     "hardHatCafe",
     "daveAndCharliesHometownDeli",
-    "tastyYolkStratford"
+    "tastyYolkStratford",
+    "merritCarWash"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
