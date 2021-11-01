@@ -47,7 +47,8 @@
     "hardHatCafe",
     "daveAndCharliesHometownDeli",
     "tastyYolkStratford",
-    "merritCarWash"
+    "merritCarWash",
+    "nyFullKitchen"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
