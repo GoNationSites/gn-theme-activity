@@ -16,7 +16,7 @@ body {
 }
 .phone {
   font-size: 1rem;
-  display: none;
+  display: none !important;
 }
 .directions {
   font-size: 1rem;
