@@ -11,7 +11,8 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: '', // leave as empty string if not needed
+        orderOnlineLink:
+          'https://ordering.chownow.com/order/32097/locations/47514', // leave as empty string if not needed
       },
     },
   ],
