@@ -26,6 +26,11 @@ body {
   height: auto;
   padding: 1rem;
 }
+
+.column2 .footer {
+  background-color: black;
+}
+
 /* 
 .phone {
   display: none !important;
