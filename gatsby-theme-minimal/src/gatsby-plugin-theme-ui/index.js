@@ -209,6 +209,9 @@ export default {
     flexDirection: ['', '', '', 'column'],
     justifyContent: 'space-between',
     backgroundColor: ['', '', '', 'white'],
+    img: {
+      objectFit: 'contain',
+    },
   },
 
   column2: {
