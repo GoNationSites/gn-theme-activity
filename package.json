@@ -50,7 +50,8 @@
     "merritCarWash",
     "nyFullKitchen",
     "toniEveryAnimalMatters",
-    "saltwaterRestaurant"
+    "saltwaterRestaurant",
+    "famous50sDiner"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
