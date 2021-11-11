@@ -1,9 +1,9 @@
-import React from 'react';
-import { Text, Box, Link } from 'theme-ui';
-import Facebook from '../icons/Facebook';
-import Instagram from '../icons/Instagram';
-import Twitter from '../icons/Twitter';
-import GoNationMan from '../icons/GoNationMan';
+import React from 'react'
+import { Text, Box, Link } from 'theme-ui'
+import Facebook from '../icons/Facebook'
+import Instagram from '../icons/Instagram'
+import Twitter from '../icons/Twitter'
+import GoNationMan from '../icons/GoNationMan'
 
 export default function SocialIcons({
   instagram,
@@ -21,7 +21,9 @@ export default function SocialIcons({
           rel='noreferrer'
         >
           <Facebook height={'30px'} width={'30px'} />
-          <Text variant='socialIcons.text'>Facebook</Text>
+          <Text variant='socialIcons.text' className='socialIconText'>
+            Facebook
+          </Text>
         </Link>
       ) : (
         ''
@@ -34,7 +36,9 @@ export default function SocialIcons({
           rel='noreferrer'
         >
           <Instagram height={'30px'} width={'30px'} />
-          <Text variant='socialIcons.text'>Instagram</Text>
+          <Text variant='socialIcons.text' className='socialIconText'>
+            Instagram
+          </Text>
         </Link>
       ) : (
         ''
@@ -47,7 +51,9 @@ export default function SocialIcons({
           rel='noreferrer'
         >
           <Twitter height={'30px'} width={'30px'} />
-          <Text variant='socialIcons.text'>Twitter</Text>
+          <Text variant='socialIcons.text' className='socialIconText'>
+            Twitter
+          </Text>
         </Link>
       ) : (
         ''
@@ -61,11 +67,13 @@ export default function SocialIcons({
           rel='noreferrer'
         >
           <GoNationMan height={'30px'} width={'30px'} />
-          <Text variant='socialIcons.text'>GoNation</Text>
+          <Text variant='socialIcons.text' className='socialIconText'>
+            GoNation
+          </Text>
         </Link>
       ) : (
         ''
       )}
     </Box>
-  );
+  )
 }

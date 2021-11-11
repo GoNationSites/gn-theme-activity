@@ -25,7 +25,8 @@ body {
 } */
 
 .column1 {
-  background-color: #fed700 !important;
+  background-color: black !important;
+  color: white;
 }
 .column2 {
   background-color: #501a84;
@@ -53,15 +54,25 @@ body {
  */
 
 body .footer {
-  background-color: black !important;
+  background-color: #2e2e2e !important;
   margin-top: 0rem;
   padding: 0.5rem 1rem 4rem;
 }
 @media only screen and (min-width: 1024px) {
   body .footer {
-    background-color: black !important;
+    background-color: #2e2e2e !important;
     margin-top: 0rem;
     padding: 0rem 1rem;
+  }
+  body .contactDetails a {
+    color: white;
+  }
+
+  body .socialIcons a {
+    color: white;
+  }
+  body .socialIconText {
+    color: white;
   }
 }
 
