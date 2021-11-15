@@ -11,7 +11,8 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: '', // leave as empty string if not needed
+        orderOnlineLink:
+          'https://www.grubhub.com/restaurant/famous-50s-diner-472-huntington-turnpike-bridgeport/671040', // leave as empty string if not needed
       },
     },
   ],
