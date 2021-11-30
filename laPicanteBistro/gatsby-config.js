@@ -11,8 +11,9 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: '', // leave as empty string if not needed
+        orderOnlineLink:
+          'https://www.toasttab.com/canoe%20cafe/v3/?mode=fulfillment', // leave as empty string if not needed
       },
     },
   ],
-}
+};
