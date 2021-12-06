@@ -51,7 +51,8 @@
     "nyFullKitchen",
     "toniEveryAnimalMatters",
     "saltwaterRestaurant",
-    "famous50sDiner"
+    "famous50sDiner",
+    "ecco"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
