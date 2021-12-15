@@ -14,17 +14,10 @@
 body {
   margin: 0;
 }
-.phone {
-  font-size: 1rem;
-  /* display: none !important; */
-}
-.directions {
-  font-size: 1rem;
-}
-/* 
+
 .phone {
   display: none !important;
-} */
+}
 
 /* .column1 {
   background-color: #831215 !important;
@@ -37,7 +30,7 @@ body {
 .socialIcons a div {
   color: white;
 } */
-/* 
+
 .column1 {
   background-color: #080f18 !important;
 }
@@ -52,4 +45,4 @@ body {
 
 .footer {
   background-color: black !important;
-} */
+}

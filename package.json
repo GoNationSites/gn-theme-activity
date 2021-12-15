@@ -52,7 +52,8 @@
     "toniEveryAnimalMatters",
     "saltwaterRestaurant",
     "famous50sDiner",
-    "magicPiePizza"
+    "magicPiePizza",
+    "ecco"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
