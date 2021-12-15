@@ -51,7 +51,8 @@
     "nyFullKitchen",
     "toniEveryAnimalMatters",
     "saltwaterRestaurant",
-    "famous50sDiner"
+    "famous50sDiner",
+    "magicPiePizza"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
