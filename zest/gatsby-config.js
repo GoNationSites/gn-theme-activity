@@ -11,7 +11,8 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: '', // leave as empty string if not needed
+        orderOnlineLink:
+          'https://slicelife.com/restaurants/ny/bay-shore/11706/zest-bay-shore/menu?utm_campaign=order_now_button&utm_medium=referral&utm_source=website', // leave as empty string if not needed
       },
     },
   ],
