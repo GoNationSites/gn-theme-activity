@@ -95,6 +95,7 @@ exports.sourceNodes = async (
     hasHours,
     hasContact,
     orderOnlineLink,
+    orderOnlineName,
   }
 ) => {
   const { createNode } = actions
@@ -116,6 +117,7 @@ exports.sourceNodes = async (
     hasHours,
     hasContact,
     orderOnlineLink,
+    orderOnlineName,
   }
   const contentDigest = crypto
     .createHash('md5')
