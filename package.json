@@ -54,7 +54,8 @@
     "famous50sDiner",
     "magicPiePizza",
     "ecco",
-    "luckysCabaret"
+    "luckysCabaret",
+    "doughAndCo"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
