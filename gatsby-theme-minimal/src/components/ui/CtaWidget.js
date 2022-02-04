@@ -12,6 +12,7 @@ export default function CtaWidget({
   postalCode,
   country,
   orderOnlineLink,
+  orderOnlineName,
 }) {
   return (
     <Flex variant='CTAContainer'>
@@ -19,7 +20,8 @@ export default function CtaWidget({
         href={`tel:${phone}`}
         variant='CTAContainer.phone'
         className='phone'
-        rel='noreferrer'>
+        rel='noreferrer'
+      >
         <FontAwesomeIcon icon={faPhone} /> <Text variant='CTAText'>Call</Text>
       </Link>
 
@@ -28,7 +30,8 @@ export default function CtaWidget({
         className='directions'
         href={`https://www.google.com/maps/dir/?api=1&destination=${street}+${city}+${state}+${postalCode}+${country}`}
         target='_blank'
-        rel='noreferrer'>
+        rel='noreferrer'
+      >
         <FontAwesomeIcon icon={faMapMarkerAlt} />
         <Text variant='CTAText'>Directions</Text>
       </Link>
@@ -38,8 +41,11 @@ export default function CtaWidget({
           variant='CTAContainer.order'
           href={`${orderOnlineLink}`}
           target='_blank'
-          rel='noreferrer'>
-          <Text variant='CTAText'>Order Online</Text>
+          rel='noreferrer'
+        >
+          <Text variant='CTAText'>
+            {orderOnlineName ? orderOnlineName : 'Order Online'}
+          </Text>
         </Link>
       ) : (
         ''
