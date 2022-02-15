@@ -55,7 +55,8 @@
     "magicPiePizza",
     "ecco",
     "luckysCabaret",
-    "doughAndCo"
+    "doughAndCo",
+    "botanika"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
