@@ -56,7 +56,8 @@
     "ecco",
     "luckysCabaret",
     "doughAndCo",
-    "botanika"
+    "botanika",
+    "sweetLeafLiving"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
