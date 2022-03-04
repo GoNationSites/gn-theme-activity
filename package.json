@@ -57,7 +57,8 @@
     "luckysCabaret",
     "doughAndCo",
     "botanika",
-    "sweetLeafLiving"
+    "sweetLeafLiving",
+    "chacra"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
