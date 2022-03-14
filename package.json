@@ -58,7 +58,8 @@
     "doughAndCo",
     "botanika",
     "sweetLeafLiving",
-    "chacra"
+    "chacra",
+    "mammaBella"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
