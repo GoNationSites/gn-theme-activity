@@ -60,7 +60,8 @@
     "sweetLeafLiving",
     "chacra",
     "mammaBella",
-    "epicRemodeling"
+    "epicRemodeling",
+    "megaBassPro"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
