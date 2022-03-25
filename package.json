@@ -61,7 +61,8 @@
     "chacra",
     "mammaBella",
     "epicRemodeling",
-    "megaBassPro"
+    "megaBassPro",
+    "primeTimeCatering"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
