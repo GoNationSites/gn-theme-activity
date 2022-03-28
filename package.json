@@ -62,7 +62,8 @@
     "mammaBella",
     "epicRemodeling",
     "megaBassPro",
-    "primeTimeCatering"
+    "primeTimeCatering",
+    "sicilian"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
