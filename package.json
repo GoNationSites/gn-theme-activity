@@ -63,7 +63,8 @@
     "epicRemodeling",
     "megaBassPro",
     "primeTimeCatering",
-    "sicilian"
+    "sicilian",
+    "esh"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
