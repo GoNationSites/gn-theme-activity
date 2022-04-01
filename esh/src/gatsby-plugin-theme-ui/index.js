@@ -277,6 +277,9 @@ export default {
 
   shout: {
     container: {
+      backgroundColor:'white',
+      // backgroundImage:'url(https://res.cloudinary.com/gonation/image/upload/v1648844475/sites/esh/patternbg3.png)',
+      // backgroundSize:'300px',
       // boxShadow: ['', '', '', '1px 0 7px rgba(0,0,0,.2)'],
       border: ['', '', '', 'solid 1px #EEEEEE'],
       borderRadius: ['', '', '', '10px'],
@@ -302,7 +305,7 @@ export default {
       height: ['130px', '', '', 'auto'],
     },
     shoutImage: {
-      objectFit: 'cover',
+      objectFit: 'contain',
       width: '100%',
       height: '100%',
       borderRadius: '5px',
@@ -318,12 +321,12 @@ export default {
     title: {
       variant: 'text.headingLight',
       fontSize: '16px',
-      color: ['light', '', '', 'text'],
+      color: ['light', '', '', 'lgith'],
     },
 
     text: {
       variant: 'text.headingLight',
-      color: ['light', '', '', 'text'],
+      color: ['light', '', '', 'light'],
       fontSize: ['18px', '', '', '1.5rem'],
       fontWeight: '400',
       lineHeight: '1.3',
@@ -439,6 +442,9 @@ export default {
 
   // form styles
   contactForm: {
+    backgroundImage:'url(https://res.cloudinary.com/gonation/image/upload/v1648844475/sites/esh/patternbg2.png)',
+    backgroundSize:'300px',
+
     flexGrow: '1',
     backgroundColor: ['primary', '', '', 'primary'],
     flexDirection: 'column',
@@ -641,6 +647,8 @@ export default {
     border: ['', '', '', 'solid 1px #EEEEEE'],
     borderRadius: ['', '', '', '10px'],
     width: ['100%', '', '', 'calc(50% - 1rem)'],
+    backgroundImage:'url(https://res.cloudinary.com/gonation/image/upload/v1648844211/sites/esh/pattern_background.png)',
+    backgroundSize:'300px',
     title: {
       variant: 'text.sectionHeading',
       fontSize: '1.5rem',
