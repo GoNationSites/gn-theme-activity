@@ -6,9 +6,9 @@ module.exports = {
         gonationID: 'bzn-wcIjfeXgQ6eniPMXhlPHtw',
         poweredID: 'bzn-wcIjfeXgQ6eniPMXhlPHtw',
         seoKeywords: '',
-        hasAbout: true,
+        hasAbout: false,
         hasMenu: true,
-        hasShout: true,
+        hasShout: false,
         hasHours: true,
         hasContact: true,
         orderOnlineLink: '', // leave as empty string if not needed
