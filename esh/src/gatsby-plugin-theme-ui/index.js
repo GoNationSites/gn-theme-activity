@@ -240,18 +240,18 @@ export default {
       maxHeight: ['150px', '', '', 'unset'],
       margin: ['0 auto', '', '', '5rem 0rem 0'],
       left: '50%',
-      top: '20%',
-      transform: ['translate(-50%,-50%)', '', '', 'none'],
+      top: ['0%', '', '', '20%'],
+      transform: ['translateX(-50%)', '', '', 'none'],
       transition: 'all ease-in-out 0.2s',
-      zIndex: '0',
+      zIndex: '10',
     },
     logoScrolled: {
       variant: 'logo.logo',
       position: ['fixed', '', '', 'static'],
       height: ['100%', '', '', 'unset'],
-      maxHeight: ['150px', '', '', 'unset'],
+      maxHeight: ['100px', '', '', 'unset'],
       margin: ['0 auto', '', '', '5rem 0rem 0'],
-      transform: ['translate(-50%,-50%)', '', '', 'none'],
+      transform: ['translateX(-50%)', '', '', 'none'],
       // top: '0%',
       // maxHeight: ['75px', '', '', '150px'],
       // display: ['none', '', '', 'block'],
@@ -264,7 +264,7 @@ export default {
 
   cover: {
     backgroundSize: 'contain',
-    // background-size: contain;
+
     backgroundAttachment: ['initial', '', '', 'unset'],
     backgroundPosition: 'center center',
     backgroundRepeat: ' no-repeat',
