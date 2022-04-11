@@ -447,16 +447,17 @@ export default {
     //   'url(https://res.cloudinary.com/gonation/image/upload/v1648844475/sites/esh/patternbg2.png)',
     // backgroundSize: '300px',
     backgroundImage:
-      'url(https://res.cloudinary.com/gonation/image/upload/v1648844211/sites/esh/pattern_background.png)',
-    backgroundSize: '300px',
+      'url(https://res.cloudinary.com/gonation/image/upload/v1649708424/sites/esh/goldleaves.png)',
+    backgroundColor: 'black',
+    backgroundSize: 'cover',
     flexGrow: '1',
-    backgroundColor: ['primary', '', '', 'primary'],
+    // backgroundColor: ['primary', '', '', 'primary'],
     flexDirection: 'column',
     padding: '2rem 1rem 2rem',
-    width: ['calc(100% - 1rem)', 'calc(75% - 1rem)', 'calc(50% - 1rem)'],
+    width: ['100%'],
     border: ['', '', '', 'solid 1px #EEEEEE'],
     borderRadius: ['', '', '', '10px'],
-    margin: ['0 auto', '', '', '0.5rem'],
+    margin: ['0rem auto', '', '', '0.5rem'],
 
     title: {
       fontWeight: '500',
@@ -483,6 +484,7 @@ export default {
       maxWidth: '400px',
       margin: '0rem auto 1rem',
       color: 'white',
+      backgroundColor: 'rgba(0,0,0,0.75)',
 
       borderRadius: ['', '', '', '12px'],
       '::placeholder': {
@@ -495,6 +497,7 @@ export default {
       borderColor: 'text',
     },
     textarea: {
+      backgroundColor: 'rgba(0,0,0,0.75)',
       borderColor: 'white',
       resize: 'vertical',
       padding: '1rem 1.5rem',
@@ -746,7 +749,7 @@ export default {
     padding: ['20px 1rem 120px', '', '', '1rem'],
     flexDirection: ['column', 'column', 'row'],
     alignItems: 'center',
-    marginTop: '1rem',
+    // marginTop: '1rem',
     width: '100%',
 
     heading: {
