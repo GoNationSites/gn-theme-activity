@@ -15,7 +15,7 @@ export default function Cover({ coverImageId }) {
       >
         <source
           src={
-            'https://res.cloudinary.com/gonation/video/upload/v1649187720/sites/esh/esh_banner_web_desktop_copy_1.mp4'
+            'https://res.cloudinary.com/gonation/video/upload/v1649775086/sites/esh/esh_banner_web_cut_out_1.mp4'
           }
           type='video/mp4'
         />
