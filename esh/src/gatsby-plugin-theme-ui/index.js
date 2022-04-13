@@ -745,7 +745,7 @@ export default {
 
   footer: {
     order: '9',
-    backgroundColor: '#272e38',
+    backgroundColor: 'black',
     padding: ['20px 1rem 120px', '', '', '1rem'],
     flexDirection: ['column', 'column', 'row'],
     alignItems: 'center',
