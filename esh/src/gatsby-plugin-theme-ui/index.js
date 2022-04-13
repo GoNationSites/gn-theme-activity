@@ -455,9 +455,9 @@ export default {
     flexDirection: 'column',
     padding: '2rem 1rem 2rem',
     width: ['100%'],
-    border: ['', '', '', 'solid 1px #EEEEEE'],
-    borderRadius: ['', '', '', '10px'],
-    margin: ['0rem auto', '', '', '0.5rem'],
+    // border: ['', '', '', 'solid 1px #EEEEEE'],
+    // borderRadius: ['', '', '', '0px'],
+    margin: ['0rem auto', '', '', '0rem'],
 
     title: {
       fontWeight: '500',
