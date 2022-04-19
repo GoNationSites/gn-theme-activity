@@ -208,7 +208,7 @@ export default {
     display: ['', '', '', 'flex'],
     flexDirection: ['', '', '', 'column'],
     justifyContent: 'space-between',
-    backgroundColor: ['', '', '', '#fff7ea'],
+    backgroundColor: ['', '', '', 'background'],
     img: {
       objectFit: 'contain',
     },
@@ -426,7 +426,7 @@ export default {
       alignItems: 'center',
       svg: {
         path: {
-          fill: 'secondary',
+          fill: 'white',
         },
       },
     },
