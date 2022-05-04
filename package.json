@@ -61,7 +61,14 @@
     "chacra",
     "mammaBella",
     "epicRemodeling",
-    "southbay"
+    "southbay",
+    "megaBassPro",
+    "primeTimeCatering",
+    "sicilian",
+    "esh",
+    "garlicRestaurant",
+    "neazRestaurantBar",
+    "lastDropCoffeeShop"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
