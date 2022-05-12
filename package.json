@@ -68,7 +68,8 @@
     "esh",
     "garlicRestaurant",
     "neazRestaurantBar",
-    "lastDropCoffeeShop"
+    "lastDropCoffeeShop",
+    "ilGabbiano"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
