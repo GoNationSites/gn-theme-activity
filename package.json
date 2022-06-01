@@ -70,7 +70,7 @@
     "neazRestaurantBar",
     "lastDropCoffeeShop",
     "ilGabiano",
-    "ilPellicano "
+    "ilPellicano"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
