@@ -56,5 +56,5 @@ body {
 } */
 
 .directions {
-  display: none;
+  display: none !important;
 }
