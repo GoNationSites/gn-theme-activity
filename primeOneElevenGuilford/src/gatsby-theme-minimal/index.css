@@ -58,3 +58,8 @@ body {
 .directions {
   display: none !important;
 }
+
+.column1 img {
+  background: black;
+  padding: 1rem;
+}
