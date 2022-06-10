@@ -71,7 +71,8 @@
     "lastDropCoffeeShop",
     "ilGabiano",
     "ilPellicano",
-    "losPortales"
+    "losPortales",
+    "primeOneElevenGuilford"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
