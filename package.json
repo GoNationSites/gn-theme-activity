@@ -73,7 +73,8 @@
     "ilPellicano",
     "losPortales",
     "primeOneElevenGuilford",
-    "roseapple"
+    "roseapple",
+    "thepharmacy"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
