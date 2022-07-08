@@ -75,7 +75,9 @@
     "primeOneElevenGuilford",
     "roseapple",
     "thepharmacy",
-    "ilCapriccio"
+    "ilCapriccio",
+    "bronxHouse",
+    "cuttingWedge"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
