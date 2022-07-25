@@ -79,7 +79,8 @@
     "bronxHouse",
     "cuttingWedge",
     "pizzaLyfe",
-    "flcInsurance"
+    "flcInsurance",
+    "hendricks"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
