@@ -81,7 +81,7 @@
     "pizzaLyfe",
     "flcInsurance",
     "hendricks",
-	"noa"
+    "noa"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
