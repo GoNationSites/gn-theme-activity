@@ -11,8 +11,9 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: '', // leave as empty string if not needed
-        orderOnlineName: '',
+        orderOnlineLink:
+          'https://slicelife.com/restaurants/ct/stratford/06615/acropolis-pizza/menu', // leave as empty string if not needed
+        orderOnlineName: 'Order Now',
       },
     },
   ],
