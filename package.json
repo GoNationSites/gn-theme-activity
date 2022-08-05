@@ -83,7 +83,9 @@
     "hendricks",
     "noa",
     "flames",
-    "saltyDog"
+    "saltyDog",
+    "threeLittleBears",
+    "gregorys"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
