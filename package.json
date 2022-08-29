@@ -85,7 +85,8 @@
     "flames",
     "saltyDog",
     "threeLittleBears",
-    "gregorys"
+    "gregorys",
+    "carpaccio"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
