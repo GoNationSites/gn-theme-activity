@@ -18,8 +18,8 @@ best tapas in fairfield, ct`,
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: '', // leave as empty string if not needed
-        orderOnlineName: '',
+        orderOnlineLink: 'https://www.opentable.com/r/il-pellicano-fairfield?corrid=034fcf12-2289-437b-a48a-5dd6d2b69e1a&avt=eyJ2IjoyLCJtIjowLCJwIjowLCJzIjowLCJuIjowfQ&p=2&sd=2022-09-20T19%3A00%3A00', // leave as empty string if not needed
+        orderOnlineName: 'Make a Reservation',
       },
     },
   ],
