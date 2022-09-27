@@ -14,10 +14,10 @@
 body {
   margin: 0;
 }
-
+/* 
 .phone {
-  display: none !important;
-}
+  display: none;
+} */
 
 /* .directions {
   display: none !important;
@@ -54,10 +54,10 @@ body {
 .footer {
   background-color: black !important;
 } */
-
+/* 
 .directions {
   display: none !important;
-}
+} */
 
 .column1 img {
   background: black;
