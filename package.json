@@ -87,7 +87,8 @@
     "threeLittleBears",
     "gregorys",
     "carpaccio",
-    "mainStreetPizza"
+    "mainStreetPizza",
+    "kireBites"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
