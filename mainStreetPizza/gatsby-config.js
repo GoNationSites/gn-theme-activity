@@ -3,9 +3,9 @@ module.exports = {
     {
       resolve: `gatsby-theme-minimal`,
       options: {
-        gonationID: 'bzn-lTBTuIcLRYS7T-_zZTt-oQ',
-        poweredID: 'bzn-lTBTuIcLRYS7T-_zZTt-oQ',
-        seoKeywords: 'Flames Restaurant',
+        gonationID: 'bzn-NpbLprATSDef_BeaypSKtw',
+        poweredID: 'bzn-NpbLprATSDef_BeaypSKtw',
+        seoKeywords: '',
         hasAbout: true,
         hasMenu: true,
         hasShout: true,
