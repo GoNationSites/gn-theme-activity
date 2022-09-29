@@ -11,6 +11,7 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: true,
+      
         orderOnlineLink: '', // leave as empty string if not needed
         orderOnlineName: '',
       },
