@@ -89,7 +89,7 @@
     "carpaccio",
     "mainStreetPizza",
     "kireBites",
-    "BagelBoutique"
+    "bagelBoutique"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
