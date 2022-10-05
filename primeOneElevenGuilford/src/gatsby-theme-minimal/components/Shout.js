@@ -150,7 +150,7 @@ const Shout = ({ gonationID, poweredID }) => {
                 </Text>
                 <Flex sx={{ flexWrap: 'wrap' }}>
                   {menus.map(({ url, name }) => (
-                    <Box sx={{ p: 0 }}>
+                    <Box sx={{ padding: '.9rem 0' }}>
                       <Link
                         key={name}
                         variant={`shout.cta`}
