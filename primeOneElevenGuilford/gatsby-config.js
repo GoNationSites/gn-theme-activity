@@ -11,8 +11,8 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: '', // leave as empty string if not needed
-        orderOnlineName: '',
+        orderOnlineLink: 'https://primeonwhitfield.securetree.com/', // leave as empty string if not needed
+        orderOnlineName: 'Purchase Gift Cards',
       },
     },
   ],
