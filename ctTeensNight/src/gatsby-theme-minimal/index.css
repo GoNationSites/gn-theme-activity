@@ -7,6 +7,6 @@
 .contactDetails {
 	display: none!important
 }
-svg {
+svg[data-icon='truck'] {
 	display: none!important
 }
