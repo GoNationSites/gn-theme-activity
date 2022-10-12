@@ -55,22 +55,22 @@ const Shout = ({ gonationID, poweredID }) => {
     {
       name: 'Beer & Wine',
       url:
-        'https://res.cloudinary.com/gonation/image/upload/v1664921523/sites/primewhitefield/Prime-wine_beer_8.5x14-2022-9-13_1.ai',
+        'https://res.cloudinary.com/gonation/image/upload/v1664921523/sites/primewhitefield/Prime-wine_beer_8.5x14-2022-9-13_1.pdf',
     },
     {
       name: 'Kids & Dessert',
       url:
-        'https://res.cloudinary.com/gonation/image/upload/v1664921520/sites/primewhitefield/Prime-guilf-Kids_dessert_8x6_1.ai',
+        'https://res.cloudinary.com/gonation/image/upload/v1664921520/sites/primewhitefield/Prime-guilf-Kids_dessert_8x6_1.pdf',
     },
     {
       name: 'Executive Lunch',
       url:
-        'https://res.cloudinary.com/gonation/image/upload/v1664921520/sites/primewhitefield/Prime-guilf-executive_lunch_11x4.25_1.ai',
+        'https://res.cloudinary.com/gonation/image/upload/v1664921520/sites/primewhitefield/Prime-guilf-executive_lunch_11x4.25_1.pdf',
     },
     {
       name: 'Dinner',
       url:
-        'https://res.cloudinary.com/gonation/image/upload/v1664921523/sites/primewhitefield/Prime-guilf-dinner_8.5x14_NEW_1.ai',
+        'https://res.cloudinary.com/gonation/image/upload/v1664921523/sites/primewhitefield/Prime-guilf-dinner_8.5x14_NEW_1.pdf',
     },
   ];
 
