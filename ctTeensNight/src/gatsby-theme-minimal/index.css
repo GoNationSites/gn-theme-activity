@@ -4,3 +4,12 @@
 .directions {
 	display: none!important;
 }
+.contactDetails {
+	display: none!important
+}
+svg[data-icon='truck'] {
+	display: none!important
+}
+a[href="tel:203-627-5798"] {
+	display: none!important
+}
