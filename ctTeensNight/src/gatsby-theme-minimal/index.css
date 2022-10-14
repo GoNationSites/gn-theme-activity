@@ -13,3 +13,26 @@ svg[data-icon='truck'] {
 a[href="tel:203-627-5798"] {
 	display: none!important
 }
+
+@media only screen and (max-width: 1023px){
+	.boxesContainers {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.css-rk1kuh{
+		order: 1;
+	}
+	.contentBoxesLinks.css-vcv4k7{
+		order: 2;
+	}
+	.css-14e4e6g{
+		order: 3;
+	}
+	.css-bejy1n{
+		order: 5;
+	}
+	form[name="contactform"]{
+		order: 4;
+	}
+}
