@@ -12,7 +12,7 @@ module.exports = {
         hasHours: true,
         hasContact: true,
       
-        orderOnlineLink: 'https://www.flowcode.com/page/Ctteennight', // leave as empty string if not needed
+        orderOnlineLink: 'https://linqapp.com/CTTeenNight?r=link', // leave as empty string if not needed
         orderOnlineName: 'Connect',
       },
     },
