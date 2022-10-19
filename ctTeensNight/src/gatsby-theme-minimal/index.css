@@ -35,4 +35,7 @@ a[href="tel:203-627-5798"] {
 	form[name="contactform"]{
 		order: 4;
 	}
+	a[href="https://www.gonation.com/place/ct-teen-nights/pulse"] {
+		display: none;
+	}
 }
