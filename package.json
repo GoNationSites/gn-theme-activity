@@ -90,7 +90,8 @@
     "mainStreetPizza",
     "kireBites",
     "bagelBoutique",
-    "ctTeensNight"
+    "ctTeensNight",
+    "bsTwistedEats"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
