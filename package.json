@@ -91,7 +91,8 @@
     "kireBites",
     "bagelBoutique",
     "ctTeensNight",
-    "bsTwistedEats"
+    "bsTwistedEats",
+    "gabagoolWineBar"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
