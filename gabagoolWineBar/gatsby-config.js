@@ -5,7 +5,7 @@ module.exports = {
       options: {
         gonationID: 'bzn-lOV1wvl1QIGfQZ4-jixMYA',
         poweredID: 'bzn-lOV1wvl1QIGfQZ4-jixMYA', 
-        seoKeywords: '',
+        seoKeywords: ' ',
         hasAbout: true,
         hasMenu: true,
         hasShout: true,
