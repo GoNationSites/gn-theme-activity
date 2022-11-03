@@ -4,7 +4,7 @@
   "main": "index.js",
   "author": "GoNation",
   "license": "MIT",
-  "scripts": {
+  "scripts": { 
     "develop": "gatsby develop",
     "build": "gatsby build"
   },
