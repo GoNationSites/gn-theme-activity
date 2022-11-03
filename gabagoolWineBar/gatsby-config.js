@@ -3,8 +3,8 @@ module.exports = {
     {
       resolve: `gatsby-theme-minimal`,
       options: {
-        gonationID: 'bzn-11_RofNnR6W-IG1fvhxsbg',
-        poweredID: 'bzn-11_RofNnR6W-IG1fvhxsbg', 
+        gonationID: 'bzn-lOV1wvl1QIGfQZ4-jixMYA',
+        poweredID: 'bzn-lOV1wvl1QIGfQZ4-jixMYA', 
         seoKeywords: ' ',
         hasAbout: true,
         hasMenu: true,
