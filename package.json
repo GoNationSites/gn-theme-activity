@@ -92,7 +92,8 @@
     "bagelBoutique",
     "ctTeensNight",
     "bsTwistedEats",
-    "gabagoolWineBar"
+    "gabagoolWineBar",
+    "parchados"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
