@@ -93,7 +93,8 @@
     "ctTeensNight",
     "bsTwistedEats",
     "gabagoolWineBar",
-    "parchados"
+    "parchados",
+    "luna"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
