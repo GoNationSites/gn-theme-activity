@@ -95,7 +95,8 @@
     "gabagoolWineBar",
     "parchados",
     "luna",
-    "pasqales"
+    "pasqales",
+    "ciao"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
