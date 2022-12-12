@@ -97,7 +97,8 @@
     "luna",
     "pasqales",
     "ciao",
-    "theRidges"
+    "theRidges",
+    "broadwayKitchen"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",

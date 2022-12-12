@@ -189,9 +189,9 @@ export default function Home({ data }) {
                 )}
 
                 {orderOnlineLink && (
-                  <OrderOnline orderOnlineName={'Reservation'} orderOnlineLink={orderOnlineLink} />
+                  <OrderOnline orderOnlineName={"Menu"} orderOnlineLink={orderOnlineLink} />
                 )}
-                <WidgetButton />
+                {/* <WidgetButton /> */}
               </Box>
             ) : (
               ""
