@@ -230,7 +230,6 @@ export default function Home({ data }) {
             {hasHours && checkHours() ? <Hours hours={hours} /> : ""}
 
             <ContactForm />
-            <p>asdfasdfas</p>
             <Footer businessName={businessName} />
           </Box>
         </Box>
