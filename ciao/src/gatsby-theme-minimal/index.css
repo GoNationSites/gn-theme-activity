@@ -1,3 +1,6 @@
 .column1 img {
 	max-height: 225px;
 }
+.phone {
+	display: none!important;
+}
