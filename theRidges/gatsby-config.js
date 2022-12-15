@@ -13,7 +13,7 @@ module.exports = {
         hasContact: true,
 
         orderOnlineLink: '', // leave as empty string if not needed
-        // orderOnlineName: 'Reservation',
+        orderOnlineName: '',
       },
     },
   ],
