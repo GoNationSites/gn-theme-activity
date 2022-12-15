@@ -12,8 +12,9 @@ module.exports = {
         hasHours: true,
         hasContact: true,
 
-        orderOnlineLink: '', // leave as empty string if not needed
-        orderOnlineName: '',
+        orderOnlineLink:
+          'https://www.opentable.com/r/the-ridges-branford?ref=1068', // leave as empty string if not needed
+        orderOnlineName: 'Reservation',
       },
     },
   ],
