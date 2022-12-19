@@ -11,8 +11,8 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: '', // leave as empty string if not needed
-        orderOnlineName: '',
+        orderOnlineLink: 'https://order.pizzalyfe.com/locations', // leave as empty string if not needed
+        orderOnlineName: 'Order Online',
       },
     },
   ],
