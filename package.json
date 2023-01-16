@@ -99,7 +99,7 @@
     "ciao",
     "theRidges",
     "broadwayKitchen",
-    "telio-greek"
+    "telioGreek"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
