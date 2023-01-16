@@ -98,7 +98,8 @@
     "pasqales",
     "ciao",
     "theRidges",
-    "broadwayKitchen"
+    "broadwayKitchen",
+    "telio-greek"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",

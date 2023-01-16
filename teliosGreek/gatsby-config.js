@@ -3,16 +3,16 @@ module.exports = {
     {
       resolve: `gatsby-theme-minimal`,
       options: {
-        gonationID: 'bzn-juCyqcLCT4aEdLrvEOPOAQ',
-        poweredID: 'bzn-juCyqcLCT4aEdLrvEOPOAQ',
+        gonationID: 'bzn-aDV7-vZ0SVGM043_SDxMfQ',
+        poweredID: 'bzn-aDV7-vZ0SVGM043_SDxMfQ',
         seoKeywords: '',
         hasAbout: true,
         hasMenu: true,
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: 'https://www.toasttab.com/pizzalyfe/v3', // leave as empty string if not needed
-        orderOnlineName: 'Order Online',
+        orderOnlineLink: '', // leave as empty string if not needed
+        orderOnlineName: '',
       },
     },
   ],
