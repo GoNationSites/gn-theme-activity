@@ -99,7 +99,8 @@
     "ciao",
     "theRidges",
     "broadwayKitchen",
-    "teliosGreek"
+    "teliosGreek",
+    "lightsCameraDj"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
