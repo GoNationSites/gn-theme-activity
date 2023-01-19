@@ -100,7 +100,8 @@
     "theRidges",
     "broadwayKitchen",
     "teliosGreek",
-    "lightsCameraDj"
+    "lightsCameraDj",
+    "temple114"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",

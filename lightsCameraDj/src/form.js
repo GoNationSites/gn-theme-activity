@@ -1,31 +1,5 @@
 import React, { useEffect, useState } from 'react'
 const ContactForm = () => {
-  const [month, setMonth] = useState('')
-  const [day, setDay] = useState('')
-  const [year, setYear] = useState('')
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [fianceName, setFianceName] = useState('');
-  const [formData, setFormData] = useState({
-    checkdate: "",
-    djidnumber: "10097",
-    action: "add_information_request",
-    month: "43",
-    day: "43",
-    year: "43",
-    first_name: "",
-    last_name: "",
-    organization: "",
-    email: "",
-    telephone: "",
-    type_of_event: ""
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // handle form submission here, such as sending a POST request to the server
-  }
-
   useEffect(() => {
     const script = document.createElement('script')
     const scriptDiv = document.querySelector('#script-id')
@@ -41,7 +15,6 @@ const ContactForm = () => {
       <form
         method="post"
         action="https://lcdjsevents.com/request_information.asp"
-        onSubmit={handleSubmit}
         name="reqinfoform"
         style={{ margin: '10px 20px' }}
       >
@@ -77,8 +50,6 @@ const ContactForm = () => {
                     name="month"
                     className="form-control monthselect"
                     style={{ float: 'left', width: '31%', margin: '2px' }}
-                    value={month}
-                    onChange={(e) => setMonth(e.target.value)}
                   >
                     <option value="43">Month</option>
                     <option value="1">January (1)</option>
@@ -98,8 +69,6 @@ const ContactForm = () => {
                     name="day"
                     className="form-control dayselect"
                     style={{ float: 'left', width: '31%', margin: '2px' }}
-                    value={day}
-                    onChange={(e) => setDay(e.target.value)}
                   >
                     <option value="43">Day</option>
                     <option value="1">1</option>
@@ -138,8 +107,6 @@ const ContactForm = () => {
                     name="year"
                     className="form-control yearselect"
                     style={{ float: 'left', width: '31%', margin: '2px' }}
-                    value={year}
-                    onChange={(e) => setYear(e.target.value)}
                   >
                     <option value="43">Year</option>
                     <option value="2022">2022</option>
@@ -171,8 +138,6 @@ const ContactForm = () => {
                     className="form-control width90hack"
                     id="first_name"
                     name="first_name"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
                   />
                 </div>
                 <div className="cf"></div>
@@ -183,13 +148,11 @@ const ContactForm = () => {
                   <div className="padding-lr-5">Last Name</div>
                 </div>
                 <div className="col-sm-8 col-md-9">
-                <input
+                  <input
                     type="text"
                     className="form-control width90hack"
                     id="first_name"
                     name="first_name"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
                   />
                 </div>
               </div>
@@ -198,13 +161,11 @@ const ContactForm = () => {
                   <div className="padding-lr-5">Fiance Full Name</div>
                 </div>
                 <div className="col-sm-8 col-md-9">
-                <input
+                  <input
                     type="text"
                     className="form-control width90hack"
                     id="fiance_name"
                     name="fiance_name"
-                    value={fianceName}
-                    onChange={(e) => setFianceName(e.target.value)}
                   />
                 </div>
               </div>
@@ -214,13 +175,11 @@ const ContactForm = () => {
                   <div className="padding-lr-5">Fiance Full Name</div>
                 </div>
                 <div className="col-sm-8 col-md-9">
-                <input
+                  <input
                     type="text"
                     className="form-control width90hack"
                     id="fiance_name"
                     name="fiance_name"
-                    value={fianceName}
-                    onChange={(e) => setFianceName(e.target.value)}
                   />
                 </div>
               </div>
@@ -230,17 +189,79 @@ const ContactForm = () => {
                   <div className="padding-lr-5">Organizatione</div>
                 </div>
                 <div className="col-sm-8 col-md-9">
-                <input
+                  <input
                     type="text"
                     className="form-control width90hack"
                     id="organization"
                     name="organization"
-                    value={fianceName}
-                    onChange={(e) => setFianceName(e.target.value)}
                   />
                 </div>
               </div>
-              
+              <div class="form-group">
+                <div class="col-sm-4 col-md-3 padding-tb-7">
+                  <div class="padding-lr-5">Email Address</div>
+                </div>
+                <div class="col-sm-8 col-md-9">
+                  <input
+                    type="text"
+                    class="form-control width90hack"
+                    id="email"
+                    name="email"
+                  />
+                </div>
+                <div class="cf"></div>
+                <div style="height:0px;"></div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-4 col-md-3 padding-tb-7">
+                  <div class="padding-lr-5">Telephone</div>
+                </div>
+                <div class="col-sm-8 col-md-9">
+                  <input
+                    type="tel"
+                    class="form-control width90hack"
+                    id="telephone"
+                    name="telephone"
+                  />
+                </div>
+                <div class="cf"></div>
+                <div style="height:0px;"></div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-4 col-md-3 padding-tb-7">
+                  <div class="padding-lr-5">Type Of Event</div>
+                </div>
+              </div>
+              <div class="col-sm-8 col-md-9">
+                <select
+                  name="event_type"
+                  class="form-control responsive-form-select"
+                >
+                  <option value="">Please select...</option>
+                  <option>Banquet</option>
+                  <option>Birthday Party</option>
+                  <option>Class Reunion</option>
+                  <option>Community Celebration</option>
+                  <option>Holiday Party</option>
+                  <option>Corporate Event</option>
+                  <option>Family Reunion</option>
+                  <option>Fundraiser</option>
+                  <option>Graduation Celebration</option>
+                  <option>Night Club / Bar Dance</option>
+                  <option>Picnic</option>
+                  <option>Private Party</option>
+                  <option>Prom</option>
+                  <option>Quinceanera</option>
+                  <option>School Dance</option>
+                  <option>Sweet 16</option>
+                  <option>Wedding Anniversary</option>
+                  <option>Wedding</option>
+                  <option>Micro Wedding</option>
+                  <option>Bridal Show</option>
+                  <option>Mitzvah</option>
+                  <option>Food Tasting</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
