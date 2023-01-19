@@ -4,12 +4,8 @@
 .directions {
 	display: none!important;
 }
-.contactDetails {
-	display: none!important
-}
-svg[data-icon='truck'] {
-	display: none!important
-}
+
+
 a[href="tel:203-627-5798"] {
 	display: none!important
 }
@@ -43,3 +39,12 @@ a[href="tel:203-627-5798"] {
 a[href="https://www.gonation.com/place/ct-teen-nights/pulse"] {
 	display: none;
 } */
+form {
+	display: none!important
+}
+.boxesContainers {
+	height: 400px;
+}
+svg[data-icon='truck'] {
+	display: none!important
+}
