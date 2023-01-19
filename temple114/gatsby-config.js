@@ -4,7 +4,7 @@ module.exports = {
       resolve: `gatsby-theme-minimal`,
       options: {
         gonationID: 'bzn-1XRkUw9yQviCXwHM3XzGSg',
-        poweredID: 'bzn-1XRkUw9yQviCXwHM3XzGSg',
+        poweredID: '599c2e627455de1ac6851bcd',
         seoKeywords: '',
         hasAbout: true,
         hasMenu: true,
