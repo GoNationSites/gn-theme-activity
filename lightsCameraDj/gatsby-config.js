@@ -11,9 +11,9 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: false,
-      
-        orderOnlineLink: 'https://lcdjsevents.com/request_information.asp?djidnumber=10097&source=jswebsite&action=get_responsive_code', // leave as empty string if not needed
-        orderOnlineName: 'Click here to fill out our Special Request Form for your next event',
+
+        orderOnlineLink: '', // leave as empty string if not needed
+        orderOnlineName: '',
       },
     },
   ],
