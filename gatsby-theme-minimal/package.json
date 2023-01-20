@@ -8,11 +8,13 @@
     "gatsby": "^2.6.0"
   },
   "dependencies": {
+    "@emotion/css": "^11.10.5",
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
     "@fortawesome/free-solid-svg-icons": "^5.13.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "axios-jsonp": "^1.0.4",
     "crypto": "^1.0.1",
+    "emotion": "^11.0.0",
     "gatsby-plugin-theme-ui": "^0.3.0",
     "moment": "^2.27.0",
     "node-fetch": "^2.6.0",
