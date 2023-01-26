@@ -101,7 +101,8 @@
     "broadwayKitchen",
     "teliosGreek",
     "lightsCameraDj",
-    "temple114"
+    "temple114",
+    "boatyardAtSmokey"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
