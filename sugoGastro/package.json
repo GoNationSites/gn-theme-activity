@@ -2,7 +2,7 @@
   "name": "sugoGastro",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "GoNation",
+  "author": "GoNation", 
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
