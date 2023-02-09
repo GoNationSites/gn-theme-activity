@@ -1,5 +1,5 @@
-import React from 'react';
-import { Flex, Input, Text, Textarea, Button } from 'theme-ui';
+import React from 'react'
+import { Flex, Input, Text, Textarea, Button } from 'theme-ui'
 
 export default function ContactForm() {
   return (
@@ -11,8 +11,10 @@ export default function ContactForm() {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <Text variant="contactForm.title" as="h3">
-      Promoters Sign Up. Put IG handle in message box.
+      <Text variant="contactForm.title" as="p">
+        Zucca Gastro Bar is currently hiring staff members for front of the
+        house and back of the house. Please inquire below and attach resumes.
+        Someone from our team will be in contact with you.
       </Text>
 
       <Input
@@ -43,6 +45,17 @@ export default function ContactForm() {
         required={true}
       />
 
+      <Input
+        placeholder="Phone Number"
+        variant="contactForm.input"
+        type="phonenumber"
+        name="phonenumber"
+        id="phonenumber"
+        ariaLabelledBy="phonenumber"
+        mb={3}
+        required={true}
+      />
+
       <Textarea
         variant="contactForm.textArea"
         placeholder="Message"
@@ -53,6 +66,18 @@ export default function ContactForm() {
         mb={3}
         required={true}
       />
+
+      <Input
+        placeholder=""
+        variant="contactForm.input"
+        type="file"
+        name="file"
+        id="file"
+        ariaLabelledBy="file"
+        mb={3}
+        required={true}
+      />
+
       <Button
         sx={{
           width: 'fit-content',
@@ -67,5 +92,5 @@ export default function ContactForm() {
         Submit
       </Button>
     </Flex>
-  );
+  )
 }
