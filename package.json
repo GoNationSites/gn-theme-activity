@@ -104,7 +104,8 @@
     "temple114",
     "boatyardAtSmokey",
     "sugoGastro",
-    "zuccaGastro"
+    "zuccaGastro",
+    "dalbaGrill"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
