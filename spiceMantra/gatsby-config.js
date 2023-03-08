@@ -13,7 +13,7 @@ module.exports = {
         hasContact: true,
         orderOnlineName: '',
         orderOnlineLink:
-          'https://slicelife.com/restaurants/ct/stamford/06902/t-s-pizza-kitchen/menu?utm_campaign=direct_websites', // leave as empty string if not needed
+          '', // leave as empty string if not needed
       },
     },
   ],
