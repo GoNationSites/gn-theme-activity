@@ -105,7 +105,8 @@
     "boatyardAtSmokey",
     "sugoGastro",
     "zuccaGastro",
-    "dalbaGrill"
+    "dalbaGrill",
+    "cantinaMexicana"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
