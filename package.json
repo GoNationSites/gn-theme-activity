@@ -106,7 +106,8 @@
     "sugoGastro",
     "zuccaGastro",
     "dalbaGrill",
-    "cantinaMexicana"
+    "cantinaMexicana",
+    "vespinoPizza"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
