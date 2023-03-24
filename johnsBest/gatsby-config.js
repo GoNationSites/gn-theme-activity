@@ -13,7 +13,7 @@ module.exports = {
         hasContact: true,
       
         orderOnlineLink: 'https://slicelife.com/restaurants/ct/norwalk/06851/john-s-best-jr-pizza/menu', // leave as empty string if not needed
-        orderOnlineName: 'Menu',
+        orderOnlineName: 'Order Online',
       },
     },
   ],

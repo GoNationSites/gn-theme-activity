@@ -193,7 +193,7 @@ export default function Home({ data }) {
                   // <OrderOnline orderOnlineName={"Order Online"} orderOnlineLink={orderOnlineLink} />
                 )}
                 {/* <WidgetButton /> */}
-                <OrderOnline orderOnlineName={"Menu"} orderOnlineLink={'https://slicelife.com/restaurants/ct/norwalk/06851/john-s-best-jr-pizza/menu'} />
+                <OrderOnline orderOnlineName={"Order Online"} orderOnlineLink={'https://slicelife.com/restaurants/ct/norwalk/06851/john-s-best-jr-pizza/menu'} />
               </Box>
             ) : (
               ""
