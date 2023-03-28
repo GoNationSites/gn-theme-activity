@@ -108,7 +108,8 @@
     "dalbaGrill",
     "cantinaMexicana",
     "vespinoPizza",
-    "johnsBest"
+    "johnsBest",
+    "milSabores"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
