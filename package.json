@@ -109,7 +109,8 @@
     "cantinaMexicana",
     "vespinoPizza",
     "johnsBest",
-    "milSabores"
+    "milSabores",
+    "jimmyMcGarth"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
