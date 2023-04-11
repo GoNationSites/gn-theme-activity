@@ -110,7 +110,8 @@
     "vespinoPizza",
     "johnsBest",
     "milSabores",
-    "jimmyMcGarth"
+    "jimmyMcGarth",
+    "lemoult"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
