@@ -111,7 +111,8 @@
     "johnsBest",
     "milSabores",
     "jimmyMcGarth",
-    "lemoult"
+    "lemoult",
+    "tasteOfTijuana"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
