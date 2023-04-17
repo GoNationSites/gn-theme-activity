@@ -112,7 +112,8 @@
     "milSabores",
     "jimmyMcGarth",
     "lemoult",
-    "tasteOfTijuana"
+    "tasteOfTijuana",
+    "tikiBeach"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
