@@ -12,8 +12,8 @@ module.exports = {
         hasHours: true,
         hasContact: true,
       
-        orderOnlineLink: '', // leave as empty string if not needed
-        orderOnlineName: '',
+        orderOnlineLink: 'https://res.cloudinary.com/gonation/image/upload/v1681824786/sites/taste-of-tijuana/taste_of_tijuana.pdf', // leave as empty string if not needed
+        orderOnlineName: 'Menu',
       },
     },
   ],
