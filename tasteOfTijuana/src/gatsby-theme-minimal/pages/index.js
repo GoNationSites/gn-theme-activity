@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { graphql } from "gatsby";
-import { Box, Text } from "theme-ui";
-import SEO from "../../../../gatsby-theme-minimal/src/components/seo";
-import Shout from "../../../../gatsby-theme-minimal/src/components/Shout";
-import About from "../../../../gatsby-theme-minimal/src/components/About";
-import Hours from "../../../../gatsby-theme-minimal/src/components/hours/hoursOld";
-import Footer from "../../../../gatsby-theme-minimal/src/components/Footer/Footer";
-import CtaWidget from "../../../../gatsby-theme-minimal/src/components/ui/CtaWidget";
-import Logo from "../../../../gatsby-theme-minimal/src/components/logo/Logo";
-import Cover from "../../../../gatsby-theme-minimal/src/components/cover/Cover";
-import ContactDetails from "../../../../gatsby-theme-minimal/src/components/contact/ContactDetails";
-import SocialIcons from "../../../../gatsby-theme-minimal/src/components/contact/SocialIcons";
-import ContactForm from "../../../../gatsby-theme-minimal/src/components/contact/ContactForm";
-import MenuLink from "../../../../gatsby-theme-minimal/src/components/menu/MenuLink";
-import OrderOnline from "../../../../gatsby-theme-minimal/src/components/ui/OrderOnline";
-import getMenu from "../../../../gatsby-theme-minimal/src/helpers/getMenu";
-import WidgetButton from "../components/WidgetButton";
-import "../index.css";
+import React, { useEffect, useState } from 'react';
+import { graphql } from 'gatsby';
+import { Box, Text } from 'theme-ui';
+import SEO from '../../../../gatsby-theme-minimal/src/components/seo';
+import Shout from '../../../../gatsby-theme-minimal/src/components/Shout';
+import About from '../../../../gatsby-theme-minimal/src/components/About';
+import Hours from '../../../../gatsby-theme-minimal/src/components/hours/hoursOld';
+import Footer from '../../../../gatsby-theme-minimal/src/components/Footer/Footer';
+import CtaWidget from '../../../../gatsby-theme-minimal/src/components/ui/CtaWidget';
+import Logo from '../../../../gatsby-theme-minimal/src/components/logo/Logo';
+import Cover from '../../../../gatsby-theme-minimal/src/components/cover/Cover';
+import ContactDetails from '../../../../gatsby-theme-minimal/src/components/contact/ContactDetails';
+import SocialIcons from '../../../../gatsby-theme-minimal/src/components/contact/SocialIcons';
+import ContactForm from '../../../../gatsby-theme-minimal/src/components/contact/ContactForm';
+import MenuLink from '../../../../gatsby-theme-minimal/src/components/menu/MenuLink';
+import OrderOnline from '../../../../gatsby-theme-minimal/src/components/ui/OrderOnline';
+import getMenu from '../../../../gatsby-theme-minimal/src/helpers/getMenu';
+import WidgetButton from '../components/WidgetButton';
+import '../index.css';
 
 export default function Home({ data }) {
   // ! ==========================================
@@ -80,7 +80,7 @@ export default function Home({ data }) {
   // ? ===================================
 
   const [menuHasItems, setMenuHasItems] = useState(false);
-  const [menuOrServices, setMenuOrServices] = useState("Menu");
+  const [menuOrServices, setMenuOrServices] = useState('Menu');
 
   // ? ====================================
   // ? =========== Functions ==============
@@ -91,14 +91,14 @@ export default function Home({ data }) {
 
     if (data?.length) {
       // *maps through powered lists and checks if there is any sections to show
-      const checkIfListshaveSections = data.map((poweredList) => {
-        return poweredList.inventory.length ? "hasItems" : "";
+      const checkIfListshaveSections = data.map(poweredList => {
+        return poweredList.inventory.length ? 'hasItems' : '';
       });
 
       setMenuOrServices(data[0].menumask);
 
       // *checks if any of the powered sections have something to show then it will show it.
-      if (checkIfListshaveSections.some((element) => element)) {
+      if (checkIfListshaveSections.some(element => element)) {
         setMenuHasItems(true);
       }
     }
@@ -108,14 +108,14 @@ export default function Home({ data }) {
     const hoursArray = Object.values(hours);
 
     return hoursArray
-      .map((dayBlock) => {
+      .map(dayBlock => {
         if (dayBlock?.length > 0) {
           return dayBlock[0]?.isClosed ? false : true;
         } else {
           return false;
         }
       })
-      .some((element) => element);
+      .some(element => element);
   };
 
   // ? ==========================================
@@ -142,7 +142,7 @@ export default function Home({ data }) {
           {/* // ! Only Shows on Desktop */}
           <Box
             variant="contactInfo"
-            sx={{ display: ["none", "", "", "block"] }}
+            sx={{ display: ['none', '', '', 'block'] }}
             className="contactInfo"
           >
             <Text variant="contactInfo.title" as="h3">
@@ -185,7 +185,7 @@ export default function Home({ data }) {
                     menuOrServices={menuOrServices}
                   />
                 ) : (
-                  ""
+                  ''
                 )}
 
                 {orderOnlineLink && (
@@ -193,10 +193,15 @@ export default function Home({ data }) {
                   // <OrderOnline orderOnlineName={"Order Online"} orderOnlineLink={orderOnlineLink} />
                 )}
                 {/* <WidgetButton /> */}
-                <OrderOnline orderOnlineName={"Menu"} orderOnlineLink={'https://res.cloudinary.com/gonation/image/upload/v1680010692/sites/milSabores/Mils_Sabores_Menu_V3-min.pdf'} />
+                <OrderOnline
+                  orderOnlineName={'Menu'}
+                  orderOnlineLink={
+                    'https://res.cloudinary.com/gonation/image/upload/v1681824786/sites/taste-of-tijuana/taste_of_tijuana.pdf'
+                  }
+                />
               </Box>
             ) : (
-              ""
+              ''
             )}
             {/* ? so if about setting is true and the checks if there is an about to render */}
             {hasAbout && description !== null ? (
@@ -204,7 +209,7 @@ export default function Home({ data }) {
             ) : null}
 
             {/* // ! Only Shows on Mobile and Tablet */}
-            <Box variant="contactInfo" sx={{ display: ["", "", "", "none"] }}>
+            <Box variant="contactInfo" sx={{ display: ['', '', '', 'none'] }}>
               <Text variant="contactInfo.title" as="h3">
                 Contact
               </Text>
@@ -229,7 +234,7 @@ export default function Home({ data }) {
             {/* // ! ================================ */}
 
             {/* * check if hours is on and also if there are any days that is it open */}
-            {hasHours && checkHours() ? <Hours hours={hours} /> : ""}
+            {hasHours && checkHours() ? <Hours hours={hours} /> : ''}
 
             <ContactForm />
             <Footer businessName={businessName} />
