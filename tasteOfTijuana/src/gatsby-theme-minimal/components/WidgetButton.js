@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react'
-import { Box, Heading, Text, Button, } from 'theme-ui'
+import React, { useEffect } from 'react';
+import { Box, Heading, Text, Button } from 'theme-ui';
 
 export default function WidgetButton() {
   return (
     <Box sx={styles.container}>
-        <a href='https://res.cloudinary.com/gonation/image/upload/v1670870238/sites/theRidges/8.5x14-Ridges-Dinner-01.pdf' target='_blank'>
-          Menu asdfasd
-        </a>
-
+      <a
+        href="https://res.cloudinary.com/gonation/image/upload/v1681824786/sites/taste-of-tijuana/taste_of_tijuana.pdf"
+        target="_blank"
+      >
+        Menu asdfasd
+      </a>
     </Box>
-  )
+  );
 }
 const styles = {
   container: {
@@ -54,4 +56,4 @@ const styles = {
     textTransform: 'uppercase',
     fontWeight: 'bold',
   },
-}
+};
