@@ -114,7 +114,8 @@
     "lemoult",
     "tasteOfTijuana",
     "tikiBeach",
-    "jayGrill"
+    "jayGrill",
+    "fiveTwenty"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
