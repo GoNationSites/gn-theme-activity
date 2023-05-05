@@ -115,7 +115,8 @@
     "tasteOfTijuana",
     "tikiBeach",
     "jayGrill",
-    "fiveTwenty"
+    "fiveTwenty",
+    "viaVeroli"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
