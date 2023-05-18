@@ -116,7 +116,8 @@
     "tikiBeach",
     "jayGrill",
     "fiveTwenty",
-    "viaVeroli"
+    "viaVeroli",
+    "theBenjamin"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
