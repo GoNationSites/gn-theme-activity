@@ -117,7 +117,8 @@
     "jayGrill",
     "fiveTwenty",
     "viaVeroli",
-    "theBenjamin"
+    "theBenjamin",
+    "theLandingAtFiveTwenty"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
