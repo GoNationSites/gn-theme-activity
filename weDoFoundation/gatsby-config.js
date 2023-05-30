@@ -11,8 +11,8 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: 'https://res.cloudinary.com/gonation/image/upload/v1685115487/landingAtTwentyFive/Five-Twenty_3_1.pdf', // leave as empty string if not needed
-        orderOnlineName: 'Menu',
+        orderOnlineLink: '', // leave as empty string if not needed
+        orderOnlineName: '',
       },
     },
   ],
