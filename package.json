@@ -118,7 +118,8 @@
     "fiveTwenty",
     "viaVeroli",
     "theBenjamin",
-    "theLandingAtFiveTwenty"
+    "theLandingAtFiveTwenty",
+    "weDoFoundation"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
