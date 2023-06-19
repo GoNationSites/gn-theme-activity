@@ -119,7 +119,8 @@
     "viaVeroli",
     "theBenjamin",
     "theLandingAtFiveTwenty",
-    "weDoFoundation"
+    "weDoFoundation",
+    "anisMarket"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
