@@ -8,15 +8,15 @@ const About = () => (
           About us
         </Text>
         <Text as="p" variant="about.text">
-          <strong>
+          <strong style={{letterSpacing: '-1px', fontSize: '1.3rem'}}>
             {" "}
             Chef Ani Robaina of Ani’s Table Distinctive Food & Catering
           </strong>
           <br />
           <br />
-          <strong>Takes Over DiFiore Ravioli Shop in Rocky Hill, CT</strong>
+          <strong style={{letterSpacing: '-1px', fontSize: '1.3rem'}}>Takes Over DiFiore Ravioli Shop in Rocky Hill, CT</strong>
           <br />
-          <strong> Ani’s Table & Marketplace Set to Open in July, 2023</strong>
+          <strong style={{letterSpacing: '-1px', fontSize: '1.3rem'}}> Ani’s Table & Marketplace Set to Open in July, 2023</strong>
           <br />
           <br />
           June 14, 2021, Rocky Hill, CT: An exciting culinary experience is set
