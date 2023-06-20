@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { Box, Text } from 'theme-ui';
 import SEO from '../../../../gatsby-theme-minimal/src/components/seo';
 import Shout from '../../../../gatsby-theme-minimal/src/components/Shout';
-import About from '../../../../gatsby-theme-minimal/src/components/About';
+import About from '../src/components/About'
 import Hours from '../../../../gatsby-theme-minimal/src/components/hours/hoursOld';
 import Footer from '../../../../gatsby-theme-minimal/src/components/Footer/Footer';
 import CtaWidget from '../../../../gatsby-theme-minimal/src/components/ui/CtaWidget';
