@@ -11,16 +11,16 @@ export default function Cover({ coverImageId }) {
         controls={false}
         loop={true}
         poster={'https://res.cloudinary.com/gonation/' + coverImageId}
-        alt="coverposter"
+        alt='coverposter'
       >
         <source
           src={
-            'https://res.cloudinary.com/gonation/video/upload/v1652234425/sites/esh/esh_banner_web_cut_out_10000.mp4'
+            'https://res.cloudinary.com/gonation/video/upload/q_auto/v1652234425/sites/esh/esh_banner_web_cut_out_10000.mp4'
           }
-          type="video/mp4"
+          type='video/mp4'
         />
 
-        <track kind="captions" />
+        <track kind='captions' />
       </video>
     </Flex>
   );
