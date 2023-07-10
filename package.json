@@ -120,7 +120,8 @@
     "theBenjamin",
     "theLandingAtFiveTwenty",
     "weDoFoundation",
-    "anisMarket"
+    "anisMarket",
+    "bigWigs"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
