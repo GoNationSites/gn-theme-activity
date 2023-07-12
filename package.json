@@ -121,7 +121,8 @@
     "theLandingAtFiveTwenty",
     "weDoFoundation",
     "anisMarket",
-    "bigWigs"
+    "bigWigs",
+    "talia"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",

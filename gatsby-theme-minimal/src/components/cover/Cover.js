@@ -5,6 +5,7 @@ export default function Cover({ coverImageId }) {
     <Flex
       variant='cover'
       title='main cover'
+      className='cover'
       ariaLabel='main cover'
       sx={{
         backgroundImage: `linear-gradient(45deg, rgb(0 0 0 / 10%), rgb(0 0 0 / 10%)), url('https://res.cloudinary.com/gonation/${coverImageId}')`,
