@@ -11,8 +11,9 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: '', // leave as empty string if not needed
+        orderOnlineName: 'Order Online',
+        orderOnlineLink: 'https://www.ordertastyyolk.com/', // leave as empty string if not needed
       },
     },
   ],
-}
+};
