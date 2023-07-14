@@ -122,7 +122,8 @@
     "weDoFoundation",
     "anisMarket",
     "bigWigs",
-    "talia"
+    "talia",
+    "theTapHouse"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
