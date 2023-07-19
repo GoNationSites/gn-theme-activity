@@ -12,7 +12,7 @@ export default function ContactForm() {
       data-netlify-honeypot="bot-field"
     >
       <Text variant="contactForm.title" as="h3">
-        Promoters Sign Up. Put IG handle in message box.
+      Promoters Sign Up. Put IG handle in message box.
       </Text>
 
       <Input
