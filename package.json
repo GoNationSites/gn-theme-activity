@@ -124,7 +124,8 @@
     "bigWigs",
     "talia",
     "theTapHouse",
-    "renatos"
+    "renatos",
+    "caffeItalia"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
