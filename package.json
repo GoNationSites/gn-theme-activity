@@ -120,7 +120,8 @@
     "theTapHouse",
     "renatos",
     "caffeItalia",
-    "faviosTrattoria"
+    "faviosTrattoria",
+    "greenChilitos"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
