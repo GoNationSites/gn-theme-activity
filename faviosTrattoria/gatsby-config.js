@@ -3,8 +3,8 @@ module.exports = {
     {
       resolve: `gatsby-theme-minimal`,
       options: {
-        gonationID: 'bzn-QaBzSmhTSd_1FJFGaon9-g',
-        poweredID: 'bzn-QaBzSmhTSd_1FJFGaon9-g',
+        gonationID: 'bzn-CD1y8FhlR1qBRYGP8eXa0g',
+        poweredID: 'bzn-CD1y8FhlR1qBRYGP8eXa0g',
         seoKeywords: '',
         hasAbout: true,
         hasMenu: true,
@@ -12,7 +12,8 @@ module.exports = {
         hasHours: true,
         hasContact: true,
         orderOnlineLink: '', // leave as empty string if not needed
+        orderOnlineName: '',
       },
     },
   ],
-}
+};

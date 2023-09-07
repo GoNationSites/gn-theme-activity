@@ -9,13 +9,7 @@
   },
   "workspaces": [
     "gatsby-theme-minimal",
-    "bankSportsBar",
-    "theKitchen",
-    "archiesTapandTable",
-    "pier131",
     "blackRockSocial",
-    "lzur",
-    "bulldog",
     "kikiLounge",
     "gruvyEvents",
     "bigAppleSmoothie",
@@ -125,7 +119,8 @@
     "talia",
     "theTapHouse",
     "renatos",
-    "caffeItalia"
+    "caffeItalia",
+    "faviosTrattoria"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",

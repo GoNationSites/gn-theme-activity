@@ -1,12 +1,13 @@
 {
-  "name": "bankSportsBar",
+  "name": "faviosTrattoria",
   "version": "1.0.0",
   "main": "index.js",
   "author": "GoNation",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "gatsby": "^2.22.15",
