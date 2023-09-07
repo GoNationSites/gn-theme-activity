@@ -221,6 +221,7 @@ export default {
     padding: ['', '', '', '0rem', '0rem'],
     marginLeft: ['', '', '', '20%'],
     boxesContainers: {
+      zIndex: '2',
       display: ['', '', '', 'flex'],
       flexWrap: 'wrap',
       backgroundColor: ['background', '', '', 'transparent'],
@@ -243,7 +244,7 @@ export default {
       top: '20%',
       transform: ['translate(-50%,-50%)', '', '', 'none'],
       transition: 'all ease-in-out 0.2s',
-      zIndex: '0',
+      zIndex: '1',
     },
     logoScrolled: {
       variant: 'logo.logo',
