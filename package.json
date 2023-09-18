@@ -122,7 +122,8 @@
     "caffeItalia",
     "faviosTrattoria",
     "greenChilitos",
-    "8ThousandPizza"
+    "8ThousandPizza",
+    "ilPellicanoNYC"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
