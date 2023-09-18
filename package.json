@@ -121,7 +121,8 @@
     "renatos",
     "caffeItalia",
     "faviosTrattoria",
-    "greenChilitos"
+    "greenChilitos",
+    "8ThousandPizza"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
