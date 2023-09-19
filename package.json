@@ -123,7 +123,8 @@
     "faviosTrattoria",
     "greenChilitos",
     "8ThousandPizza",
-    "ilPellicanoNYC"
+    "ilPellicanoNYC",
+    "latitude39"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
