@@ -124,7 +124,8 @@
     "greenChilitos",
     "8ThousandPizza",
     "ilPellicanoNYC",
-    "latitude39"
+    "latitude39",
+    "moltoDarien"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
