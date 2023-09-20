@@ -1,8 +1,34 @@
 .column1 img {
-	max-height: 225px;
+  max-height: 225px;
 }
 
 .cover {
-	background-color: black;
-	background-size: contain!important;
+  background-color: black;
+  background-size: contain !important;
+}
+
+/* .boxesContainers::before {
+  content: 'Located above Bijoux Lounge, the latest and most vibrant destination in New York City.';
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25em;
+  display: flex;
+  background-color: #162714;
+  color: white;
+  width: auto;
+  flex-grow: 1;
+  padding: 2rem;
+} */
+.contentBoxesLinks svg {
+  display: none;
+}
+
+.contentBoxesLinks a {
+  background-color: #162714 !important;
+  border-radius: 10px;
+  color: white;
+}
+.contentBoxesLinks a:hover {
+  background-color: #162714b4 !important;
 }

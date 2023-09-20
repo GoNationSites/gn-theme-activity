@@ -11,8 +11,9 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: '', // leave as empty string if not needed
-        orderOnlineName: '',
+        orderOnlineLink: 'http://Bijouxloungenyc.com', // leave as empty string if not needed
+        orderOnlineName:
+          'Located above Bijoux Lounge, the latest and most vibrant destination in New York City.',
       },
     },
   ],
