@@ -125,7 +125,8 @@
     "8ThousandPizza",
     "ilPellicanoNYC",
     "latitude39",
-    "moltoDarien"
+    "moltoDarien",
+    "antoniosItalianBistro"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
