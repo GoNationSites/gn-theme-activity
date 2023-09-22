@@ -126,7 +126,8 @@
     "ilPellicanoNYC",
     "latitude39",
     "moltoDarien",
-    "antoniosItalianBistro"
+    "antoniosItalianBistro",
+    "123Pronto"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
