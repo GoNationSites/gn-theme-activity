@@ -127,7 +127,8 @@
     "latitude39",
     "moltoDarien",
     "antoniosItalianBistro",
-    "123Pronto"
+    "123Pronto",
+    "bulaBbq"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
