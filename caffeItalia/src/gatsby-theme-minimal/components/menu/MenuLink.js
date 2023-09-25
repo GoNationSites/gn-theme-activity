@@ -10,7 +10,7 @@ export default function MenuLink({ gonationSlug, menuOrServices }) {
         variant='menu.link'
         target='_blank'
         href={
-          'https://res.cloudinary.com/gonation/image/upload/v1694017511/caffeItalia/caffe-italia-tv-menu-2.jpg'
+          'https://res.cloudinary.com/gonation/image/upload/v1695662056/sites/caffe-italia/caffe-italia-tv-menu.jpg'
         }
         rel='noreferrer'
       >
