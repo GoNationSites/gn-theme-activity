@@ -128,7 +128,8 @@
     "moltoDarien",
     "antoniosItalianBistro",
     "123Pronto",
-    "bulaBbq"
+    "bulaBbq",
+    "cafeMelba"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
