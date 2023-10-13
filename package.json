@@ -130,7 +130,8 @@
     "123Pronto",
     "bulaBbq",
     "cafeMelba",
-    "fitClubLounge"
+    "fitClubLounge",
+    "llamaLips"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",

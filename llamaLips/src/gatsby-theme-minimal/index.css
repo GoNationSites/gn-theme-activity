@@ -1,0 +1,19 @@
+.column1 img {
+  max-height: 225px;
+}
+
+.cover {
+  background-color: black;
+  background-size: contain !important;
+}
+
+@media only screen and (min-width: 1024px) {
+  .cover {
+    background-color: black;
+    background-size: cover !important;
+  }
+}
+
+.contentBoxesLinks svg {
+  display: none;
+}
