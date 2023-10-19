@@ -9,3 +9,11 @@
 .contentBoxesLinks svg {
   display: none;
 }
+
+form {
+  display: none !important;
+}
+
+.boxesContainers > div {
+  flex-grow: 1;
+}
