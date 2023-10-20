@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMap } from '@fortawesome/free-solid-svg-icons';
 
 export default function MenuLink({ gonationSlug, menuOrServices }) {
-  console.log('menulink');
   const characters = '0123456789';
   const number = (Math.random() * characters.length)
     .toString()
