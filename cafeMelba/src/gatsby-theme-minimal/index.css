@@ -17,3 +17,7 @@
 .contentBoxesLinks svg {
   display: none;
 }
+
+.phone {
+	display: none!important;
+}
