@@ -26,14 +26,14 @@ const Events = ({ gonationID, slug, poweredID }) => {
       url: `https://data.prod.gonation.com/profile/recurringevents?profile_id=${poweredID}`,
       adapter: jsonpAdapter,
     })
-      .then(res => {
+      .then((res) => {
         setRecurringEvents({
           ...recurringEvents,
           eventsData: res.data,
           isLoading: false,
         });
       })
-      .catch(e => {
+      .catch((e) => {
         console.log('error : ', console.e);
         setRecurringEvents({ ...recurringEvents, isLoading: false });
       });
@@ -43,14 +43,14 @@ const Events = ({ gonationID, slug, poweredID }) => {
       url: `https://data.prod.gonation.com/profile/events?profile_id=${poweredID}`,
       adapter: jsonpAdapter,
     })
-      .then(res => {
+      .then((res) => {
         setSingleEvents({
           ...singleEvents,
           eventsData: res.data,
           isLoading: false,
         });
       })
-      .catch(e => {
+      .catch((e) => {
         console.log('error : ', console.e);
         setSingleEvents({ ...recurringEvents, isLoading: false });
       });
@@ -68,10 +68,10 @@ const Events = ({ gonationID, slug, poweredID }) => {
       recurringEvents.eventsData &&
       recurringEvents.eventsData.events.length ? (
         // ========== Start RECURRINGS EVENTS JSX ==============
-        <Box variant="page.section">
-          <Text variant="sectionHeading">Recurring Events</Text>
-          <Flex variant="event.eventsContainer" sx={{ flexWrap: 'wrap' }}>
-            {recurringEvents.eventsData.events.map(event => {
+        <Box variant='page.section'>
+          <Text variant='sectionHeading'>Recurring Events</Text>
+          <Flex variant='event.eventsContainer' sx={{ flexWrap: 'wrap' }}>
+            {recurringEvents.eventsData.events.map((event) => {
               return (
                 <Box
                   sx={{
@@ -101,10 +101,10 @@ const Events = ({ gonationID, slug, poweredID }) => {
         // ========== END OF RECURRINGS EVENTS JSX ============
 
         // ======= Start of Single Events  =======
-        <Box variant="page.section">
-          <Text variant="sectionHeading">Special Events</Text>
-          <Flex variant="event.eventsContainer" sx={{ flexWrap: 'wrap' }}>
-            {singleEvents.eventsData.events.map(event => {
+        <Box variant='page.section'>
+          <Text variant='sectionHeading'>Special Events</Text>
+          <Flex variant='event.eventsContainer' sx={{ flexWrap: 'wrap' }}>
+            {singleEvents.eventsData.events.map((event) => {
               return (
                 <Box
                   sx={{

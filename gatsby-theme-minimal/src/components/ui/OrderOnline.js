@@ -1,7 +1,7 @@
-import React from 'react'
-import { Box, Text, Link } from 'theme-ui'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTruck } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import { Box, Text, Link } from 'theme-ui';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTruck } from '@fortawesome/free-solid-svg-icons';
 
 export default function OrderOnline({ orderOnlineLink, orderOnlineName }) {
   return (
@@ -18,5 +18,5 @@ export default function OrderOnline({ orderOnlineLink, orderOnlineName }) {
         </Text>
       </Link>
     </Box>
-  )
+  );
 }
