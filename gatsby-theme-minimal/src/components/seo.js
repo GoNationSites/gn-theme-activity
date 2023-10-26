@@ -5,17 +5,18 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 
 function SEO({ description, lang, meta, title, keywords }) {
+  console.log('title', title);
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={`${title} ${description ? `| ${description}` : ''}`}
+      title={`${title}`}
       titleTemplate={``}
       meta={[
         {
@@ -57,7 +58,7 @@ function SEO({ description, lang, meta, title, keywords }) {
         },
       ].concat(meta)}
     />
-  )
+  );
 }
 
 SEO.defaultProps = {
@@ -65,13 +66,13 @@ SEO.defaultProps = {
   meta: [],
   title: ``,
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
+};
 
-export default SEO
+export default SEO;
