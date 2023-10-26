@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { Box, Text } from 'theme-ui';
 import SEO from '../../../../gatsby-theme-minimal/src/components/seo';
 import Shout from '../../../../gatsby-theme-minimal/src/components/Shout';
-import About from '../src/components/About'
+import About from '../src/components/About';
 import Hours from '../../../../gatsby-theme-minimal/src/components/hours/hoursOld';
 import Footer from '../../../../gatsby-theme-minimal/src/components/Footer/Footer';
 import CtaWidget from '../../../../gatsby-theme-minimal/src/components/ui/CtaWidget';
@@ -92,14 +92,14 @@ export default function Home({ data }) {
 
     if (data?.length) {
       // *maps through powered lists and checks if there is any sections to show
-      const checkIfListshaveSections = data.map(poweredList => {
+      const checkIfListshaveSections = data.map((poweredList) => {
         return poweredList.inventory.length ? 'hasItems' : '';
       });
 
       setMenuOrServices(data[0].menumask);
 
       // *checks if any of the powered sections have something to show then it will show it.
-      if (checkIfListshaveSections.some(element => element)) {
+      if (checkIfListshaveSections.some((element) => element)) {
         setMenuHasItems(true);
       }
     }
@@ -109,14 +109,14 @@ export default function Home({ data }) {
     const hoursArray = Object.values(hours);
 
     return hoursArray
-      .map(dayBlock => {
+      .map((dayBlock) => {
         if (dayBlock?.length > 0) {
           return dayBlock[0]?.isClosed ? false : true;
         } else {
           return false;
         }
       })
-      .some(element => element);
+      .some((element) => element);
   };
 
   // ? ==========================================
@@ -137,17 +137,17 @@ export default function Home({ data }) {
         keywords={seoKeywords}
       />
 
-      <Box variant="pageContainer" className="pageContainer">
-        <Box variant="column1" className="column1">
+      <Box variant='pageContainer' className='pageContainer'>
+        <Box variant='column1' className='column1'>
           <Logo logoImageId={avatarCloudinaryId} />
 
           {/* // ! Only Shows on Desktop */}
           <Box
-            variant="contactInfo"
+            variant='contactInfo'
             sx={{ display: ['none', '', '', 'block'] }}
-            className="contactInfo"
+            className='contactInfo'
           >
-            <Text variant="contactInfo.title" as="h3">
+            <Text variant='contactInfo.title' as='h3'>
               Contact
             </Text>
 
@@ -171,16 +171,16 @@ export default function Home({ data }) {
           {/* // ! ================================ */}
         </Box>
 
-        <Box variant="column2" className="column2">
+        <Box variant='column2' className='column2'>
           <Cover coverImageId={coverCloudinaryId} />
 
-          <Box variant="column2.boxesContainers" className="boxesContainers">
+          <Box variant='column2.boxesContainers' className='boxesContainers'>
             {hasShout && (
               <Shout gonationID={gonationID} poweredID={poweredID} />
             )}
 
             {(hasMenu && menuHasItems) || orderOnlineLink ? (
-              <Box variant="contentBoxesLinks" className="contentBoxesLinks">
+              <Box variant='contentBoxesLinks' className='contentBoxesLinks'>
                 {hasMenu && menuHasItems ? (
                   <MenuLink
                     gonationSlug={slug}
@@ -201,13 +201,7 @@ export default function Home({ data }) {
               ''
             )}
 
-            <Box sx={{ padding: '1rem' }}>
-              <Events
-                gonationID={gonationID}
-                slug={slug}
-                poweredID={poweredID}
-              />
-            </Box>
+            <Events gonationID={gonationID} slug={slug} poweredID={poweredID} />
 
             {/* ? so if about setting is true and the checks if there is an about to render */}
             {hasAbout && description !== null ? (
@@ -215,8 +209,8 @@ export default function Home({ data }) {
             ) : null}
 
             {/* // ! Only Shows on Mobile and Tablet */}
-            <Box variant="contactInfo" sx={{ display: ['', '', '', 'none'] }}>
-              <Text variant="contactInfo.title" as="h3">
+            <Box variant='contactInfo' sx={{ display: ['', '', '', 'none'] }}>
+              <Text variant='contactInfo.title' as='h3'>
                 Contact
               </Text>
 

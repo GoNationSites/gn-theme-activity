@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Text } from 'theme-ui';
 
 const About = ({ description }) => (
-  <Box variant='about'>
+  <Box variant='about' className='about'>
     {description && (
       <>
         <Text as='h3' variant='about.title' className='about-title'>
