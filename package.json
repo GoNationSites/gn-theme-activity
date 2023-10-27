@@ -132,7 +132,8 @@
     "cafeMelba",
     "fitClubLounge",
     "llamaLips",
-    "superiorRoofing"
+    "superiorRoofing",
+    "jHouseSpa"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
