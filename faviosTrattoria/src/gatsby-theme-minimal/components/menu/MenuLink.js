@@ -10,14 +10,23 @@ export default function MenuLink({ gonationSlug, menuOrServices }) {
     .replace('.', '');
 
   return (
-    <Box variant='menu'>
+    <Box
+      variant='menu'
+      sx={{
+        a: {
+          border: 'solid 1px',
+          borderColor: 'primary',
+          borderRadius: '20px',
+          margin: '0.25rem',
+        },
+      }}
+    >
       <Link
         variant='menu.link'
         target='_blank'
         href={`https://res.cloudinary.com/gonation/image/upload/v${number}/sites/favios-trattoria/lunch-menu.pdf`}
         rel='noreferrer'
       >
-        <FontAwesomeIcon icon={faMap} />
         <Text variant='menu.text'>Lunch Menu</Text>
       </Link>
       <Link
@@ -26,8 +35,15 @@ export default function MenuLink({ gonationSlug, menuOrServices }) {
         href={`https://res.cloudinary.com/gonation/image/upload/v${number}/sites/favios-trattoria/dinner-menu.pdf`}
         rel='noreferrer'
       >
-        <FontAwesomeIcon icon={faMap} />
         <Text variant='menu.text'>Dinner Menu</Text>
+      </Link>
+      <Link
+        variant='menu.link'
+        target='_blank'
+        href={`https://res.cloudinary.com/gonation/image/upload/v${number}/sites/favios-trattoria/cocktail-menu.pdf`}
+        rel='noreferrer'
+      >
+        <Text variant='menu.text'>Cocktail Menu</Text>
       </Link>
     </Box>
   );
