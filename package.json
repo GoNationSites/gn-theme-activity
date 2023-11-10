@@ -134,7 +134,8 @@
     "llamaLips",
     "superiorRoofing",
     "jHouseSpa",
-    "papasPlace"
+    "papasPlace",
+    "maxHomeImprovement"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
