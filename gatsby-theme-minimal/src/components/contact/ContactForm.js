@@ -1,5 +1,5 @@
-import React from 'react'
-import { Flex, Input, Text, Textarea, Button } from 'theme-ui'
+import React from 'react';
+import { Flex, Input, Text, Textarea, Button } from 'theme-ui';
 
 export default function ContactForm() {
   return (
@@ -9,12 +9,18 @@ export default function ContactForm() {
       name='contactform'
       method='POST'
       data-netlify='true'
-      data-netlify-honeypot='bot-field'>
+      data-netlify-honeypot='bot-field'
+    >
       <Text variant='contactForm.title' as='h3'>
         Reach Out
       </Text>
 
-      <Input type='hidden' name='form-name' value='contactform' ariaLabelledBy='hidden' />
+      <Input
+        type='hidden'
+        name='form-name'
+        value='contactform'
+        ariaLabelledBy='hidden'
+      />
 
       <Input
         variant='contactForm.input'
@@ -36,6 +42,15 @@ export default function ContactForm() {
         mb={3}
         required={true}
       />
+      <Input
+        placeholder='Phone'
+        variant='contactForm.input'
+        type='text'
+        name='phone'
+        id='phone'
+        ariaLabelledBy='Phone'
+        mb={3}
+      />
 
       <Textarea
         variant='contactForm.textArea'
@@ -56,9 +71,10 @@ export default function ContactForm() {
           textTransform: 'uppercase',
         }}
         variant='secondary'
-        type='submit'>
+        type='submit'
+      >
         Submit
       </Button>
     </Flex>
-  )
+  );
 }

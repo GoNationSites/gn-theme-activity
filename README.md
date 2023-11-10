@@ -131,3 +131,12 @@ type in the command line
 - netlify deploy --prod (for production)
 
 <ins>STEP 11:</ins> Check Site and Your Done
+
+## Version Note
+
+Use Node v14.15.4
+
+```
+nvm install 14.15.4
+nvm use 14.15.4
+```
