@@ -11,7 +11,8 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineLink: '', // leave as empty string if not needed
+        orderOnlineLink:
+          'https://order.toasttab.com/online/antonios-nro-darien-971-post-road', // leave as empty string if not needed
         orderOnlineName: '', // leave as empty string if not needed
       },
     },
