@@ -135,7 +135,8 @@
     "superiorRoofing",
     "jHouseSpa",
     "papasPlace",
-    "maxHomeImprovement"
+    "maxHomeImprovement",
+    "queenCorso"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
