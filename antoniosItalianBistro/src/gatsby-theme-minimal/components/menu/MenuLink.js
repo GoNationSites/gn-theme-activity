@@ -5,17 +5,30 @@ import { faMap } from '@fortawesome/free-solid-svg-icons';
 
 export default function MenuLink({ gonationSlug, menuOrServices }) {
   return (
-    <Box variant='menu'>
-      {/* <Link
+    <Box
+      variant='menu'
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+        a: {
+          height: 'auto',
+        },
+        width: '100%',
+      }}
+    >
+      <Link
         variant='menu.link'
         target='_blank'
-        href={`https://gonation.com/place/${gonationSlug}/items`}
-        rel='noreferrer'>
+        href={`https://res.cloudinary.com/gonation/image/upload/v1700237838/sites/antonio-italian-bistro/menu.pdf`}
+        rel='noreferrer'
+      >
         <FontAwesomeIcon icon={faMap} />
         <Text variant='menu.text'>
           See Our {menuOrServices ? menuOrServices : 'Menu'}
         </Text>
-      </Link> */}
+      </Link>
       <Link
         variant='menu.link'
         target='_blank'
