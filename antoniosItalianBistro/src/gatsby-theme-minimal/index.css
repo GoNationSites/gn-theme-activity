@@ -9,3 +9,14 @@
 .contentBoxesLinks svg {
   display: none;
 }
+
+.contentBoxesLinks a {
+	border: 1px solid black;
+}
+
+@media (min-width: 769px) {
+	.contentBoxesLinks a {
+		padding: 4rem 0!important;
+	}
+}
+
