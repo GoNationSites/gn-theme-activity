@@ -17,3 +17,12 @@
 .contentBoxesLinks svg {
   display: none;
 }
+
+.shoutInnerContainer .shoutImageContainer {
+  width: 30%;
+  height: auto;
+}
+
+.shoutInnerContainer .shoutText {
+  font-size: 0.9rem;
+}
