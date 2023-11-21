@@ -136,7 +136,8 @@
     "jHouseSpa",
     "papasPlace",
     "maxHomeImprovement",
-    "queenCorso"
+    "queenCorso",
+    "doughBoy"
   ],
   "dependencies": {
     "rc-progress": "^3.0.0",
