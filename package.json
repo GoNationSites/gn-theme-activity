@@ -5,7 +5,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "yarn workspace example build"
+    "build": "yarn workspace example build",
+    "setup-node": "nvm use"
   },
   "workspaces": [
     "gatsby-theme-minimal",
