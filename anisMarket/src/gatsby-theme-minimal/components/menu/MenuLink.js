@@ -6,7 +6,7 @@ import { faMap } from '@fortawesome/free-solid-svg-icons';
 export default function MenuLink({ gonationSlug, menuOrServices }) {
   return (
     <>
-      <Box variant='menu' className='menu'>
+      <Box variant="menu" className="menu">
         <Box
           sx={{
             display: 'flex',
@@ -17,27 +17,27 @@ export default function MenuLink({ gonationSlug, menuOrServices }) {
           }}
         >
           <Link
-            variant='menu.link'
-            target='_blank'
+            variant="menu.link"
+            target="_blank"
             href={
-              'https://res.cloudinary.com/gonation/image/upload/v1698330378/sites/anis-table/ATM_THANKSGIVING_MENU_2023.pdf'
+              'https://res.cloudinary.com/gonation/image/upload/v1701461195/gonation.data.prod/business/bzn-LUeON2KmS7Cj1QgkyMt7IA/pdfs/AT_M_Christmas_2023.pdf'
             }
-            rel='noreferrer'
+            rel="noreferrer"
           >
             <FontAwesomeIcon icon={faMap} />
-            <Text variant='menu.text'>Thanksgiving Menu</Text>
+            <Text variant="menu.text">Christmas Menu</Text>
           </Link>
 
           <Link
-            variant='menu.link'
-            target='_blank'
+            variant="menu.link"
+            target="_blank"
             href={
               'https://res.cloudinary.com/gonation/image/upload/v1698942705/sites/anis-table/holiday-dessert-menu.pdf'
             }
-            rel='noreferrer'
+            rel="noreferrer"
           >
             <FontAwesomeIcon icon={faMap} />
-            <Text variant='menu.text'>Holiday Dessert Menu</Text>
+            <Text variant="menu.text">Holiday Dessert Menu</Text>
           </Link>
         </Box>
       </Box>
