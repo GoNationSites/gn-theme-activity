@@ -20,7 +20,7 @@ export default function MenuLink({ gonationSlug, menuOrServices }) {
             variant="menu.link"
             target="_blank"
             href={
-              'https://res.cloudinary.com/gonation/image/upload/v1701461195/gonation.data.prod/business/bzn-LUeON2KmS7Cj1QgkyMt7IA/pdfs/AT_M_Christmas_2023.pdf'
+              'https://res.cloudinary.com/gonation/image/upload/v1702330095/gonation.data.prod/business/bzn-LUeON2KmS7Cj1QgkyMt7IA/pdfs/new_menu_holiday_2023.pdf'
             }
             rel="noreferrer"
           >
