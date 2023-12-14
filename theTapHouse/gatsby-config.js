@@ -11,8 +11,9 @@ module.exports = {
         hasShout: true,
         hasHours: true,
         hasContact: true,
-        orderOnlineName: '',
-        orderOnlineLink: '', // leave as empty string if not needed
+        orderOnlineName: 'View Menu',
+        orderOnlineLink:
+          'https://res.cloudinary.com/gonation/image/upload/v1702584066/gonation.data.prod/business/bzn-HJ-Q-CAKRxKMaY5_mGH-nQ/pdfs/taphouse-menu.pdf', // leave as empty string if not needed
       },
     },
   ],

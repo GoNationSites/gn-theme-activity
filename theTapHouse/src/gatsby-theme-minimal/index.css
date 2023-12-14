@@ -22,7 +22,7 @@ body {
 /* .column1 {
   background-color: #831215 !important;
 } */
-/* 
+/*
 .column1 .directions a {
   color: white;
 }
@@ -33,4 +33,13 @@ body {
 
 .footer {
   background-color: black !important;
+}
+
+.contentBoxesLinks > div {
+	border: 2px solid black;
+	border-radius: 3px;
+}
+
+.contentBoxesLinks svg {
+	display: none;
 }
