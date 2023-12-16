@@ -13,7 +13,7 @@ module.exports = {
         hasContact: true,
         orderOnlineName: 'View Menu',
         orderOnlineLink:
-          'https://res.cloudinary.com/gonation/image/upload/v1702584066/gonation.data.prod/business/bzn-HJ-Q-CAKRxKMaY5_mGH-nQ/pdfs/taphouse-menu.pdf', // leave as empty string if not needed
+          'https://res.cloudinary.com/gonation/image/upload/v1702761534/gonation.data.prod/business/bzn-HJ-Q-CAKRxKMaY5_mGH-nQ/pdfs/jpg2pdf.pdf', // leave as empty string if not needed
       },
     },
   ],
