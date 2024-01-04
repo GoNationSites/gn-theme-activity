@@ -5,17 +5,17 @@ import { faMap } from '@fortawesome/free-solid-svg-icons';
 
 export default function MenuLink({ gonationSlug, menuOrServices }) {
   return (
-    <Box variant='menu'>
+    <Box variant="menu">
       <Link
-        variant='menu.link'
-        target='_blank'
+        variant="menu.link"
+        target="_blank"
         href={
-          'https://res.cloudinary.com/gonation/image/upload/v1695059834/sites/8-thousand-pizza/menu.pdf'
+          'https://res.cloudinary.com/gonation/image/upload/v1704300348/gonation.data.prod/business/bzn-zz9ffngrSgSItwzvb_vx9w/pdfs/update_menu_1123.pdf'
         }
-        rel='noreferrer'
+        rel="noreferrer"
       >
         <FontAwesomeIcon icon={faMap} />
-        <Text variant='menu.text'>See Our Menu</Text>
+        <Text variant="menu.text">See Our Menu</Text>
       </Link>
     </Box>
   );
