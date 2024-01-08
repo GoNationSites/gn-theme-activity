@@ -7,7 +7,7 @@ module.exports = {
         poweredID: 'bzn-HJ-Q-CAKRxKMaY5_mGH-nQ',
         seoKeywords: '',
         hasAbout: true,
-        hasMenu: true,
+        hasMenu: false,
         hasShout: true,
         hasHours: true,
         hasContact: true,
